@@ -1,0 +1,31 @@
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m265.116 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m128.467 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m140.833 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/status/ \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/ \u001b[32m200 \u001b[0m8.820 ms - 32\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/ \u001b[32m200 \u001b[0m1.036 ms - 32\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m185.677 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m172.254 ms - 28\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m132.449 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m126.360 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m120.541 ms - -\u001b[0m\n","level":"info"}

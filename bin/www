@@ -4,8 +4,6 @@
  * Module dependencies.
  */
 
-// import app from '../dist/app';
-// var app = require('../dist/app');
 var app = require('../app');
 var debug = require('debug')('push.reef.mn:server');
 var http = require('http');

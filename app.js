@@ -41,7 +41,7 @@ app.get('/test', (req, res) => {
   res.send('Test endpoint!');
 });
 
-app.use('/', express.static(path.join(__dirname, '/cp002/dist/pwa')));
+app.use('/', express.static(path.join(__dirname, '/frontend/dist/pwa')));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

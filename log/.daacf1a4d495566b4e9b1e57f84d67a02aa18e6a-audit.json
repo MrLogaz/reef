@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 25
+    },
+    "auditLog": "D:\\Git\\push.reef.mn\\log\\.daacf1a4d495566b4e9b1e57f84d67a02aa18e6a-audit.json",
+    "files": [
+        {
+            "date": 1580579545645,
+            "name": "D:\\Git\\push.reef.mn\\log\\app.log..Sa-02-yyyy",
+            "hash": "82e1d1118e27751cfc4a2bf08387ef34"
+        }
+    ]
+}
