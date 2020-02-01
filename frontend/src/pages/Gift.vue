@@ -203,9 +203,7 @@ export default {
         address: this.sendAddress,
         message: ''
       }
-      this.sendingDialog = true
       this.$store.dispatch('SENDER', txData).then(txHash => {
-        this.sendingDialog = false
         console.log(txHash)
         this.txReady = true
       })
@@ -219,6 +217,22 @@ export default {
       txReady: state => state.wallet.txReady,
       balance: state => state.api.balance
     }),
+    txReady: {
+      get () {
+        return this.$store.state.wallet.txReady
+      },
+      set (value) {
+        this.$store.commit('SET_TXREADY', value)
+      }
+    },
+    sending: {
+      get () {
+        return this.$store.state.wallet.sending
+      },
+      set (value) {
+        this.$store.commit('SET_SENDING', value)
+      }
+    },
     language: {
       get () {
         return this.$store.state.app.language

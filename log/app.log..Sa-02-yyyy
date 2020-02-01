@@ -29,3 +29,6 @@
 {"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m132.449 ms - 28\u001b[0m\n","level":"info"}
 {"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m126.360 ms - 28\u001b[0m\n","level":"info"}
 {"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m120.541 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m189.083 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m141.521 ms - -\u001b[0m\n","level":"info"}
