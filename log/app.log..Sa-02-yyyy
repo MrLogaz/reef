@@ -1,0 +1,542 @@
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m203.882 ms - 61\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.310 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m210.789 ms - 61\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.831 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m272.670 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.490 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m215.595 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.786 ms - 17\u001b[0m\n","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m147.815 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.423 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m207.500 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.539 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m307.543 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.928 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m228.258 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.465 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m239.759 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.511 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - ReferenceError: url is not defined","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m20.126 ms - 47\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.290 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m245.806 ms - 61\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.657 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m225.233 ms - 61\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.634 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m233.263 ms - 61\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.406 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m226.931 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.482 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m130.417 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.189 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m21.062 ms - 17\u001b[0m\n","level":"info"}
+{"message":"BipToPhone - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m22.497 ms - 17\u001b[0m\n","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m23.450 ms - 17\u001b[0m\n","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mPOST /api/services/biptophone \u001b[32m200 \u001b[0m0.604 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone \u001b[32m200 \u001b[0m5.095 ms - 17\u001b[0m\n","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone \u001b[32m200 \u001b[0m5.842 ms - 17\u001b[0m\n","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m5.201 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[36m304 \u001b[0m0.380 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m9.259 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.706 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m8.739 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.352 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m0.832 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.177 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m10.053 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.662 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m0.869 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.230 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m1.065 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.613 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone \u001b[32m200 \u001b[0m12.617 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone \u001b[32m200 \u001b[0m21.779 ms - 17\u001b[0m\n","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone \u001b[32m200 \u001b[0m21.113 ms - 17\u001b[0m\n","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone \u001b[32m200 \u001b[0m21.698 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone \u001b[32m200 \u001b[0m20.643 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m0.713 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.361 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m1.039 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.915 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m6.745 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.581 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m9.946 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.972 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m2.073 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.232 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m47.528 ms - 1772\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.549 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m53.760 ms - 1772\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.604 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m7.890 ms - 1772\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.358 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m50.787 ms - 1772\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.460 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m78.983 ms - 1772\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m2.526 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m55.576 ms - 1772\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.398 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m21.561 ms - 1772\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.535 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - Error: Not allowed by CORS","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m210.123 ms - 60\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.350 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone \u001b[32m200 \u001b[0m0.948 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m2.243 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m1.491 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m9.287 ms - 17\u001b[0m\n","level":"info"}
+{"message":"ERROR - Error: Not allowed by CORS","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m150.264 ms - 60\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.604 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - Error: Not allowed by CORS","level":"error"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m197.923 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.418 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - Error: Not allowed by CORS","level":"error"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m232.236 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.360 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - Error: Not allowed by CORS","level":"error"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m217.239 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.274 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m193.899 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.128 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m169.286 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.411 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m245.523 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.323 ms - 17\u001b[0m\n","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m128.374 ms - 2\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m235.229 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m133.888 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.346 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m234.420 ms - 60\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.991 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m416.136 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.544 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m269.650 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.782 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m193.917 ms - 62\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.743 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m234.252 ms - 62\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.785 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m228.124 ms - 15\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.701 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m135.930 ms - 15\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.446 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m191.274 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.487 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m140.736 ms - 15\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.485 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m207.903 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.539 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m215.527 ms - 15\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.581 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m132.016 ms - 15\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.672 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m188.031 ms - 31\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.364 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m177.882 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.614 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m137.845 ms - 31\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m246.450 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.418 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m127.444 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m193.390 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[36m304 \u001b[0m0.400 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m132.347 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.467 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m214.991 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.609 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m189.256 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m131.038 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m151.223 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m127.700 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m125.822 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m201.717 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m128.461 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m128.192 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m405.464 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m144.573 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m155.194 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m132.407 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m139.589 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m133.633 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m229.639 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m142.679 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m125.258 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m133.221 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m211.336 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m219.016 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m289.687 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m241.288 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[36m304 \u001b[0m207.151 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[36m304 \u001b[0m0.311 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m229.212 ms - 62\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.544 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"BipToPhone - TypeError: Converting circular structure to JSON","level":"error"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[31m500 \u001b[0m220.402 ms - 62\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.832 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m239.867 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.190 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m216.728 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m227.322 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.406 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m209.424 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m191.596 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m170.428 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m178.199 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m136.897 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m169.624 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m135.969 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m185.861 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m182.152 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m137.564 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m134.733 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m134.481 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m144.780 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m138.475 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m171.452 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m189.681 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m167.607 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m182.694 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m184.858 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/code \u001b[32m200 \u001b[0m2.149 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/code \u001b[32m200 \u001b[0m1.043 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m174.622 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m169.567 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/code \u001b[32m200 \u001b[0m2.725 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m179.930 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/code \u001b[32m200 \u001b[0m6478.136 ms - 131\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m199.322 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m124.487 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m160.002 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m174.942 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/code \u001b[32m200 \u001b[0m395.146 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m130.841 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/code \u001b[32m200 \u001b[0m394.080 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/code \u001b[32m200 \u001b[0m327.189 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m123.955 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m140.904 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m159.614 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m144.339 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m133.573 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m150.016 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/code \u001b[32m200 \u001b[0m444.576 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m138.769 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m130.233 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m131.019 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/code \u001b[32m200 \u001b[0m372.561 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m170.681 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m193.265 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m163.166 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m162.355 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m126.391 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/code \u001b[32m200 \u001b[0m1319.690 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m160.350 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m436.715 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m158.308 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m264.813 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m285.569 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m275.539 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m265.731 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m128.120 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m214.458 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m183.425 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m159.375 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m155.004 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m214.032 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m189.331 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/validate \u001b[32m200 \u001b[0m361.949 ms - 37\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m191.556 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m184.976 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m138.661 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m154.101 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m131.316 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m123.028 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m175.787 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m150.593 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m181.130 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m126.456 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m148.451 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m174.406 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m174.582 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m161.262 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m126.862 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m164.501 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m167.950 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m189.713 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.406 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m125.873 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m206.253 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m174.396 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m855.575 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m135.099 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m126.669 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m135.180 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m185.470 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m129.166 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m179.029 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m179.014 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m183.125 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m165.237 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m1057.913 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m127.852 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m122.032 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m612.527 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m390.201 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m126.958 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m224.216 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m132.228 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m175.081 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m124.705 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m414.005 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m141.689 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m124.410 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m148.996 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m128.643 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m180.059 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m133.896 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m127.053 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m126.788 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m126.708 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m140.784 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m140.804 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m132.850 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m141.476 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m247.683 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m226.591 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m200.010 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m134.520 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m396.061 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m227.534 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m197.607 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m209.528 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m193.484 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m146.669 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m140.948 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/validate \u001b[32m200 \u001b[0m1431.319 ms - 37\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/validate \u001b[32m200 \u001b[0m218.793 ms - 37\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m199.201 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m219.875 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m256.929 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m260.919 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m224.399 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m199.440 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m148.626 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/validate \u001b[32m200 \u001b[0m241.386 ms - 37\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/services/biptophone/code \u001b[32m200 \u001b[0m603.192 ms - 131\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m172.079 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m143.942 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m126.325 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m126.468 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m145.587 ms - 28\u001b[0m\n","level":"info"}

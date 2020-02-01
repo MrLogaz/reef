@@ -1,0 +1,79 @@
+{"message":"\u001b[0mGET /api/wallet \u001b[32m200 \u001b[0m2.192 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[36m304 \u001b[0m0.246 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/wallet/1 \u001b[31m500 \u001b[0m119.553 ms - 1772\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[36m304 \u001b[0m0.603 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Error in getting wallet - ReferenceError: CarsModel is not defined","level":"error"}
+{"message":"\u001b[0mGET /api/wallet/1 \u001b[32m200 \u001b[0m3.284 ms - 19\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.320 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Error in getting wallet - ReferenceError: CarsModel is not defined","level":"error"}
+{"message":"\u001b[0mGET /api/wallet/1 \u001b[32m200 \u001b[0m5.619 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.371 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Error in getting wallet - ReferenceError: CarsModel is not defined","level":"error"}
+{"message":"\u001b[0mGET /api/wallet/1 \u001b[32m200 \u001b[0m2.882 ms - 20\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.303 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Error in getting wallet - ReferenceError: CarsModel is not defined","level":"error"}
+{"message":"\u001b[0mGET /api/wallet/1 \u001b[32m200 \u001b[0m2.813 ms - 20\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.313 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"sending wallet...","level":"info"}
+{"message":"\u001b[0mGET /api/wallet/1 \u001b[32m200 \u001b[0m18.577 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.383 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"sending wallet...","level":"info"}
+{"message":"\u001b[0mGET /api/wallet/1 \u001b[32m200 \u001b[0m9.308 ms - 0\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m1.129 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"sending wallet...","level":"info"}
+{"message":"\u001b[0mGET /api/wallet/1 \u001b[33m404 \u001b[0m12.027 ms - 14\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.616 ms - 17\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}

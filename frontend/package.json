@@ -1,0 +1,44 @@
+{
+  "name": "REEF push",
+  "version": "0.0.1",
+  "description": "REEF push",
+  "productName": "REEF push",
+  "cordovaId": "org.cordova.quasar.app",
+  "capacitorId": "",
+  "author": "Andrew L. <mrlogaz@gmail.com>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
+    "big.js": "^5.2.2",
+    "bip39": "^3.0.2",
+    "minter-js-sdk": "^0.26.1",
+    "minterjs-util": "^0.15.1",
+    "minterjs-wallet": "^4.0.4",
+    "qrcode": "^1.4.4",
+    "quasar": "^1.0.0",
+    "vue-carousel": "^0.18.0",
+    "vue-i18n": "^8.0.0",
+    "vuex-persistedstate": "^2.7.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0"
+  },
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}

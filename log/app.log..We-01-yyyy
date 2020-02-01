@@ -1,0 +1,16 @@
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Could not connect to MongoDB","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Could not connect to MongoDB","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Could not connect to MongoDB","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /test \u001b[32m200 \u001b[0m3.436 ms - 14\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.298 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /test \u001b[32m200 \u001b[0m0.961 ms - 14\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m0.204 ms - 17\u001b[0m\n","level":"info"}

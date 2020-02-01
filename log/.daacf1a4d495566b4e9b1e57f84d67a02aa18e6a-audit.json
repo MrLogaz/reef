@@ -1,0 +1,24 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 25
+    },
+    "auditLog": "D:\\Git\\push.reef.mn\\log\\.daacf1a4d495566b4e9b1e57f84d67a02aa18e6a-audit.json",
+    "files": [
+        {
+            "date": 1580321468397,
+            "name": "D:\\Git\\push.reef.mn\\log\\app.log..We-01-yyyy",
+            "hash": "2bcabacce4d467814d51161029ef20d5"
+        },
+        {
+            "date": 1580328012976,
+            "name": "D:\\Git\\push.reef.mn\\log\\app.log..Th-01-yyyy",
+            "hash": "b901242b57c487313723fe1a10e79255"
+        },
+        {
+            "date": 1580546025122,
+            "name": "D:\\Git\\push.reef.mn\\log\\app.log..Sa-02-yyyy",
+            "hash": "08bef3095f086383b0321d3a73ce8edc"
+        }
+    ]
+}
