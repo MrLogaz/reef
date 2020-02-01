@@ -3,7 +3,7 @@ import axios from 'axios'
 const getDefaultState = () => {
   return {
     explorerApi: 'https://explorer-api.minter.network/api/v1/',
-    reefApi: 'https://push.reef.mn/api/',
+    reefApi: 'http://push.reef.mn/api/',
     currency: null,
     balance: null,
     balanceJSON: {}
