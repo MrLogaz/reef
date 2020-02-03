@@ -366,7 +366,7 @@ export default {
       if (process.env.DEV || location.hostname === 'localhost') {
         this.resultLink = 'http://localhost:8080/#/gift?key=' + encodeURIComponent(this.mnemonicKey) + usernameStr + fromStr + messageStr
       } else {
-        this.resultLink = 'http://push.reef.mn/#/gift?key=' + encodeURIComponent(this.mnemonicKey) + usernameStr + fromStr + messageStr
+        this.resultLink = 'https://push.reef.mn/#/gift?key=' + encodeURIComponent(this.mnemonicKey) + usernameStr + fromStr + messageStr
       }
     }
   },
