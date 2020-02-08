@@ -6,10 +6,10 @@
           <q-item @click.native="clickLink('http://push.reef.mn/')">
             <q-item-section avatar>
               <q-avatar color="white" class="desktop-only" text-color="white" size="60px">
-                <img src="statics/rif.png">
+                <img src="statics/icons/Icon-120.png">
               </q-avatar>
               <q-avatar color="white" class="mobile-only" text-color="white" size="44px">
-                <img src="statics/rif.png">
+                <img src="statics/icons/Icon-88.png">
               </q-avatar>
             </q-item-section>
 

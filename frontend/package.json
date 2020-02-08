@@ -1,11 +1,11 @@
 {
   "name": "REEF push",
-  "version": "0.0.1",
+  "version": "0.2",
   "description": "REEF push",
   "productName": "REEF push",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
-  "author": "Andrew L. <mrlogaz@gmail.com>",
+  "author": "Andrew Loginov <mrlogaz@gmail.com> tg: @mrlogaz",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",

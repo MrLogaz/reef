@@ -3,24 +3,23 @@
     <div>
       <q-header bordered class="bg-white text-primary">
         <q-toolbar>
-            <q-item>
-              <q-item-section avatar>
-                <q-avatar color="white" class="desktop-only" text-color="white" size="60px">
-                  <img src="statics/rif.png">
-                </q-avatar>
-                <q-avatar color="white" class="mobile-only" text-color="white" size="44px">
-                  <img src="statics/rif.png">
-                </q-avatar>
-              </q-item-section>
+          <q-item>
+            <q-item-section avatar>
+              <q-avatar color="white" class="desktop-only" text-color="white" size="60px">
+                <img src="statics/icons/Icon-120.png">
+              </q-avatar>
+              <q-avatar color="white" class="mobile-only" text-color="white" size="44px">
+                <img src="statics/icons/Icon-88.png">
+              </q-avatar>
+            </q-item-section>
 
-              <q-item-section>
-                <div class="text-h4 desktop-only">REEF Push</div>
-                <div class="text-h6 mobile-only">REEF Push</div>
-                <q-item-label caption>{{ $t('Easy way to send a value') }}</q-item-label>
-              </q-item-section>
-            </q-item>
-          <q-toolbar-title class="text-center">
-          </q-toolbar-title>
+            <q-item-section>
+              <div class="text-h4 desktop-only">REEF Push</div>
+              <div class="text-h6 mobile-only">REEF Push</div>
+              <q-item-label caption>{{ $t('Easy way to send a value') }}</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-space />
           <q-btn round color="teal" :label="language.substr(0,2)" @click="alertLang = true"></q-btn>
         </q-toolbar>
       </q-header>
@@ -46,24 +45,6 @@
           </q-card-actions>
         </q-card>
       </q-dialog>
-      <!-- <div class="row">
-        <q-item>
-          <q-item-section avatar>
-            <q-avatar color="primary" class="desktop-only" text-color="white" size="80px">
-              <q-icon name="settings_remote" size="54px" />
-            </q-avatar>
-            <q-avatar color="primary" class="mobile-only" text-color="white" size="60px">
-              <q-icon name="settings_remote" size="40px" />
-            </q-avatar>
-          </q-item-section>
-
-          <q-item-section>
-            <div class="text-h3 desktop-only">Reef Push</div>
-            <div class="text-h4 mobile-only">Reef Push</div>
-            <q-item-label caption>{{ $t('Easy way to send a gift') }}</q-item-label>
-          </q-item-section>
-        </q-item>
-      </div> -->
 
       <q-stepper
         v-model="step"
@@ -75,41 +56,8 @@
         header-nav
       >
         <q-step
-          :name="1"
-          :title="`1. ${ $t('Your message') }`"
-          icon="supervisor_account"
-        >
-          <div class="q-pt-md">
-            <q-input
-              clearable
-              outlined
-              v-model="username"
-              :label="$t('Receiver name')"
-            />
-            <q-input
-              class="q-pt-md"
-              clearable
-              outlined
-              v-model="from"
-              :label="$t('Sender name')"
-            />
-            <q-input
-              class="q-pt-md"
-              clearable
-              outlined
-              v-model="message"
-              :label="$t('Message')"
-            />
-          </div>
-          <div class="text-grey-6 q-pb-sm q-pt-md">{{ $t('Fields are optional') }}</div>
-          <q-separator />
-          <q-stepper-navigation class="q-pt-md">
-            <q-btn @click="step = 2" color="primary" :label="$t('Continue')" />
-          </q-stepper-navigation>
-        </q-step>
-        <q-step
           :name="2"
-          :title="`2. ${ $t('Send coins') }`"
+          :title="`1. ${ $t('Send coins') }`"
           icon="card_giftcard"
           active-icon="card_giftcard"
         >
@@ -122,7 +70,7 @@
           >
             <q-tab name="address" :label="$t('Address')" />
             {{ $t('or') }}
-            <q-tab name="qrcode" label="QRCode" @click="actionWallet()" />
+            <q-tab name="DeepLink" label="DeepLink" @click="actionWallet()" />
           </q-tabs>
           <q-tab-panels v-model="tab"
             animated
@@ -130,27 +78,37 @@
             transition-next="jump-left"
           >
             <q-tab-panel name="address">
-              <div style="height: 226px;">
+              <div style="height: 240px;">
                 <div class="text-subtitle1 q-pb-sm">{{ $t('Send coins to address') }}</div>
                 <q-input outlined v-model="address" :label="$t('Copy address')" stack-label readonly @click="copyAddress()">
                   <template v-slot:after>
                     <q-btn icon="file_copy" flat round @click="copyAddress()" />
                   </template>
                 </q-input>
-                <div class="q-pt-sm desktop-only">
+                <div class="q-pt-sm">
                   <div class="text-subtitle1 q-pb-sm">{{ $t('Use web wallet') }}</div>
                   <q-btn type="a" color="purple" target="_blank" icon="account_balance_wallet" href="https://wallet.bip.to/send" label="Open wallet.bip.to" /><br>
                   <q-btn type="a" color="deep-orange-8" class="q-mt-sm" target="_blank" icon="account_balance_wallet" href="https://console.minter.network/" label="Open console.minter" />
                 </div>
-                <div class="q-pt-lg mobile-only">
-                  <div class="text-subtitle1 q-pb-sm">{{ $t('Or use DeepLink') }}</div>
-                  <q-btn @click="actionWallet()" type="a" color="purple" target="_blank" icon="account_balance_wallet" :href="deepLink" label="Open BIP Wallet" />
-                </div>
               </div>
             </q-tab-panel>
-            <q-tab-panel name="qrcode" style="padding-left: 0; padding-right: 0;">
-              <div style="height: 226px">
-                <img style="max-width: 100%" :src="qrImage">
+            <q-tab-panel name="DeepLink" style="padding-left: 0; padding-right: 0;">
+              <div style="height: 240px">
+                <q-input
+                  v-model.number="deeplinkAmount"
+                  type="number"
+                  :label="$t('Amount') + ' BIP'"
+                  clearable
+                  outlined
+                  dense
+                />
+                <div class="q-pt-lg mobile-only">
+                  <div class="text-subtitle1 q-pb-sm">{{ $t('DeepLink open wallet') }}</div>
+                  <q-btn @click="actionWallet()" type="a" color="purple" target="_blank" icon="account_balance_wallet" :href="deepLink" label="Open BIP Wallet" />
+                </div>
+                <div class="text-center desktop-only">
+                  <img class="q-mt-sm" style="max-width: 100%;" :src="qrImage">
+                </div>
               </div>
             </q-tab-panel>
           </q-tab-panels>
@@ -187,22 +145,32 @@
         </q-step>
         <q-step
           :name="3"
-          :title="`3. ${ $t('Share link') }`"
+          :title="`2. ${ $t('Share link') }`"
           icon="done"
           active-icon="done"
           :header-nav="balance && parseFloat(balance.total_balance_sum) > 0"
         >
-          <div class="text-h6">
-            {{ $t('Gift balance') }}
-            <span class="text-subtitle1 text-grey-6">({{ address.substr(0,4) + "..." + address.substr(-4) }})</span>
+          <div class="text-subtitle1">
+            <b>{{ $t('Gift balance') }}</b>
+            <span class="text-subtitle1 text-grey-6"> ({{ address.substr(0,4) + "..." + address.substr(-4) }})</span>
           </div>
-          <div class="text-h6">
+          <div class="text-subtitle1">
             {{ balance && parseFloat(balance.total_balance_sum) > 0 ? prettyNumber(balance.total_balance_sum, 3) : 0 }} BIP
             <span class="text-grey-6">(~ {{ balance && parseFloat(balance.total_balance_sum) > 0 ? prettyNumber(balance.total_balance_sum_usd, 2) : 0 }} usd)</span>
           </div>
 
+          <q-btn class="q-mt-sm q-pr-sm q-pl-sm" @click="addMessageDialog = true" dense color="primary" :label="$t('Add message')" />
+
           <div class="text-subtitle1 q-pb-sm q-pt-md">{{ $t('Send this link to your friend') }}</div>
-          <q-input outlined v-model="resultLink" :label="$t('Copy link')" stack-label readonly @click="copyLink()">
+          <!-- :hint="$t('Link already copied')" -->
+          <q-input
+            v-model="resultLink"
+            outlined
+            :label="$t('Copy link')"
+            stack-label
+            readonly
+            @click="copyLink()"
+          >
             <template v-slot:after>
               <q-btn icon="file_copy" flat round @click="copyLink()" />
             </template>
@@ -210,8 +178,59 @@
           <div class="q-pt-md" v-if="shareTest()">
             <q-btn @click="share(resultLink)" color="positive" icon="share" label="Share" />
           </div>
+          <div class="text-subtitle1 q-pb-sm q-pt-sm">
+            {{ $t('or') }}
+          </div>
+          <div class="">
+            <q-btn @click="shareQRcode = true" class="q-mb-sm q-mr-sm" color="deep-purple" size="0.85em" icon="select_all" :label="$t('QR code')" />
+            <br />
+            <q-btn class="q-mb-sm q-mr-sm" :disabled="true" color="deep-purple" size="0.85em" icon="email" label="Email" />
+            <q-btn class="q-mb-sm q-mr-sm" :disabled="true" color="deep-purple" size="0.85em" icon="textsms" label="SMS" />
+          </div>
         </q-step>
       </q-stepper>
+
+      <q-dialog v-model="shareQRcode">
+        <q-card>
+          <q-card-section class="text-center">
+            <img :src="shareQRImage">
+            <br>
+            <q-btn @click="downloadShareQR" class="q-mt-sm" color="deep-purple" icon="get_app" :label="$t('Download')" />
+          </q-card-section>
+        </q-card>
+      </q-dialog>
+      <q-dialog v-model="addMessageDialog">
+        <q-card class="dialog-min300">
+          <q-card-section>
+            <div class="q-pt-md">
+              <q-input
+                clearable
+                outlined
+                v-model="username"
+                :label="$t('Receiver name')"
+              />
+              <q-input
+                class="q-pt-md"
+                clearable
+                outlined
+                v-model="from"
+                :label="$t('Sender name')"
+              />
+              <q-input
+                class="q-pt-md"
+                clearable
+                outlined
+                v-model="message"
+                :label="$t('Message')"
+              />
+            </div>
+            <div class="text-grey-6 q-pb-sm q-pt-md">{{ $t('Fields are optional') }}</div>
+          </q-card-section>
+          <q-card-actions align="right">
+            <q-btn flat :label="$t('Add message')" color="primary" v-close-popup />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
 
     </div>
   </q-page>
@@ -230,6 +249,8 @@ export default {
     return {
       tab: 'address',
       alertLang: false,
+      addMessageDialog: false,
+      shareQRcode: false,
       languageList: [
         {
           label: 'English',
@@ -239,8 +260,9 @@ export default {
           value: 'ru'
         }
       ],
+      deeplinkAmount: 10,
       mnemonic: null,
-      step: 1,
+      step: 2,
       username: null,
       from: null,
       message: null,
@@ -252,6 +274,7 @@ export default {
       balanceUpdateLoading: false,
       address: null,
       qrImage: null,
+      shareQRImage: null,
       deepLink: null,
       resultLink: null
     }
@@ -260,34 +283,39 @@ export default {
     this.mnemonic = generateMnemonic()
     this.wallet = walletFromMnemonic(this.mnemonic)
     this.address = this.wallet.getAddressString()
-    const opts = {
-      errorCorrectionLevel: 'H',
-      type: 'image/png',
-      width: 220
-    }
-    const txParams = {
-      type: TX_TYPE.SEND,
-      data: {
-        to: this.address,
-        value: 10,
-        coin: 'BIP'
-      }
-    }
-    let deepLinkTmp = prepareLink(txParams, 'minter://')
-    this.deepLink = deepLinkTmp.replace('https://minter://', 'minter://')
 
-    QRCode.toDataURL(this.deepLink, opts).then(url => {
-      this.qrImage = url
-    }).catch(err => {
-      this.$q.notify({
-        message: err,
-        color: 'purple'
-      })
-      // console.error(err)
-    })
+    this.generateDeepQRcode()
     this.generateLink()
   },
   methods: {
+    generateDeepQRcode () {
+      const opts = {
+        errorCorrectionLevel: 'H',
+        type: 'image/png',
+        width: 200,
+        margin: 0
+      }
+      const txParams = {
+        type: TX_TYPE.SEND,
+        data: {
+          to: this.address,
+          value: this.deeplinkAmount,
+          coin: 'BIP'
+        }
+      }
+      let deepLinkTmp = prepareLink(txParams, 'minter://')
+      this.deepLink = deepLinkTmp.replace('https://minter://', 'minter://')
+
+      QRCode.toDataURL(this.deepLink, opts).then(url => {
+        this.qrImage = url
+      }).catch(err => {
+        this.$q.notify({
+          message: err,
+          color: 'purple'
+        })
+        // console.error(err)
+      })
+    },
     openLink (val) {
       let newWindow = window.open(val, '_blank')
       newWindow.focus()
@@ -339,6 +367,12 @@ export default {
         .then(() => console.log('Successful share'))
         .catch(error => console.log('Error sharing', error))
     },
+    downloadShareQR () {
+      let link = document.createElement('a')
+      link.download = 'qr-push-gift.png'
+      link.href = this.shareQRImage
+      link.click()
+    },
     checkBalance () {
       this.balanceUpdateLoading = true
       this.$axios.get(`https://explorer-api.minter.network/api/v1/addresses/${this.address}?withSum=true`).then(data => {
@@ -368,6 +402,19 @@ export default {
       } else {
         this.resultLink = 'https://push.reef.mn/#/gift?key=' + encodeURIComponent(this.mnemonicKey) + usernameStr + fromStr + messageStr
       }
+      copyToClipboard(this.resultLink)
+
+      const opts = {
+        errorCorrectionLevel: 'H',
+        type: 'image/png',
+        width: 200,
+        margin: 0
+      }
+      QRCode.toDataURL(this.resultLink, opts).then(url => {
+        this.shareQRImage = url
+      }).catch(err => {
+        console.error(err)
+      })
     }
   },
   computed: {
@@ -387,10 +434,23 @@ export default {
     step (val) {
       if (val === 3) {
         this.generateLink()
+        this.copyLink()
       }
+    },
+    deeplinkAmount () {
+      this.generateDeepQRcode()
     },
     language (val) {
       this.$i18n.locale = val
+    },
+    username (val) {
+      this.generateLink()
+    },
+    from (val) {
+      this.generateLink()
+    },
+    message (val) {
+      this.generateLink()
     }
   }
 }
