@@ -2,6 +2,7 @@ import { Minter, SendTxParams, DelegateTxParams, SellTxParams, BuyTxParams } fro
 
 const getDefaultState = () => {
   return {
+    urlKey: null,
     address: null,
     publicKey: null,
     privateKey: null,
@@ -21,9 +22,11 @@ const mutations = {
   RESET_WALLET: state => {
     Object.assign(state, getDefaultState())
   },
+  SAVE_URLKEY: (state, payload) => {
+    state.urlKey = payload
+  },
   SAVE_WALLET: (state, payload) => {
     state.address = payload.address
-    // state.publicKey = payload.publicKey
     state.privateKey = payload.privateKey
     state.mnemonic = payload.mnemonic
   },

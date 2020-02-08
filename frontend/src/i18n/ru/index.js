@@ -51,6 +51,7 @@ export default {
   'Save gift': 'Сохранить подарок',
 
   // Services
+  'Create wallet': 'Создать кошелек',
   'Top up phone balance': 'Пополнить баланс телефона',
   'Top up internet balance': 'Оплатить интернет',
   'Top up online game': 'Пополнить онлайн игры',

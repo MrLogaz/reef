@@ -183,8 +183,9 @@
           </div>
           <div class="">
             <q-btn @click="shareQRcode = true" class="q-mb-sm q-mr-sm" color="deep-purple" size="0.85em" icon="select_all" :label="$t('QR code')" />
+            <!-- <q-btn @click="sendEmailDialog = true" class="q-mb-sm q-mr-sm" color="deep-purple" size="0.85em" icon="email" label="Email" /> -->
+            <q-btn :disabled="true" class="q-mb-sm q-mr-sm" color="deep-purple" size="0.85em" icon="email" label="Email" />
             <br />
-            <q-btn class="q-mb-sm q-mr-sm" :disabled="true" color="deep-purple" size="0.85em" icon="email" label="Email" />
             <q-btn class="q-mb-sm q-mr-sm" :disabled="true" color="deep-purple" size="0.85em" icon="textsms" label="SMS" />
           </div>
         </q-step>
@@ -231,6 +232,24 @@
           </q-card-actions>
         </q-card>
       </q-dialog>
+      <q-dialog v-model="sendEmailDialog">
+        <q-card class="dialog-min300">
+          <q-card-section>
+            <div class="q-pt-md">
+              <q-input
+                v-model="emailUser"
+                clearable
+                outlined
+                label="Email"
+              />
+            </div>
+            <!-- <div class="text-grey-6 q-pb-sm q-pt-md">{{ $t('Fields are optional') }}</div> -->
+          </q-card-section>
+          <q-card-actions align="right">
+            <q-btn @click="sendEmailAction" flat :label="$t('Send email')" color="primary" v-close-popup />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
 
     </div>
   </q-page>
@@ -250,6 +269,7 @@ export default {
       tab: 'address',
       alertLang: false,
       addMessageDialog: false,
+      sendEmailDialog: false,
       shareQRcode: false,
       languageList: [
         {
@@ -274,6 +294,7 @@ export default {
       balanceUpdateLoading: false,
       address: null,
       qrImage: null,
+      emailUser: null,
       shareQRImage: null,
       deepLink: null,
       resultLink: null
@@ -388,6 +409,18 @@ export default {
       }).catch(error => {
         console.log(error)
       })
+    },
+    sendEmailAction () {
+      if (this.emailUser) {
+        this.$store.dispatch('SEND_EMAIL', {
+          email: this.emailUser,
+          username: this.username,
+          from: this.from,
+          message: this.message
+        }).then(response => {
+          console.log(response)
+        })
+      }
     },
     generateLink () {
       this.mnemonicKey = this.mnemonic.split(' ').map(word => wordlists.english.indexOf(word)).join('.')

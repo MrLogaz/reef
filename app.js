@@ -29,6 +29,7 @@ app.use(morgan("dev", { "stream": logger.stream }));
 
 import wallet from './routes/wallet.route'
 import services from './routes/services.route'
+import email from './routes/email.route'
 
 app.get('/api', (req, res) => {
   res.json({
@@ -36,6 +37,7 @@ app.get('/api', (req, res) => {
   })
 })
 // app.use('/api/wallet', wallet);
+app.use('/api/email', email);
 app.use('/api/services', services);
 app.get('/test', (req, res) => {
   res.send('Test endpoint!');

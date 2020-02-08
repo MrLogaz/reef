@@ -9,6 +9,9 @@ config.LOCAL_URL = process.env.LOCAL_URL || 'http://localhost:3000';
 config.APP_PORT = process.env.APP_PORT || '3000';
 config.NODE_ENV = process.env.NODE_ENV || 'development';
 
+config.EMAIL_SMTP_SERVER = process.env.EMAIL_SMTP_SERVER || 'gmail.com';
+config.EMAIL_SMTP_PORT = process.env.EMAIL_SMTP_PORT || '404';
+
 // Services
 config.biptophone = process.env.SERVICES_BIPTOPHONE;
 

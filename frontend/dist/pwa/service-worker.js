@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.bad7932b43ae09634468b3ae785dae8f.js"
+  "precache-manifest.f2e9c6293585a007bb0965a83c170fdb.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "REEF push"});

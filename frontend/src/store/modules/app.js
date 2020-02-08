@@ -2,7 +2,10 @@ import { i18n } from 'boot/i18n'
 
 const getDefaultState = () => {
   return {
-    language: 'ru'
+    language: 'ru',
+    username: null,
+    from: null,
+    message: null
   }
 }
 const state = getDefaultState()
@@ -18,6 +21,11 @@ const mutations = {
   SET_LANG: (state, payload) => {
     i18n.locale = payload
     state.language = payload
+  },
+  SAVE_USER: (state, payload) => {
+    state.username = payload.username
+    state.from = payload.from
+    state.message = payload.message
   }
 }
 

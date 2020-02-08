@@ -95,3 +95,142 @@
 {"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m210.736 ms - 28\u001b[0m\n","level":"info"}
 {"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m168.537 ms - -\u001b[0m\n","level":"info"}
 {"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m183.868 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m225.625 ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m254.705 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[36m304 \u001b[0m200.101 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m160.703 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m237.745 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m240.255 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m193.950 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m173.519 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m232.626 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m217.104 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m171.682 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m248.260 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m190.011 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m223.677 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m162.598 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m163.003 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m166.902 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m209.455 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m157.932 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m892.236 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m260.017 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m160.718 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m212.158 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone/ \u001b[32m200 \u001b[0m381.286 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m222.654 ms - 28\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m359.380 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m313.596 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m286.394 ms - 28\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m170.841 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Send Mail Solo - Error: read ECONNRESET","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Send Mail Solo - Error: read ECONNRESET","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Send Mail Solo - Error: 24936:error:1408F10B:SSL routines:ssl3_get_record:wrong version number:c:\\ws\\deps\\openssl\\openssl\\ssl\\record\\ssl3_record.c:252:\n","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Send Mail Solo - Error: read ECONNRESET","level":"error"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[31m500 \u001b[0m81.035 ms - 167\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Send Mail Solo - Error: read ECONNRESET","level":"error"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[31m500 \u001b[0m86.810 ms - 83\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Send Mail Solo - Error: read ECONNRESET","level":"error"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[31m500 \u001b[0m79.357 ms - 83\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Send Mail Solo - Error: read ECONNRESET","level":"error"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[31m500 \u001b[0m63.842 ms - 83\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Send Mail Solo - Error: read ECONNRESET","level":"error"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[31m500 \u001b[0m71.851 ms - 83\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Send Mail Solo - Error: read ECONNRESET","level":"error"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[31m500 \u001b[0m73.141 ms - 83\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m482.231 ms - 73\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m446.480 ms - 73\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m43.712 ms - 73\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m477.282 ms - 73\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m1308.170 ms - 73\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m501.357 ms - 73\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m27719.942 ms - 73\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m13211.104 ms - 73\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m4126.573 ms - 35\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m508.468 ms - 35\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m72.923 ms - 83\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m816.645 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m80.700 ms - 83\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m340.855 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"SendPuls - [object Object]","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m250.186 ms - 28\u001b[0m\n","level":"info"}
+{"message":"SendPuls - [object Object]","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m823.745 ms - 144\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"SendPuls - Failed to authenticate on SMTP server with username \"mrlogaz@gmail.com\" using 2 possible authenticators","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m802.865 ms - 144\u001b[0m\n","level":"info"}
+{"message":"SendPuls - Failed to authenticate on SMTP server with username \"mrlogaz@gmail.com\" using 2 possible authenticators","level":"info"}
+{"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m1101.274 ms - 144\u001b[0m\n","level":"info"}

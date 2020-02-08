@@ -51,6 +51,7 @@ export default {
   'Save gift': 'Save gift',
 
   // Services
+  'Create wallet': 'Create wallet',
   'Top up phone balance': 'Top up phone balance',
   'Top up internet balance': 'Top up internet balance',
   'Top up online game': 'Top up online game',

@@ -37,16 +37,16 @@ const mutations = {
 }
 
 const actions = {
-  // FETCH_BALANCE_ADDRESS: async (context, payload) => {
-  //   let { data } = await axios.get(`${ state.explorerApi }addresses/${ payload }?withSum=true`)
-  //   return data.data
-  // },
+  SEND_EMAIL: async (context, payload) => {
+    let { data } = await axios.post(context.state.reefApi + 'email/solo', payload)
+    return data.data
+  },
   FETCH_BALANCE: async (context, payload) => {
     let { data } = await axios.get(context.state.explorerApi + 'addresses/' + context.rootState.wallet.address + '?withSum=true')
     context.commit('SET_BALANCE', data.data)
   },
   FETCH_CURRENCY: async (context, payload) => {
-    let { data } = await axios.get(context.state.reefApi + 'services/biptophone/')
+    let { data } = await axios.get(context.state.reefApi + 'services/biptophone')
     context.commit('SET_CURRENCY', data)
   }
 }
