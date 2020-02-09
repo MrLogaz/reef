@@ -156,7 +156,8 @@
           </div>
           <div class="text-subtitle1">
             {{ balance && parseFloat(balance.total_balance_sum) > 0 ? prettyNumber(balance.total_balance_sum, 3) : 0 }} BIP
-            <span class="text-grey-6">(~ {{ balance && parseFloat(balance.total_balance_sum) > 0 ? prettyNumber(balance.total_balance_sum_usd, 2) : 0 }} usd)</span>
+            <span class="text-grey-6">(~ {{ balance && parseFloat(balance.total_balance_sum) > 0 ? prettyNumber(balance.total_balance_sum_usd, 2) : 0 }} usd </span>
+            <span class="text-grey-6"> {{ $t('or') }} {{ balance && parseFloat(balance.total_balance_sum) > 0 ? prettyNumber(parseFloat(balance.total_balance_sum_usd) * parseFloat(currency.BIPRUB), 2) : 0 }} rub)</span>
           </div>
 
           <q-btn class="q-mt-sm q-pr-sm q-pl-sm" @click="addMessageDialog = true" dense color="primary" :label="$t('Add message')" />
@@ -183,8 +184,8 @@
           </div>
           <div class="">
             <q-btn @click="shareQRcode = true" class="q-mb-sm q-mr-sm" color="deep-purple" size="0.85em" icon="select_all" :label="$t('QR code')" />
-            <!-- <q-btn @click="sendEmailDialog = true" class="q-mb-sm q-mr-sm" color="deep-purple" size="0.85em" icon="email" label="Email" /> -->
-            <q-btn :disabled="true" class="q-mb-sm q-mr-sm" color="deep-purple" size="0.85em" icon="email" label="Email" />
+            <q-btn @click="sendEmailDialog = true" class="q-mb-sm q-mr-sm" color="deep-purple" size="0.85em" icon="email" label="Email" />
+            <!-- <q-btn :disabled="true" class="q-mb-sm q-mr-sm" color="deep-purple" size="0.85em" icon="email" label="Email" /> -->
             <br />
             <q-btn class="q-mb-sm q-mr-sm" :disabled="true" color="deep-purple" size="0.85em" icon="textsms" label="SMS" />
           </div>
@@ -235,18 +236,33 @@
       <q-dialog v-model="sendEmailDialog">
         <q-card class="dialog-min300">
           <q-card-section>
+            <div class="text-h6">{{ $t('Enter recipient email') }}</div>
             <div class="q-pt-md">
               <q-input
                 v-model="emailUser"
+                type="email"
                 clearable
                 outlined
                 label="Email"
-              />
+              >
+                <template v-slot:after>
+                  <q-btn icon="send" :disabled="!validateEmail()" color="teal" round @click="sendEmailAction" />
+                </template>
+              </q-input>
             </div>
-            <!-- <div class="text-grey-6 q-pb-sm q-pt-md">{{ $t('Fields are optional') }}</div> -->
           </q-card-section>
           <q-card-actions align="right">
-            <q-btn @click="sendEmailAction" flat :label="$t('Send email')" color="primary" v-close-popup />
+            <q-btn flat :label="$t('Close')" color="primary" v-close-popup />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
+      <q-dialog v-model="sendEmailDialogSuccess">
+        <q-card class="dialog-min300">
+          <q-card-section>
+            <div class="text-h5">{{ $t('Email sent successfully') }} <span color="text-grey-8">{{ emailUser }}</span></div>
+          </q-card-section>
+          <q-card-actions align="right">
+            <q-btn flat :label="$t('Close')" color="primary" v-close-popup />
           </q-card-actions>
         </q-card>
       </q-dialog>
@@ -270,6 +286,7 @@ export default {
       alertLang: false,
       addMessageDialog: false,
       sendEmailDialog: false,
+      sendEmailDialogSuccess: false,
       shareQRcode: false,
       languageList: [
         {
@@ -306,7 +323,6 @@ export default {
     this.address = this.wallet.getAddressString()
 
     this.generateDeepQRcode()
-    this.generateLink()
   },
   methods: {
     generateDeepQRcode () {
@@ -355,6 +371,7 @@ export default {
       this.actionWallet()
     },
     prettyNumber (summ, length) {
+      if ((summ === undefined) || (summ === null)) return '0'
       let num = parseFloat(parseFloat(summ).toFixed(length))
       let parts = num.toString().split('.')
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
@@ -401,6 +418,8 @@ export default {
         if (data && data.data && data.data.data && parseFloat(data.data.data.total_balance_sum) > 0) {
           this.balance = data.data.data
           this.step = 3
+          this.generateLink()
+          this.copyLink()
         } else {
           if (this.balance === null) {
             setTimeout(this.checkBalance, 4000)
@@ -411,16 +430,25 @@ export default {
       })
     },
     sendEmailAction () {
-      if (this.emailUser) {
+      if (this.validateEmail()) {
+        this.sendEmailDialog = false
         this.$store.dispatch('SEND_EMAIL', {
           email: this.emailUser,
           username: this.username,
+          value: this.prettyNumber((this.balance && this.balance.total_balance_sum) || 0, 3),
           from: this.from,
-          message: this.message
+          link: this.resultLink
         }).then(response => {
+          this.sendEmailDialogSuccess = true
           console.log(response)
+        }).catch(error => {
+          console.log(error)
         })
       }
+    },
+    validateEmail () {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return re.test(String(this.emailUser).toLowerCase())
     },
     generateLink () {
       this.mnemonicKey = this.mnemonic.split(' ').map(word => wordlists.english.indexOf(word)).join('.')
@@ -452,7 +480,8 @@ export default {
   },
   computed: {
     ...mapState({
-      language: state => state.app.language
+      language: state => state.app.language,
+      currency: state => state.api.currency
     }),
     language: {
       get () {
@@ -464,12 +493,6 @@ export default {
     }
   },
   watch: {
-    step (val) {
-      if (val === 3) {
-        this.generateLink()
-        this.copyLink()
-      }
-    },
     deeplinkAmount () {
       this.generateDeepQRcode()
     },

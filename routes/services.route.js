@@ -36,13 +36,8 @@ router.post('/biptophone/validate', cors(corsOptions), (req, res) => {
 });
 
 // MinterPay
-router.post('/minterpay', cors(corsOptions), (req, res) => {
-  minterpayController.send(req, res);
-});
-
-// router.post('/', (req, res) => {
-//   biptophoneController.add(req, res);
+// router.post('/minterpay', cors(corsOptions), (req, res) => {
+//   minterpayController.send(req, res);
 // });
-
 
 export default router;

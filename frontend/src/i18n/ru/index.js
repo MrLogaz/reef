@@ -38,6 +38,9 @@ export default {
   'Choose a language': 'Выберите язык',
   'Easy way to send a gift': 'Простой способ отправить подарок',
   'Easy way to send a value': 'Простой способ отправить ценность',
+  'Send email': 'Отправить email',
+  'Enter recipient email': 'Укажите email получателя',
+  'Email sent successfully': 'Письмо успешно отправлено',
 
   // Gift
   'Hello': 'Привет',

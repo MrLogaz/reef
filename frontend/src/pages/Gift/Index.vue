@@ -98,7 +98,7 @@ export default {
         .catch(error => console.log('Error sharing', error))
     },
     checkAddress () {
-      return this.sendAddress && this.sendAddress.length === 42 && Big(this.balance.total_balance_sum).gte(0.5)
+      return this.sendAddress && this.sendAddress.length === 42 && Big(this.balance.total_balance_sum).gte(0.011)
     },
     onSendToAddress () {
       if (!this.checkAddress) return false

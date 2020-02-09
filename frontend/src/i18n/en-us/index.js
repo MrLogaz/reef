@@ -38,6 +38,9 @@ export default {
   'Choose a language': 'Choose a language',
   'Easy way to send a gift': 'Easy way to send a gift',
   'Easy way to send a value': 'Easy way to send a value',
+  'Send email': 'Send email',
+  'Enter recipient email': 'Enter recipient email',
+  'Email sent successfully': 'Email sent successfully',
 
   // Gift
   'Hello': 'Hello',

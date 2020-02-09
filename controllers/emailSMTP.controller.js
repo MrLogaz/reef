@@ -5,24 +5,22 @@ const controller = {}
 
 const transporterData = {
   host: process.env.EMAIL_SMTP_SERVER,
-  port: process.env.EMAIL_SMTP_PORT,
-  secure: true, // true for 465, false for other ports
+  port: parseInt(process.env.EMAIL_SMTP_PORT, 10),
+  secure: false,
   auth: {
     user: process.env.EMAIL_SMTP_NOREPLY, // generated ethereal user
     pass: process.env.EMAIL_SMTP_PASS // generated ethereal password
   },
-  secureConnection: false,
-  tls: {
-    rejectUnauthorized: false
-  }
+  logger: true,
+  debug: true
 }
 const transporter = nodemailer.createTransport(transporterData)
 
 controller.sendSolo = (req, res) => {
 
     console.log(transporterData)
-    console.log('-----------')
-    console.log(req.body)
+    // console.log('-----------')
+    // console.log(req.body)
     console.log('//////////////')
     // transporter.verify(function(error, success) {
     //   if (error) {
@@ -36,6 +34,7 @@ controller.sendSolo = (req, res) => {
       const mailTo = req.body.email
       const username = req.body.username
       const giftLink = req.body.link
+
       const mailOptions = {
         from: process.env.EMAIL_SMTP_NOREPLY,
         to: mailTo,
@@ -44,7 +43,7 @@ controller.sendSolo = (req, res) => {
       }
       let info = await transporter.sendMail({
         from: '"Reef" <' + process.env.EMAIL_SMTP_NOREPLY + '>', // sender address
-        to: "mrlogaz@gmail.com", // list of receivers
+        to: 'mrlogaz@gmail.com', // list of receivers
         subject: "Hello ✔", // Subject line
         text: "Hello", // plain text body
         html: "<b>Hello</b>" // html body
@@ -56,6 +55,7 @@ controller.sendSolo = (req, res) => {
     }
 
     main().catch(error => {
+      logger.error(error)
       res.json({
         error: error
       })
