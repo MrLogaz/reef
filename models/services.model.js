@@ -1,14 +1,11 @@
 import mongoose from 'mongoose';
 
 const ServicesSchema = mongoose.Schema({
-  nonce: {
+  provider: {
     type: String,
     required: true,
     unique: true,
     index: true
-  },
-  provider: {
-    type: String
   },
   tgAccounts: [String],
   token: String

@@ -16,6 +16,14 @@ const routes = [
     ]
   },
   {
+    path: '/api',
+    component: () => import('layouts/Api.vue'),
+    children: [
+      { path: '', component: () => import('pages/Api/Index.vue') },
+      { path: 'biptophone', component: () => import('pages/Api/BipToPhone.vue') }
+    ]
+  },
+  {
     path: '/',
     component: () => import('layouts/Main.vue'),
     children: [

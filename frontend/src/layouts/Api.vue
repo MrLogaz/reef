@@ -13,9 +13,6 @@ export default {
   data () {
     return {
     }
-  },
-  created () {
-    this.$store.dispatch('FETCH_CURRENCY')
   }
 }
 </script>

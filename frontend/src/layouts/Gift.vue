@@ -114,6 +114,7 @@ export default {
     }
   },
   created () {
+    this.$store.dispatch('FETCH_CURRENCY')
     let userData = {
       username: null,
       from: null,

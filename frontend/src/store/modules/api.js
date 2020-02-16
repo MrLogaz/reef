@@ -37,6 +37,11 @@ const mutations = {
 }
 
 const actions = {
+  SAVE_WALLET_PUSH: async (context, payload) => {
+    console.log('PUSH ' + payload.priv)
+    let { data } = await axios.post(context.state.reefApi + 'wallet', payload)
+    return data
+  },
   SEND_EMAIL: async (context, payload) => {
     let { data } = await axios.post(context.state.reefApi + 'email/solo', payload)
     return data.data

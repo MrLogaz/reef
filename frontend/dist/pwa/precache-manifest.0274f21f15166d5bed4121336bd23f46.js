@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "06318fe616b21ba6411f",
+    "revision": "24cf1e3619d14f0e291a",
     "url": "css/2.168aa1a5.css"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "css/4.e72d3887.css"
   },
   {
-    "revision": "4b3dce97c0d35320e83c",
+    "revision": "ecf3b4cbbe3361e44642",
     "url": "css/app.2f261bc7.css"
   },
   {
@@ -20,32 +20,44 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.0509ab09.woff2"
   },
   {
-    "revision": "7f51a780c3c7b81ec87f2401f2ff7010",
+    "revision": "c330c9782818fa6fa7daf469617db6f9",
     "url": "index.html"
   },
   {
-    "revision": "ebf94d14d02443c0de80",
-    "url": "js/1.faa5c3a7.js"
+    "revision": "bec1fb086c15ffb58782",
+    "url": "js/1.3fbf4b18.js"
   },
   {
-    "revision": "06318fe616b21ba6411f",
-    "url": "js/2.a1f3ff18.js"
+    "revision": "24cf1e3619d14f0e291a",
+    "url": "js/2.505e901b.js"
   },
   {
     "revision": "ee4f0c3253d51b5e365a",
     "url": "js/4.aeb8c376.js"
   },
   {
-    "revision": "467dc0794742ef76338d",
-    "url": "js/5.4440450c.js"
+    "revision": "96cd41fa4a96b28ac0cb",
+    "url": "js/5.7dd9d9ac.js"
   },
   {
-    "revision": "45801a749d2bc842f4ab",
-    "url": "js/6.5290a35a.js"
+    "revision": "5c82cbc8ee17f8c6ac0b",
+    "url": "js/6.5a94965e.js"
   },
   {
-    "revision": "4b3dce97c0d35320e83c",
-    "url": "js/app.a802a36d.js"
+    "revision": "1d18f65fac3b0d44ba57",
+    "url": "js/7.25739b82.js"
+  },
+  {
+    "revision": "07bc07bcab759134f5d8",
+    "url": "js/8.0ab74853.js"
+  },
+  {
+    "revision": "c9eb037bea205e06f42b",
+    "url": "js/9.d580d218.js"
+  },
+  {
+    "revision": "ecf3b4cbbe3361e44642",
+    "url": "js/app.f0b8fe1d.js"
   },
   {
     "revision": "7117d6743582258d9e1f",
@@ -374,5 +386,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e9541d7555ae7795e2de823213afd098",
     "url": "statics/icons/safari-pinned-tab.svg"
+  },
+  {
+    "revision": "c0dc54b186a34a5b2c38193ed5bde6a1",
+    "url": "statics/strategy/biptophone.png"
   }
 ]);

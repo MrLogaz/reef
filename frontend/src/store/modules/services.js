@@ -13,8 +13,6 @@ const getters = {
 const mutations = {
   RESET_APP: state => {
     Object.assign(state, getDefaultState())
-  },
-  SET_LANG: (state, payload) => {
   }
 }
 
@@ -27,7 +25,6 @@ const actions = {
     let { data } = await axios.post(context.rootState.api.reefApi + 'services/biptophone/validate', payload)
     return data
   }
-  // s
 }
 
 export default {

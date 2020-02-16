@@ -234,3 +234,131 @@
 {"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m802.865 ms - 144\u001b[0m\n","level":"info"}
 {"message":"SendPuls - Failed to authenticate on SMTP server with username \"mrlogaz@gmail.com\" using 2 possible authenticators","level":"info"}
 {"message":"\u001b[0mPOST /api/email/solo \u001b[32m200 \u001b[0m1101.274 ms - 144\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/services/biptophone \u001b[32m200 \u001b[0m353.885 ms - 28\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - TypeError: _strategy.default.biptophone.pay is not a function","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - TypeError: Cannot read property 'pay' of undefined","level":"error"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - TypeError: Cannot read property 'toLowerCase' of undefined","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - TypeError: _strategy.default.includes is not a function","level":"error"}
+{"message":"ERROR - TypeError: _strategy.default.includes is not a function","level":"error"}
+{"message":"ERROR - TypeError: _strategy.default.includes is not a function","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - TypeError: _strategy.default.includes is not a function","level":"error"}
+{"message":"ERROR - TypeError: _strategy.default.includes is not a function","level":"error"}
+{"message":"ERROR - TypeError: _strategy.default.includes is not a function","level":"error"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - TypeError: _strategy.default.includes is not a function","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m10.287 ms - 21\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m1.933 ms - 21\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/strategy/biptophone \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/pay \u001b[32m200 \u001b[0m1.153 ms - 21\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m0.308 ms - 26\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m0.797 ms - 21\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m8.916 ms - 21\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m10.643 ms - 21\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m3.570 ms - 21\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m1.846 ms - 21\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m8.137 ms - 21\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/sa \u001b[32m200 \u001b[0m15.434 ms - 57\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophones/sa \u001b[32m200 \u001b[0m1.438 ms - 68\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/status \u001b[32m200 \u001b[0m0.806 ms - 24\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/status \u001b[32m200 \u001b[0m0.526 ms - 24\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m1.479 ms - 21\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m0.273 ms - 21\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/status \u001b[32m200 \u001b[0m0.860 ms - 24\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m0.845 ms - 21\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/status \u001b[32m200 \u001b[0m0.793 ms - 24\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m0.750 ms - 21\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m7.528 ms - 21\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptopshone/status \u001b[32m200 \u001b[0m1.561 ms - 68\u001b[0m\n","level":"info"}
+{"message":"ERROR - TypeError: Cannot read property 'hasOwnProperty' of undefined","level":"error"}
+{"message":"\u001b[0mPOST /api/strategy/biptopshone/stasstus \u001b[32m200 \u001b[0m0.449 ms - 68\u001b[0m\n","level":"info"}
+{"message":"ERROR - TypeError: Cannot read property 'hasOwnProperty' of undefined","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptopshone/stasstus \u001b[33m404 \u001b[0m14.561 ms - 68\u001b[0m\n","level":"info"}
+{"message":"ERROR - TypeError: Cannot read property 'hasOwnProperty' of undefined","level":"error"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/ssstatus \u001b[33m405 \u001b[0m1.976 ms - 63\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/bisptophone/ssstatus \u001b[33m404 \u001b[0m6.546 ms - 68\u001b[0m\n","level":"info"}
+{"message":"ERROR - TypeError: Cannot read property 'hasOwnProperty' of undefined","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/bisptophone/ssstatus \u001b[32m200 \u001b[0m11.728 ms - 68\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/bisptophone/ssstatus \u001b[32m200 \u001b[0m7.223 ms - 68\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m1.414 ms - 21\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m5.228 ms - 21\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/bisptophone/ssstatus \u001b[32m200 \u001b[0m1.543 ms - 68\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/status \u001b[32m200 \u001b[0m0.582 ms - 24\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m5.022 ms - 36\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m423.295 ms - 71\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m693.508 ms - 60\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m334.998 ms - 71\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m508.391 ms - 71\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m302.956 ms - 71\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m305.113 ms - 31\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m264.299 ms - 35\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m205.217 ms - 35\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m390.695 ms - 31\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone/validate \u001b[32m200 \u001b[0m339.577 ms - 31\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m860.878 ms - 53\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}

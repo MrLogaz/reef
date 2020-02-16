@@ -321,7 +321,6 @@ export default {
     this.mnemonic = generateMnemonic()
     this.wallet = walletFromMnemonic(this.mnemonic)
     this.address = this.wallet.getAddressString()
-
     this.generateDeepQRcode()
   },
   methods: {
@@ -419,7 +418,6 @@ export default {
           this.balance = data.data.data
           this.step = 3
           this.generateLink()
-          this.copyLink()
         } else {
           if (this.balance === null) {
             setTimeout(this.checkBalance, 4000)
@@ -449,6 +447,9 @@ export default {
     validateEmail () {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return re.test(String(this.emailUser).toLowerCase())
+    },
+    generateLinkNew () {
+      console.log(this.wallet.getPrivateKeyString())
     },
     generateLink () {
       this.mnemonicKey = this.mnemonic.split(' ').map(word => wordlists.english.indexOf(word)).join('.')
@@ -480,7 +481,6 @@ export default {
   },
   computed: {
     ...mapState({
-      language: state => state.app.language,
       currency: state => state.api.currency
     }),
     language: {

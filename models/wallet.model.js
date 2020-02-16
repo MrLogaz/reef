@@ -1,31 +1,34 @@
-import mongoose from 'mongoose';
+import mongoose from 'mongoose'
 
 const WalletSchema = mongoose.Schema({
-  nonce: {
+  hash: {
     type: String,
     required: true,
     unique: true,
     index: true
   },
-  private: {
-    type: String
-  },
-  username: {
-    type: String
-  },
-  from: {
-    type: String
+  private: String,
+  address: String,
+  meta: {
+    username: String,
+    from: String,
+    message: String
   },
   project: {
     type: Boolean,
     default: false
   },
-}, {collection : 'Wallet'});
+  stats: {
+    counter: Number,
+    visits: Number
+  },
+  strategy: [String]
+}, {collection : 'Wallet'})
 
-let WalletModel = mongoose.model('Wallet', WalletSchema);
+let WalletModel = mongoose.model('Wallet', WalletSchema)
 
 WalletModel.add = walletToAdd => {
-  return walletToAdd.save();
+  return walletToAdd.save()
 }
 
-export default WalletModel;
+export default WalletModel
