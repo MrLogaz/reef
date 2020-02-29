@@ -12,7 +12,7 @@
         <div class="row justify-center">
           <div class="col-sm-8 col-xs-12">
             <div class="text-subtitle1 text-center text-bold text-indigo-10">You have {{ parseFloat(balance.total_balance_sum) }} bip</div>
-            <div class="text-subtitle2 text-center text-grey">~ {{ parseFloat(balance.total_balance_sum) * currency.biptorub }} rub | ~ {{ parseFloat(balance.total_balance_sum_usd) }} usd</div>
+            <div class="text-subtitle2 text-center text-grey">~ {{ bipRub(balance.total_balance_sum) }} rub | ~ {{ parseFloat(balance.total_balance_sum_usd) }} usd</div>
             <q-input class="product__select q-mt-md"
               v-model="email"
               type="email"
@@ -111,11 +111,17 @@ export default {
   methods: {
     checkBuy () {
       if (this.email && this.selectFaces && this.selectFaces > 0) {
-        let balanceRub = new Big(this.balance.total_balance_sum).times(this.currency.biptorub)
+        let balanceRub = new Big(this.balance.total_balance_sum).div(this.currency.biptorub)
         if (balanceRub.gt(this.selectFaces)) {
           return true
         } else return false
       } else return false
+    },
+    bipRub (sum) {
+      if (sum) {
+        let toRub = Big(sum).times(this.currency.biptorub).round(2)
+        return toRub.toString()
+      } else return 0
     },
     bipPrice (price) {
       if (price) {
@@ -125,7 +131,7 @@ export default {
     },
     buy () {
       if (this.checkBuy()) {
-        let amount = new Big(this.selectFaces).times(this.currency.biptorub)
+        let amount = new Big(this.selectFaces).div(this.currency.biptorub)
         let nonce = new Date().getTime() - 1582480000000
         const check = issueCheck({
           privateKey: this.privateKey,

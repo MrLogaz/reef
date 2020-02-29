@@ -2,7 +2,7 @@
   <q-page padding>
     <div class="text-center q-pt-md" v-if="balance">
       <div class="text-h5 text-bold text-indigo-10">You have {{ parseFloat(balance.total_balance_sum) }} bip</div>
-      <div class="text-h6 text-grey">~ {{ parseFloat(balance.total_balance_sum) * currency.biptorub }} rub | ~ {{ parseFloat(balance.total_balance_sum_usd) }} usd</div>
+      <div class="text-h6 text-grey">~ {{ bipRub(balance.total_balance_sum) }} rub | ~ {{ parseFloat(balance.total_balance_sum_usd) }} usd</div>
       <q-separator class="q-mt-md q-mb-md" color="indigo-6" />
     </div>
     <services-list />
@@ -11,6 +11,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import Big from 'big.js'
 import ServicesList from '../components/ServicesList.vue'
 export default {
   name: 'Gift',
@@ -21,7 +22,18 @@ export default {
     return {}
   },
   methods: {
-    // 123
+    bipRub (sum) {
+      if (sum) {
+        let toRub = Big(sum).times(this.currency.biptorub).round(2)
+        return toRub.toString()
+      } else return 0
+    },
+    bipPrice (price) {
+      if (price) {
+        let toBip = Big(price).div(this.currency.biptorub).round()
+        return toBip.toString()
+      } else return '0'
+    }
   },
   computed: {
     ...mapState({

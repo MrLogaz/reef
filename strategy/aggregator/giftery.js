@@ -36,7 +36,6 @@ const pay = async (req, res) => {
   const decode = decodeCheck(req.body.check)
   const currencyData = await Currency.findOne({ provider: 'base' })
   let amount = new Big(req.body.face).div(currencyData.biptorub)
-  console.log(amount.toString(), decode.value)
   if (amount.eq(decode.value)) {
     const txData = {
       type: 'check',
@@ -56,8 +55,7 @@ const pay = async (req, res) => {
       const makeMerchantOrder = {
         product_id: req.body.product,
         email_to: req.body.email,
-        face: 500,
-        // face: req.body.face,
+        face: req.body.face,
         comment: checkHash
       }
       const merchantOrderId = await requestGiftery('makeOrder', makeMerchantOrder)
@@ -81,6 +79,7 @@ const pay = async (req, res) => {
       })
     } catch (error) {
       console.log(error)
+      res.status(500)
       res.json({
         method: 'Pay',
         status: 'Error',
@@ -88,6 +87,7 @@ const pay = async (req, res) => {
       })
     }
   } else {
+    res.status(500)
     res.json({
       method: 'Pay',
       status: 'Failed',
@@ -125,6 +125,7 @@ const getProducts = async (req, res) => {
       products: productsData
     })
   } catch (err) {
+    res.status(500)
     res.json({
       status: 'Failed',
       error: err
@@ -146,6 +147,7 @@ const testorder = async (req, res) => {
       orderData: orderData
     })
   } catch (err) {
+    res.status(500)
     res.json({
       status: 'Failed',
       error: err
@@ -163,6 +165,7 @@ const getCertificate = async (req, res) => {
       certificateData
     })
   } catch (err) {
+    res.status(500)
     res.json({
       status: 'Failed',
       error: err
@@ -177,6 +180,7 @@ const getBalance = async (req, res) => {
       balanceData: balanceData
     })
   } catch (err) {
+    res.status(500)
     res.json({
       status: 'Failed',
       error: err
@@ -200,6 +204,7 @@ const updateGiftery = async (req, res) => {
       productsSaved: productsSaved
     })
   } catch (err) {
+    res.status(500)
     res.json({
       status: 'Failed',
       error: err
