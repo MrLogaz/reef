@@ -51,7 +51,6 @@ const mutations = {
 
 const actions = {
   SAVE_WALLET_PUSH: async (context, payload) => {
-    console.log('PUSH ' + payload.priv)
     let { data } = await axios.post(context.state.reefApi + 'wallet', payload)
     return data
   },
@@ -73,7 +72,6 @@ const actions = {
   },
   FETCH_PRODUCTS: async (context, payload) => {
     let { data } = await axios.get(context.state.reefApi + 'strategy/giftery/products')
-    console.log(data)
     context.commit('SET_PRODUCTS', data)
   }
 }

@@ -119,7 +119,7 @@ export default {
     },
     bipPrice (price) {
       if (price) {
-        let toBip = Big(price).times(this.currency.biptorub)
+        let toBip = Big(price).div(this.currency.biptorub).round()
         return toBip.toString()
       } else return '0'
     },

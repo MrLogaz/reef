@@ -53,6 +53,7 @@ export default {
         address: wallet.getAddressString(),
         privateKey: wallet.getPrivateKeyString()
       })
+      this.$store.dispatch('FETCH_BALANCE')
       const path = '/' + seedkey + '/recive'
       if (this.$route.path !== path) this.$router.push(path)
     }

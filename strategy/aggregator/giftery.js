@@ -35,7 +35,7 @@ const requestGiftery = async (method = 'test', dataReq = '') => {
 const pay = async (req, res) => {
   const decode = decodeCheck(req.body.check)
   const currencyData = await Currency.findOne({ provider: 'base' })
-  let amount = new Big(req.body.face).times(currencyData.biptorub)
+  let amount = new Big(req.body.face).div(currencyData.biptorub)
   console.log(amount.toString(), decode.value)
   if (amount.eq(decode.value)) {
     const txData = {
