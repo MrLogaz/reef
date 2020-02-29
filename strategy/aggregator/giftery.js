@@ -16,11 +16,11 @@ const merchant = {
 }
 
 const requestGiftery = async (method = 'test', dataReq = '') => {
-  const dataReqUrl = JSON.stringify(dataReq)
+  const dataReqUrl = dataReq === '' ? '' : '&data=' + JSON.stringify(dataReq)
   // const dataReqUrl = new URLSearchParams(dataReq).toString()
   const secret = method + dataReqUrl + process.env.GIFTERY_KEY
   const SIG = crypto.createHash('sha256').update(secret).digest('hex');
-  const sendData = `id=${process.env.GIFTERY_ID}&cmd=${method}&data=${dataReqUrl}&sig=${SIG}&in=json&out=json`
+  const sendData = `id=${process.env.GIFTERY_ID}&cmd=${method}${dataReqUrl}&sig=${SIG}&in=json&out=json`
   console.log(method + ' ////////////////')
   console.log(merchant.api + '/?' + sendData)
 
@@ -211,7 +211,7 @@ export default {
   pay,
   validate,
   status,
-  testorder,
+  // testorder,
   certificate: getCertificate,
   update: updateGiftery,
   products: getProducts,
