@@ -1,34 +1,28 @@
 
 const routes = [
   {
-    path: '/start',
-    component: () => import('layouts/Main.vue'),
-    children: [
-      { path: '', component: () => import('pages/Index.vue'), params: true }
-    ]
-  },
-  {
-    path: '/gift',
-    component: () => import('layouts/Gift.vue'),
-    children: [
-      { path: '', component: () => import('pages/Gift/Index.vue'), params: true },
-      { path: 'biptophone', component: () => import('pages/Gift/Biptophone.vue') }
-    ]
-  },
-  {
     path: '/api',
     component: () => import('layouts/Api.vue'),
     children: [
       { path: '', component: () => import('pages/Api/Index.vue') },
-      { path: 'biptophone', component: () => import('pages/Api/BipToPhone.vue') }
+      { path: 'biptophone', component: () => import('pages/Api/BipToPhone.vue') },
+      { path: 'ozon', component: () => import('pages/Api/Ozon.vue') }
     ]
   },
   {
-    path: '/',
-    component: () => import('layouts/Main.vue'),
+    path: '/:seed',
+    component: () => import('layouts/Client.vue'),
     children: [
-      { path: '', redirect: '/start' }
+      { name: 'gift', path: '', component: () => import('pages/Gift.vue'), params: true },
+      { name: 'recive', path: 'recive', component: () => import('pages/Recive.vue'), params: true },
+      { name: 'settings', path: 'settings', component: () => import('pages/Settings.vue'), params: true },
+      { name: 'category', path: 'category/:categoryId', component: () => import('pages/Category.vue'), params: true },
+      { name: 'product', path: 'product/:productId', component: () => import('pages/Product.vue'), params: true }
     ]
+  },
+  {
+    path: '*',
+    component: () => import('layouts/Client.vue')
   }
 ]
 
@@ -36,9 +30,9 @@ const routes = [
 if (process.env.MODE !== 'ssr') {
   routes.push({
     path: '*',
-    component: () => import('layouts/Main.vue'),
+    component: () => import('layouts/Client.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: '', component: () => import('pages/Start.vue') }
     ]
   })
 }

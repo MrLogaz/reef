@@ -1,69 +1,45 @@
 <template>
   <div>
-    <div class="row">
+    <!-- <div class="row justify-center">
+      <div class="col-sm-4 col-xs-6">
+        <div class="card-app">
+          <q-btn :to="'/' + seedkey + '/biptophone/'" no-caps>
+            <q-avatar color="orange" size="3.7em" text-color="white">
+              <q-icon name="system_update" size="1.2em" />
+            </q-avatar>
+            <div class="full-width">{{ $t('Top up phone balance') }}</div>
+          </q-btn>
+        </div>
+      </div>
       <div class="col-sm-4 col-xs-6">
         <div class="card-app">
           <q-btn to="/gift/biptophone" no-caps>
-            <q-avatar color="red" size="3.5em" text-color="white">
-              <q-icon name="phone_iphone" size="1.2em" />
+            <q-avatar color="orange" size="3.7em" text-color="white">
+              <q-icon name="system_update" size="1.2em" />
             </q-avatar>
-            <div class="q-pt-sm">{{ $t('Top up phone balance') }}</div>
+            <div class="full-width">{{ $t('Top up phone balance') }}</div>
           </q-btn>
         </div>
       </div>
-
-      <div class="col-sm-4 col-xs-6">
-        <div class="card-app">
-          <q-btn class="card-app" no-caps @click="createWallet">
-            <q-avatar color="red" size="3.5em" text-color="white">
-              <q-icon name="account_balance_wallet" size="1.2em" />
-            </q-avatar>
-            <div class="q-pt-sm">{{ $t('Create wallet') }}</div>
+    </div> -->
+    <div class="row justify-center" v-if="categories && categories.length">
+      <div class="col-sm-4 col-xs-6" v-for="category in categories" :key="category.id">
+        <div class="card-app category-giftery">
+          <q-btn :to="'/' + seedkey + '/category/' + category.id" no-caps>
+            <div class="full-width text-indigo-10 text-bold text-subtitle1">{{ language === 'ru' ? category.title : category.title_en.length ? category.title_en : category.code }}</div>
           </q-btn>
         </div>
       </div>
-
-      <div class="col-sm-4 col-xs-6">
-        <div class="card-app">
-          <q-btn :disabled="true" class="card-app" no-caps>
-            <q-avatar color="grey" size="3.5em" text-color="white">
-              <q-icon name="fastfood" size="1.2em" />
-            </q-avatar>
-            <div class="q-pt-sm">{{ $t('Buy eda.yandex') }}</div>
-          </q-btn>
-        </div>
-      </div>
-      <div class="col-sm-4 col-xs-6">
-        <div class="card-app">
-          <q-btn :disabled="true" class="card-app" no-caps>
-            <q-avatar color="grey" size="3.5em" text-color="white">
-              <q-icon name="credit_card" size="1.2em" />
-            </q-avatar>
-            <div class="q-pt-sm">{{ $t('Card transfer') }}</div>
-          </q-btn>
-        </div>
-        </div>
     </div>
-
-    <q-dialog v-model="soonDialog" transition-show="scale" transition-hide="scale">
-      <q-card class="dialog-min300 text-center q-pt-lg q-pb-lg">
-        <div class="text-h4">SOON</div>
-      </q-card>
-    </q-dialog>
   </div>
 </template>
 
 <script>
 
 import { mapState } from 'vuex'
-import { openURL } from 'quasar'
 export default {
-  name: 'Apps',
-  components: {
-    // 'service-biptophone': ServiceBiptophone
-    // Carousel,
-    // Slide
-  },
+  name: 'Strategy',
+  components: {},
   data () {
     return {
       biptophone: false,
@@ -72,29 +48,17 @@ export default {
   },
   methods: {
     createWallet () {
-      openURL('https://cp002.cloudp.group/?#/hello?key=' + this.urlKey)
+      // openURL('https://cp002.cloudp.group/?#/hello?key=' + this.seedkey)
     }
   },
   computed: {
     ...mapState({
-      urlKey: state => state.wallet.urlKey,
+      seedkey: state => state.wallet.seedkey,
       currency: state => state.api.currency,
+      categories: state => state.api.categories,
       balance: state => state.api.balance,
-      balanceJSON: state => state.api.balanceJSON
+      language: state => state.app.language
     })
   }
 }
 </script>
-
-<style>
-  .card-app {
-    padding: 0 5px 7px;
-  }
-  .card-app .q-btn {
-    padding: 5px 0;
-    font-size: 14px;
-    line-height: 1.2em;
-    font-weight: 500;
-    min-height: 128px
-  }
-</style>

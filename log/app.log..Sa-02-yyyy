@@ -362,3 +362,368 @@
 {"message":"Connected to mongo!!!","level":"info"}
 {"message":"\u001b[0mPOST /api/strategy/biptophone \u001b[32m200 \u001b[0m860.878 ms - 53\u001b[0m\n","level":"info"}
 {"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m25.642 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m83.303 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m32.806 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m96.294 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m4.925 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m62.314 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m3.549 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m65.606 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m4.345 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m44.504 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m2.346 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m41.672 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m2.983 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m59.681 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m17.424 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m73.024 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m4.696 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m51.851 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m2.721 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m69.923 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m4.435 ms - 38\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m47.679 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m606.363 ms - 29\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m12.272 ms - 51\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m71.881 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m581.917 ms - 29\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m15.263 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m61.369 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m3.924 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m86.421 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m601.853 ms - 29\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency \u001b[36m304 \u001b[0m7.611 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m6.893 ms - 2\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[36m304 \u001b[0m32.352 ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m613.586 ms - 29\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m9.623 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m40.788 ms - 2\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[36m304 \u001b[0m1481.925 ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[36m304 \u001b[0m460.309 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[36m304 \u001b[0m39.181 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m11.221 ms - 30\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m13.329 ms - 221\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m39.532 ms - 139\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[36m304 \u001b[0m523.685 ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m625.129 ms - 29\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m624.282 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[36m304 \u001b[0m471.987 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m436.586 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m619.078 ms - 131\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m561.661 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[36m304 \u001b[0m545.252 ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m64.561 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m52.697 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m567.568 ms - 131\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m4.171 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m519.337 ms - 68\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m11.448 ms - 2\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[36m304 \u001b[0m582.284 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m11.467 ms - 2\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m19.267 ms - 93\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m45.627 ms - 50\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m4.456 ms - 125\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m677.411 ms - 68\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m10.216 ms - 125\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m543.898 ms - 168\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m10.637 ms - 52\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m616.904 ms - 168\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m8.262 ms - 52\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m449.986 ms - 168\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m2.248 ms - 52\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m589.926 ms - 168\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m584.337 ms - 168\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m8.981 ms - 66\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m6.739 ms - 64\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m79.367 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m17.889 ms - 16\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m60.407 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m621.069 ms - 168\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m2.311 ms - 66\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m558.325 ms - 168\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m12.466 ms - 67\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m10.944 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m75.319 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m25.688 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m78.377 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m7.096 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m91.004 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m2.443 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m50.964 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m1.981 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m52.486 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m29.783 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m98.143 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m46.402 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m106.329 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m14.223 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m74.176 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m30.508 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m93.478 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/pay \u001b[32m200 \u001b[0m2.615 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m26.588 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m100.925 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/pay \u001b[32m200 \u001b[0m0.447 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/pay \u001b[32m200 \u001b[0m6.389 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/pay \u001b[32m200 \u001b[0m7.831 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m21.549 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m66.675 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m3.623 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m8.268 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m35.959 ms - 2490\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m16.791 ms - 2490\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m20.752 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m19.127 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m98.093 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m9.692 ms - 16\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m1285.032 ms - 44\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m29.981 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m91.648 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - ReferenceError: currency is not defined","level":"error"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/order/list \u001b[32m200 \u001b[0m14.251 ms - 2\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m24.526 ms - 66\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m3.617 ms - 66\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m3.676 ms - 66\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m1248.110 ms - 44\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m344.860 ms - 44\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m5667.067 ms - 370\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m4881.256 ms - 707\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/order/list \u001b[32m200 \u001b[0m26.009 ms - 289\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"ERROR - NotFoundError: Not Found","level":"error"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/balance \u001b[0m- \u001b[0m- ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/balance \u001b[32m200 \u001b[0m264.416 ms - 66\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m3833.617 ms - 44\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m3789.575 ms - 44\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/testOrder \u001b[32m200 \u001b[0m2.869 ms - 64\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/testOrder \u001b[32m200 \u001b[0m252.450 ms - 138\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/testOrder \u001b[32m200 \u001b[0m1556.536 ms - 64\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/order/list \u001b[32m200 \u001b[0m13.934 ms - 289\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/certificate \u001b[32m200 \u001b[0m1655.149 ms - 107235\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m38.206 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m120.867 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m5.466 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m53.269 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m1.505 ms - 67\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency/update \u001b[32m200 \u001b[0m725.639 ms - 168\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency/list \u001b[32m200 \u001b[0m8.519 ms - 66\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m13.502 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m85.888 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m4.025 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m70.348 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m34.872 ms - 66\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m25.472 ms - 66\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m32.257 ms - 66\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m2846.631 ms - 44\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m8579.316 ms - 194\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/order/list \u001b[32m200 \u001b[0m9.944 ms - 608\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m4.411 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m90.293 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m25.810 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m81.124 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m34.068 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m103.984 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m30.987 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m78.789 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m27.459 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m88.787 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"Connected to mongo!!!","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m24.714 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m93.855 ms - 403020\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mPOST /api/strategy/giftery/pay \u001b[32m200 \u001b[0m1473.281 ms - 1810\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/currency \u001b[32m200 \u001b[0m4.231 ms - 17\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /api/strategy/giftery/products \u001b[32m200 \u001b[0m85.524 ms - 403020\u001b[0m\n","level":"info"}

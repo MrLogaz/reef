@@ -1,1 +1,0 @@
-minterpay.route.js

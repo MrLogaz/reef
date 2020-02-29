@@ -55,4 +55,4 @@ controller.delete = async (req, res) => {
   }
 }
 
-export default controller;
+export default controller

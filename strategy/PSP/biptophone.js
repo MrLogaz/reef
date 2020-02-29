@@ -2,14 +2,16 @@ import axios from 'axios'
 import Big from 'big.js'
 import { TX_TYPE, decodeCheck } from 'minter-js-sdk'
 import { getFeeValue } from 'minterjs-util'
+import { sleep } from '../../utils/helper'
 import { sender, checkToWallet } from '../../utils/minter'
-import httpInfo from '../../utils/httpInfo'
+import Order from '../../models/order.model'
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-
-const hostApi = 'https://biptophone.ru/api.php'
+const merchant = {
+  api: 'https://biptophone.ru/api.php',
+  address: 'Mx403b763ab039134459448ca7875c548cd5e80f77',
+  minBip: 1
+}
 const headersConfig = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
-const minBip = 1
 const feeCheck = getFeeValue(TX_TYPE.REDEEM_CHECK)
 const feeSend = getFeeValue(TX_TYPE.SEND, { payload: '03esf0' })
 
@@ -17,19 +19,19 @@ const validateFn = async userData => {
   if (userData.phone.match(/\d/g).length < 10) return false
 
   const sendData = 'validation=1&phone=' + userData.phone + '&key1=' + process.env.SERVICES_BIPTOPHONE
-  let { data } = await axios.post(hostApi, sendData, headersConfig)
+  let { data } = await axios.post(merchant.api, sendData, headersConfig)
   if (data.isvalid && data.isvalid === '1') return true
   else return false
 }
 const getCode = async userData => {
   const sendData = 'contact=1&phone=' + userData.phone + '&key1=' + process.env.SERVICES_BIPTOPHONE
-  let { data } = await axios.post(hostApi, sendData, headersConfig)
+  let { data } = await axios.post(merchant.api, sendData, headersConfig)
   if (data.keyword) return data.keyword
   else return false
 }
 const getCurs = async () => {
   const sendData = 'curs=1&key1=' + process.env.SERVICES_BIPTOPHONE
-  let { data } = await axios.post(hostApi, sendData, headersConfig)
+  let { data } = await axios.post(merchant.api, sendData, headersConfig)
   return data
 }
 
@@ -50,7 +52,7 @@ const pay = async (req, res) => {
             privateKey: checkWallet.privateKey,
             type: 'send',
             data: {
-              to: 'Mx403b763ab039134459448ca7875c548cd5e80f77',
+              to: merchant.address,
               value: Big(check.value).minus(feeSend).toString(),
               coin: 'BIP'
             },

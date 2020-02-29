@@ -1,8 +1,9 @@
-import { Minter, SendTxParams, DelegateTxParams, SellTxParams, BuyTxParams } from 'minter-js-sdk'
+import { Minter, TX_TYPE } from 'minter-js-sdk'
 
 const getDefaultState = () => {
   return {
     urlKey: null,
+    seedkey: null,
     address: null,
     publicKey: null,
     privateKey: null,
@@ -26,6 +27,7 @@ const mutations = {
     state.urlKey = payload
   },
   SAVE_WALLET: (state, payload) => {
+    state.seedkey = payload.seedkey
     state.address = payload.address
     state.privateKey = payload.privateKey
     state.mnemonic = payload.mnemonic
@@ -44,33 +46,47 @@ const mutations = {
 
 const actions = {
   SENDER: (context, payload) => {
-    payload.privateKey = context.state.privateKey
-    payload.chainId = 1
     context.commit('SET_SENDING', true)
-    let txParams = null
-    switch (payload.txAction) {
-      case 'SendTxParams':
-        txParams = new SendTxParams(payload)
+    let txParams = {
+      privateKey: context.state.privateKey,
+      chainId: 1,
+      data: payload.data,
+      gasCoin: payload.gasCoin || 'BIP',
+      payload: payload.payload || ''
+    }
+    switch (payload.type) {
+      case 'send':
+        txParams.type = TX_TYPE.SEND
         break
-      case 'DelegateTxParams':
-        txParams = new DelegateTxParams(payload)
+      case 'multisend':
+        txParams.type = TX_TYPE.MULTISEND
         break
-      case 'SellTxParams':
-        txParams = new SellTxParams(payload)
+      case 'delegate':
+        txParams.type = TX_TYPE.DELEGATE
         break
-      case 'BuyTxParams':
-        txParams = new BuyTxParams(payload)
+      case 'check':
+        txParams.type = TX_TYPE.REDEEM_CHECK
+        break
+      case 'sell':
+        txParams.type = TX_TYPE.SELL
+        break
+      case 'buy':
+        txParams.type = TX_TYPE.BUY
         break
       default:
-        return false
+        txParams.type = TX_TYPE.SEND
+        break
     }
     return new Promise((resolve, reject) => {
-      context.state.minterGate.postTx(txParams).then((txHash) => {
-        console.log(payload.txAction + ' created: ' + txHash)
+      context.state.minterGate.postTx(txParams).then(txHash => {
+        console.log('Sender 1111')
+        console.log(payload.type + ' created: ' + txHash)
+        resolve(txHash)
         context.commit('SET_SENDING', false)
         context.commit('SET_TXREADY', true)
-        resolve(txHash)
-      }).catch((error) => {
+      }).catch(error => {
+        console.log('Sender 2222 ERROR')
+        // console.log(error)
         context.commit('SET_SENDING', false)
         context.commit('SET_TXREADY', true)
         reject(error)

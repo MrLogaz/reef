@@ -27,20 +27,24 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/frontend/dist/pwa')));
 app.use(morgan("dev", { "stream": logger.stream }));
 
-import wallet from './routes/wallet.route'
+// import wallet from './routes/wallet.route'
 import services from './routes/services.route'
 import strategy from './routes/strategy.route'
 import email from './routes/email.route'
+import currency from './routes/currency.route'
+import order from './routes/order.route'
 
 app.get('/api', (req, res) => {
   res.json({
     message: 'Welcome to the API'
   })
 })
-app.use('/api/wallet', wallet);
+// app.use('/api/wallet', wallet);
 app.use('/api/email', email);
 app.use('/api/strategy', strategy);
 app.use('/api/services', services);
+app.use('/api/currency', currency);
+app.use('/api/order', order);
 app.get('/test', (req, res) => {
   res.send('Test endpoint!');
 });

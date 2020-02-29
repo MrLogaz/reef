@@ -36,12 +36,9 @@ export const sender = payload => {
   }
   return new Promise((resolve, reject) => {
     minterGate.postTx(txParams).then(txHash => {
-      console.log('Sender 1111')
       console.log(payload.type + ' created: ' + txHash)
       resolve(txHash)
     }).catch(error => {
-      console.log('Sender 2222')
-      // console.log(error)
       reject(error)
     })
   })

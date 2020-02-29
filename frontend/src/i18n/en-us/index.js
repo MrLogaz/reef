@@ -25,6 +25,7 @@ export default {
   'Send a gift': 'Send a gift',
   'Send coins': 'Send coins',
   'Send coins to address': 'Send coins to address',
+  'Or use deeplink': 'Or use deeplink',
   'Send this link to your friend': 'Send this link to your friend',
   'Send QR code': 'Send QR code',
   'QR code': 'QR code',
@@ -43,6 +44,7 @@ export default {
   'Email sent successfully': 'Email sent successfully',
 
   // Gift
+  'Gift': 'Gift',
   'Hello': 'Hello',
   'lucky': 'lucky',
   'Your friend': 'Your friend',
@@ -54,6 +56,7 @@ export default {
   'Save gift': 'Save gift',
 
   // Services
+  'Recive': 'Recive',
   'Create wallet': 'Create wallet',
   'Top up phone balance': 'Top up phone balance',
   'Top up internet balance': 'Top up internet balance',

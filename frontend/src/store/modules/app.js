@@ -2,7 +2,7 @@ import { i18n } from 'boot/i18n'
 
 const getDefaultState = () => {
   return {
-    language: 'ru',
+    language: 'en-us',
     username: null,
     from: null,
     message: null

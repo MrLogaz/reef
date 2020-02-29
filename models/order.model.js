@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import { getRandomHashHEX } from '../utils/nacl'
 
 const OrderSchema = mongoose.Schema({
   hash: {
@@ -8,24 +9,26 @@ const OrderSchema = mongoose.Schema({
     index: true
   },
   checkHash: String,
+  merchantOrderId: Number,
   address: String,
+  status: String,
   meta: mongoose.Mixed,
   date: {
     type: Date,
     default: Date.now
-  }
-  project: {
-    type: Boolean,
-    default: false
   },
-  projectUrl: String,
-  strategy: String
+  vendorUrl: String,
+  strategy: String,
+  product: Number,
+  face: Number
 }, {collection : 'Order'})
 
-let OrderSchema = mongoose.model('Order', OrderSchema)
+let OrderModel = mongoose.model('Order', OrderSchema)
 
-OrderSchema.add = orderToAdd => {
-  return orderToAdd.save()
+OrderModel.createNew = orderData => {
+  orderData.hash = getRandomHashHEX(4)
+  let order = new OrderModel(orderData)
+  return order.save()
 }
 
-export default OrderSchema
+export default OrderModel

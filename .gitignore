@@ -61,4 +61,5 @@ typings/
 .next
 
 log
-/log
+/log/
+log/
