@@ -61,7 +61,6 @@ typings/
 # next.js build output
 .next
 
-log
-/log/
 log/
-/log
+
+certificate/
