@@ -1,7 +1,16 @@
-// This is j  ust an example,
+// This is just an example,
 // so you can safely delete all default props below
 
 export default {
+  // NEW
+  'Payment was successful!': 'Payment was successful!',
+  'After a few seconds, the certificate will be ready': 'After a few seconds, the certificate will be ready',
+  'Your certificate is ready': 'Your certificate is ready',
+  'Open certificate': 'Open certificate',
+
+  'Send coins to address': 'Send coins to address',
+  'Or use deeplink': 'Or use deeplink',
+  // OLD
   'or': 'or',
   'Message': 'Message',
   'Result': 'Result',
@@ -24,8 +33,6 @@ export default {
   'Add message': 'Add message',
   'Send a gift': 'Send a gift',
   'Send coins': 'Send coins',
-  'Send coins to address': 'Send coins to address',
-  'Or use deeplink': 'Or use deeplink',
   'Send this link to your friend': 'Send this link to your friend',
   'Send QR code': 'Send QR code',
   'QR code': 'QR code',

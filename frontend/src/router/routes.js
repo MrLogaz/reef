@@ -13,7 +13,8 @@ const routes = [
     path: '/:seed',
     component: () => import('layouts/Client.vue'),
     children: [
-      { name: 'gift', path: '', component: () => import('pages/Gift.vue'), params: true },
+      { name: 'empty', path: '', redirect: 'gift' },
+      { name: 'gift', path: 'gift', component: () => import('pages/Gift.vue'), params: true },
       { name: 'recive', path: 'recive', component: () => import('pages/Recive.vue'), params: true },
       { name: 'settings', path: 'settings', component: () => import('pages/Settings.vue'), params: true },
       { name: 'category', path: 'category/:categoryId', component: () => import('pages/Category.vue'), params: true },

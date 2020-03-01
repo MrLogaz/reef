@@ -37,9 +37,11 @@ const mutations = {
     // state.minterGate = new Minter({ apiType: API_TYPE_NODE, baseURL: 'https://api.minter.stakeholder.space/' })
   },
   SET_SENDING: (state, payload) => {
+    console.log('SET_SENDING', payload)
     state.sending = payload
   },
   SET_TXREADY: (state, payload) => {
+    console.log('SET_TXREADY', payload)
     state.txReady = payload
   }
 }
@@ -79,14 +81,12 @@ const actions = {
     }
     return new Promise((resolve, reject) => {
       context.state.minterGate.postTx(txParams).then(txHash => {
-        console.log('Sender 1111')
         console.log(payload.type + ' created: ' + txHash)
         resolve(txHash)
         context.commit('SET_SENDING', false)
         context.commit('SET_TXREADY', true)
       }).catch(error => {
-        console.log('Sender 2222 ERROR')
-        // console.log(error)
+        console.log(error)
         context.commit('SET_SENDING', false)
         context.commit('SET_TXREADY', true)
         reject(error)

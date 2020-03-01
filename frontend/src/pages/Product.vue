@@ -11,16 +11,16 @@
         <div class="text-h6 text-center full-width q-mb-md text-bold text-indigo-10">Buy certificate</div>
         <div class="row justify-center">
           <div class="col-sm-8 col-xs-12">
-            <div class="text-subtitle1 text-center text-bold text-indigo-10">You have {{ parseFloat(balance.total_balance_sum) }} bip</div>
-            <div class="text-subtitle2 text-center text-grey">~ {{ bipRub(balance.total_balance_sum) }} rub | ~ {{ parseFloat(balance.total_balance_sum_usd) }} usd</div>
-            <q-input class="product__select q-mt-md"
+            <div v-if="balance" class="text-subtitle1 text-center text-bold text-indigo-10">You have {{ parseFloat(balance.total_balance_sum) }} bip</div>
+            <div v-if="balance" class="text-subtitle2 text-center text-grey">~ {{ bipRub(balance.total_balance_sum) }} rub | ~ {{ parseFloat(balance.total_balance_sum_usd) }} usd</div>
+            <!-- <q-input class="product__select q-mt-md"
               v-model="email"
               type="email"
               label="Email *"
               clearable
               outlined
               hint="A certificate will come to this mail"
-            />
+            /> -->
             <q-select class="product__select q-mt-md"
               outlined
               v-model="selectFaces"
@@ -65,17 +65,15 @@
         </q-card>
       </q-dialog>
 
-      <q-dialog v-model="success">
+      <q-dialog v-model="certificateDialog">
         <q-card class="dialog-min300 text-center">
           <q-card-section>
             <div>
-              <q-icon color="secondary" name="email" size="5em" />
+              <q-icon color="secondary" name="done" size="5em" />
             </div>
-            <div class="text-h6">Письмо с сертификатом отправилось к вам на почту {{ email }}</div>
+            <div class="text-h6">{{ $t('Your certificate is ready') }}</div>
+            <q-btn type="a" target="_blank" :href="reefApi + 'certificate/' + certificateHash + '.pdf'" color="positive" :label="$t('Open certificate')" size="1.2em" class="full-width q-mt-md" />
           </q-card-section>
-          <q-card-actions align="right">
-            <q-btn flat label="OK" color="primary" v-close-popup />
-          </q-card-actions>
         </q-card>
       </q-dialog>
       <br>
@@ -92,8 +90,9 @@ export default {
   name: 'Settings',
   data () {
     return {
-      success: false,
+      certificateDialog: false,
       email: null,
+      certificateHash: null,
       selectFaces: null,
       dialogDisclaimer: false,
       productId: null,
@@ -110,8 +109,8 @@ export default {
   },
   methods: {
     checkBuy () {
-      if (this.email && this.selectFaces && this.selectFaces > 0) {
-        let balanceRub = new Big(this.balance.total_balance_sum).div(this.currency.biptorub)
+      if (this.selectFaces && this.selectFaces > 0) {
+        let balanceRub = new Big(this.balance.total_balance_sum).times(this.currency.biptorub)
         if (balanceRub.gt(this.selectFaces)) {
           return true
         } else return false
@@ -131,7 +130,7 @@ export default {
     },
     buy () {
       if (this.checkBuy()) {
-        let amount = new Big(this.selectFaces).div(this.currency.biptorub)
+        let amount = new Big(this.selectFaces).div(this.currency.biptorub).round()
         let nonce = new Date().getTime() - 1582480000000
         const check = issueCheck({
           privateKey: this.privateKey,
@@ -142,17 +141,32 @@ export default {
           value: amount.toString(),
           dueBlock: 999999999
         })
-        this.$store.dispatch('SEND_CHECK', {
+        const buyData = {
           check: check,
           product: this.productId,
           face: this.selectFaces,
-          address: this.address,
-          email: this.email
-        }).then(response => {
-          this.success = true
+          address: this.address
+        }
+        this.selectFaces = null
+        this.$store.commit('SET_SENDING', true)
+        this.$store.dispatch('SEND_CHECK', buyData).then(response => {
+          this.$store.commit('SET_SENDING', false)
+          this.$store.commit('SET_TXREADY', true)
+          this.$store.commit('ADD_SERTIFICATES', {
+            hash: response.orderHash,
+            name: this.product.title,
+            face: buyData.face
+          })
           this.$store.dispatch('FETCH_BALANCE')
-          console.log(response)
+          this.$store.dispatch('LOAD_SERTIFICATE', response.orderHash).then(certificate => {
+            this.certificateHash = response.orderHash
+            this.$store.commit('SET_TXREADY', false)
+            this.certificateDialog = true
+          }).catch(error => {
+            console.log(error)
+          })
         }).catch(error => {
+          this.$store.commit('SET_SENDING', false)
           console.log(error)
         })
       }
@@ -162,6 +176,7 @@ export default {
     ...mapState({
       currency: state => state.api.currency,
       balance: state => state.api.balance,
+      reefApi: state => state.api.reefApi,
       products: state => state.api.products,
       privateKey: state => state.wallet.privateKey,
       address: state => state.wallet.address

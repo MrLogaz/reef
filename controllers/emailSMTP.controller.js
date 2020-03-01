@@ -8,8 +8,8 @@ const transporterData = {
   port: parseInt(process.env.EMAIL_SMTP_PORT, 10),
   secure: false,
   auth: {
-    user: process.env.EMAIL_SMTP_NOREPLY, // generated ethereal user
-    pass: process.env.EMAIL_SMTP_PASS // generated ethereal password
+    user: process.env.EMAIL_SMTP_NOREPLY,
+    pass: process.env.EMAIL_SMTP_PASS
   },
   logger: true,
   debug: true
@@ -19,16 +19,6 @@ const transporter = nodemailer.createTransport(transporterData)
 controller.sendSolo = (req, res) => {
 
     console.log(transporterData)
-    // console.log('-----------')
-    // console.log(req.body)
-    console.log('//////////////')
-    // transporter.verify(function(error, success) {
-    //   if (error) {
-    //     console.log(error);
-    //   } else {
-    //     console.log("Server is ready to take our messages");
-    //   }
-    // });
     async function main() {
       
       const mailTo = req.body.email
@@ -42,11 +32,11 @@ controller.sendSolo = (req, res) => {
         text: `Получите подарок по ссылке ${giftLink}`
       }
       let info = await transporter.sendMail({
-        from: '"Reef" <' + process.env.EMAIL_SMTP_NOREPLY + '>', // sender address
-        to: 'mrlogaz@gmail.com', // list of receivers
-        subject: "Hello ✔", // Subject line
-        text: "Hello", // plain text body
-        html: "<b>Hello</b>" // html body
+        from: '"Reef" <' + process.env.EMAIL_SMTP_NOREPLY + '>',
+        to: 'mrlogaz@gmail.com',
+        subject: "Hello ✔",
+        text: "Hello",
+        html: "<b>Hello</b>"
       });
       console.log("Message sent: %s", info.messageId);
       res.json({

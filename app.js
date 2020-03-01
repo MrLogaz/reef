@@ -25,6 +25,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/frontend/dist/pwa')));
+app.use(express.static(path.join(__dirname, '/certificate')));
 app.use(morgan("dev", { "stream": logger.stream }));
 
 // import wallet from './routes/wallet.route'
@@ -45,6 +46,7 @@ app.use('/api/strategy', strategy);
 app.use('/api/services', services);
 app.use('/api/currency', currency);
 app.use('/api/order', order);
+app.use('/api/certificate', express.static(path.join(__dirname, '/certificate')));
 app.get('/test', (req, res) => {
   res.send('Test endpoint!');
 });

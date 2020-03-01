@@ -2,6 +2,15 @@
 // so you can safely delete all default props below
 
 export default {
+  // NEW
+  'Payment was successful!': 'Оплата прошла успешно!',
+  'After a few seconds, the certificate will be ready': 'Через несколько секунд сертификат будет готов',
+  'Your certificate is ready': 'Ваш сертификат готов',
+  'Open certificate': 'Открыть сертификат',
+
+  'Send coins to address': 'Отправьте монеты на адрес',
+  'Or use deeplink': 'Или используте deeplink',
+  // OLD
   'or': 'или',
   'Message': 'Cообщение',
   'Result': 'Результат',
@@ -24,8 +33,6 @@ export default {
   'Add message': 'Добавить сообщение',
   'Send a gift': 'Отправьте подарок',
   'Send coins': 'Отправьте монеты',
-  'Send coins to address': 'Отправьте монеты на адрес',
-  'Or use deeplink': 'Или используй deeplink',
   'Send this link to your friend': 'Отправь своему другу эту ссылку',
   'Send QR code': 'Отправить QR код',
   'QR code': 'QR код',

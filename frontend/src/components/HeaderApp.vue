@@ -19,15 +19,16 @@
           </q-item-section>
         </q-item>
         <q-space />
-        <q-btn round color="primary" outline dense size="0.9em" :label="language.substr(0,2)" @click="alertLang = true" />
+        <q-btn color="indigo-10" round outline dense size="0.9em" :label="language.substr(0,2)" @click="alertLang = true" />
+        <q-btn color="indigo-10" flat :to="'/' + seedkey + '/settings'" name="settings" label="" icon="settings" />
       </q-toolbar>
 
       <q-separator class="q-mt-sm" color="indigo" />
 
       <q-tabs v-model="headerTab" narrow-indicator inline-label class="bg-white text-indigo-10">
-        <q-route-tab :to="'/' + seedkey + '/'" name="gift" :label="$t('Gift')" icon="card_giftcard" style="min-width: 140px" />
+        <q-route-tab :to="'/' + seedkey + '/gift'" name="gift" :label="$t('Gift')" icon="card_giftcard" style="min-width: 140px" />
         <q-route-tab :to="'/' + seedkey + '/recive'" name="recive" :label="$t('Recive')" icon="system_update_alt" />
-        <q-route-tab :to="'/' + seedkey + '/settings'" name="settings" label="" icon="settings" />
+        <!-- <q-route-tab :to="'/' + seedkey + '/settings'" name="settings" label="" icon="settings" /> -->
       </q-tabs>
     </q-header>
 

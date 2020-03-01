@@ -1,6 +1,7 @@
 import axios from 'axios'
 import Big from 'big.js'
 import crypto from 'crypto'
+import { promises as fs } from 'fs'
 import { TX_TYPE, decodeCheck } from 'minter-js-sdk'
 import { getFeeValue } from 'minterjs-util'
 import { sleep } from '../../utils/helper'
@@ -16,9 +17,10 @@ const merchant = {
 }
 
 const requestGiftery = async (method = 'test', dataReq = '') => {
+  const dataReqOrigin = dataReq === '' ? '' : JSON.stringify(dataReq)
   const dataReqUrl = dataReq === '' ? '' : '&data=' + JSON.stringify(dataReq)
   // const dataReqUrl = new URLSearchParams(dataReq).toString()
-  const secret = method + dataReqUrl + process.env.GIFTERY_KEY
+  const secret = method + dataReqOrigin + process.env.GIFTERY_KEY
   const SIG = crypto.createHash('sha256').update(secret).digest('hex');
   const sendData = `id=${process.env.GIFTERY_ID}&cmd=${method}${dataReqUrl}&sig=${SIG}&in=json&out=json`
   console.log(method + ' ////////////////')
@@ -35,7 +37,8 @@ const requestGiftery = async (method = 'test', dataReq = '') => {
 const pay = async (req, res) => {
   const decode = decodeCheck(req.body.check)
   const currencyData = await Currency.findOne({ provider: 'base' })
-  let amount = new Big(req.body.face).div(currencyData.biptorub)
+  let amount = new Big(req.body.face).div(currencyData.biptorub).round()
+  console.log(amount.toString(), decode.value)
   if (amount.eq(decode.value)) {
     const txData = {
       type: 'check',
@@ -54,41 +57,47 @@ const pay = async (req, res) => {
 
       const makeMerchantOrder = {
         product_id: req.body.product,
-        email_to: req.body.email,
+        email_to: 'mrlogaz@gmail.com',
         face: req.body.face,
         comment: checkHash
       }
       const merchantOrderId = await requestGiftery('makeOrder', makeMerchantOrder)
-      const orderData = {
-        checkHash: checkHash,
-        address: req.body.address,
-        status: 'process',
-        vendorUrl: origin,
-        strategy: 'giftery',
-        product: req.body.product,
-        face: req.body.face,
-        merchantOrderId: merchantOrderId.data.id
+      if (merchantOrderId.status === "ok") {
+        const orderData = {
+          checkHash: checkHash,
+          address: req.body.address,
+          status: 'process',
+          vendorUrl: origin,
+          strategy: 'giftery',
+          product: req.body.product,
+          face: req.body.face,
+          merchantOrderId: merchantOrderId.data.id
+        }
+        const newOrder = await Order.createNew(orderData)
+        res.json({
+          method: 'Pay',
+          checkHash: checkHash,
+          orderHash: newOrder.hash,
+          // merchantOrderId: merchantOrderId.data.id,
+          status: 'process'
+        })
+      } else {
+        res.status(418).json({
+          method: 'Pay',
+          status: 'Error makeOrder',
+          error: merchantOrderId
+        })
       }
-      const newOrder = await Order.createNew(orderData)
-      res.json({
-        method: 'Pay',
-        checkHash: checkHash,
-        orderHash: newOrder.hash,
-        merchantOrderId: merchantOrderId,
-        status: 'process'
-      })
     } catch (error) {
       console.log(error)
-      res.status(500)
-      res.json({
+      res.status(418).json({
         method: 'Pay',
         status: 'Error',
         error: error
       })
     }
   } else {
-    res.status(500)
-    res.json({
+    res.status(418).json({
       method: 'Pay',
       status: 'Failed',
       error: 'Check value not valid'
@@ -99,6 +108,14 @@ const pay = async (req, res) => {
 const validate = async (req, res) => {
   res.json({
     method: 'Validate'
+  })
+}
+const statusOrder = async (req, res) => {
+  let getStatus = await requestGiftery('getStatus', { id: req.body.id })
+  res.json({
+    method: 'Status',
+    merchantOrderId: req.body.id,
+    status: getStatus
   })
 }
 const status = async (req, res) => {
@@ -125,8 +142,7 @@ const getProducts = async (req, res) => {
       products: productsData
     })
   } catch (err) {
-    res.status(500)
-    res.json({
+    res.status(418).json({
       status: 'Failed',
       error: err
     })
@@ -135,9 +151,8 @@ const getProducts = async (req, res) => {
 
 const testorder = async (req, res) => {
   const makeMerchantOrder = {
-    product_id: 13711,
-    face: 169,
-    comment: 'checkHash',
+    product_id: 13900,
+    face: 500,
     email_to: 'mrlogaz@gmail.com'
   }
   try {
@@ -147,26 +162,44 @@ const testorder = async (req, res) => {
       orderData: orderData
     })
   } catch (err) {
-    res.status(500)
-    res.json({
+    res.status(418).json({
       status: 'Failed',
       error: err
     })
   }
 }
 
-const getCertificate = async (req, res) => {
+const getCode = async (req, res) => {
   try {
-    const orderData = await Order.findOne({ hash: req.body.hash })
-    const certificateData = await requestGiftery('getCertificate', { queue_id: orderData.merchantOrderId })
-    // const certificateData = await requestGiftery('getCertificate', { queue_id: 926688 })
-    res.json({
-      status: 'OK',
-      certificateData
-    })
+    // const orderData = await Order.findOne({ hash: req.body.hash })
+    // const certificateData = await requestGiftery('getCertificate', { queue_id: orderData.merchantOrderId })
+    const codeData = await requestGiftery('getCode', { queue_id: req.body.queue_id })
+    res.json(codeData)
   } catch (err) {
-    res.status(500)
-    res.json({
+    res.status(418).json({
+      status: 'Failed',
+      error: err
+    })
+  }
+}
+const getCertificate = async (req, res) => {
+  console.log(req.query.hash)
+  try {
+    const orderData = await Order.findOne({ hash: req.query.hash })
+    const certificateData = await requestGiftery('getCertificate', { queue_id: orderData.merchantOrderId })
+    if (certificateData.status === 'ok') {
+      const writeFile = await fs.writeFile('./certificate/' + req.query.hash + '.pdf', certificateData.data.certificate, { encoding: 'base64' })//, function(err) {
+      console.log('File created: ' + req.query.hash + '.pdf')
+      orderData.status = 'success'
+      const saveOrderStatus = await orderData.save()
+      res.json({
+        certificate: req.query.hash
+      })
+    } else {
+      res.status(418).json(certificateData)
+    }
+  } catch (err) {
+    res.status(418).json({
       status: 'Failed',
       error: err
     })
@@ -180,8 +213,7 @@ const getBalance = async (req, res) => {
       balanceData: balanceData
     })
   } catch (err) {
-    res.status(500)
-    res.json({
+    res.status(418).json({
       status: 'Failed',
       error: err
     })
@@ -204,8 +236,7 @@ const updateGiftery = async (req, res) => {
       productsSaved: productsSaved
     })
   } catch (err) {
-    res.status(500)
-    res.json({
+    res.status(418).json({
       status: 'Failed',
       error: err
     })
@@ -217,6 +248,8 @@ export default {
   validate,
   status,
   // testorder,
+  order: statusOrder,
+  // code: getCode,
   certificate: getCertificate,
   update: updateGiftery,
   products: getProducts,
