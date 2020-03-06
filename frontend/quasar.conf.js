@@ -25,8 +25,9 @@ module.exports = function (ctx) {
       // 'themify',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-      // 'roboto-font', // optional, you are not bound to it
-      'material-icons' // optional, you are not bound to it
+      // 'roboto-font',
+      'material-icons', // https://material.io/resources/icons/
+      'line-awesome' // https://icons8.com/line-awesome
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
@@ -44,13 +45,15 @@ module.exports = function (ctx) {
       all: 'auto',
 
       components: [],
-      directives: [],
+      directives: [
+        'Ripple'
+      ],
 
       // Quasar plugins
       plugins: [
         'Notify',
         'Loading',
-        'LoadingBar'
+        'Cookies'
       ]
     },
 
@@ -97,7 +100,10 @@ module.exports = function (ctx) {
 
     // animations: 'all', // --- includes all animations
     // https://quasar.dev/options/animations
-    animations: [],
+    animations: [
+      'fadeIn',
+      'fadeOut'
+    ],
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {

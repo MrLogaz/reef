@@ -9,8 +9,8 @@ const OrderSchema = mongoose.Schema({
     index: true
   },
   checkHash: String,
-  merchantOrderId: Number,
-  address: String,
+  sendHash: String,
+  merchantOrderId: String,
   status: String,
   meta: mongoose.Mixed,
   date: {
@@ -19,8 +19,9 @@ const OrderSchema = mongoose.Schema({
   },
   vendorUrl: String,
   strategy: String,
-  product: Number,
-  face: Number
+  product: mongoose.Mixed,
+  value: String,
+  coin: String
 }, {collection : 'Order'})
 
 let OrderModel = mongoose.model('Order', OrderSchema)

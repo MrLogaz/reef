@@ -1,21 +1,29 @@
 <template>
   <q-page padding>
-    <div class="text-h6 q-pb-sm q-pt-md">{{ $t('Send coins to address') }}</div>
+    <div class="text-h5 full-width text-indigo-10 q-pb-sm q-pt-md">{{ $t('Send coins to address') }}</div>
+    <!-- <div class="text-h6 q-pb-sm q-pt-md">{{ $t('Send coins to address') }}</div> -->
     <q-input outlined v-model="address" :label="$t('Copy address')" stack-label readonly @click="copyAddress()">
       <template v-slot:after>
         <q-btn icon="file_copy" flat round @click="copyAddress()" />
       </template>
     </q-input>
-    <div class="text-h6 q-mt-lg q-pb-sm">{{ $t('Or use deeplink') }}</div>
+    <div class="text-h5 full-width text-indigo-10 q-mt-lg q-mb-sm">{{ $t('Or use deeplink') }}</div>
     <div class="row">
       <div class="col-sm-6 col-xs-12">
         <q-input
           v-model.number="deeplinkAmount"
           type="number"
           :label="$t('Amount') + ' BIP'"
+          clear-icon="close"
           clearable
           outlined
-        />
+        >
+          <template v-slot:after>
+            <q-btn flat round @click="dialogQrDeeplink = true">
+              <i class="las la-qrcode" style="font-size: 2.3em"></i>
+            </q-btn>
+          </template>
+        </q-input>
         <q-btn type="a" color="indigo-6" size="md" class="q-mt-md" target="_blank" icon="account_balance_wallet" :href="deepLink" :label="'Send ' + deeplinkAmount + ' Bip'" />
       </div>
       <div class="desktop-only col-sm-6">
@@ -24,6 +32,16 @@
         </div>
       </div>
     </div>
+    <q-dialog v-model="dialogQrDeeplink">
+      <q-card class="text-center">
+        <q-card-section>
+          <div class="text-h5">Send {{ deeplinkAmount }} Bip</div>
+        </q-card-section>
+        <q-card-section>
+          <img style="max-width: 100%" :src="qrImage">
+        </q-card-section>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -37,6 +55,7 @@ export default {
   data () {
     return {
       qrImage: null,
+      dialogQrDeeplink: false,
       shareQRImage: null,
       deepLink: null,
       deeplinkAmount: 10,
@@ -45,6 +64,9 @@ export default {
   },
   created () {
     this.generateDeepQRcode()
+    if (this.$route.params.amount) {
+      this.deeplinkAmount = this.$route.params.amount
+    }
   },
   methods: {
     generateDeepQRcode () {

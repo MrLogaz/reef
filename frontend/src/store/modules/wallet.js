@@ -1,4 +1,5 @@
 import { Minter, TX_TYPE } from 'minter-js-sdk'
+// import { Loading, QSpinnerFacebook } from 'quasar'
 
 const getDefaultState = () => {
   return {
@@ -10,7 +11,8 @@ const getDefaultState = () => {
     mnemonic: null,
     minterGate: null,
     sending: false,
-    txReady: false
+    txError: false,
+    txErrorData: ''
   }
 }
 
@@ -37,12 +39,28 @@ const mutations = {
     // state.minterGate = new Minter({ apiType: API_TYPE_NODE, baseURL: 'https://api.minter.stakeholder.space/' })
   },
   SET_SENDING: (state, payload) => {
-    console.log('SET_SENDING', payload)
     state.sending = payload
+    // if (payload) {
+    //   Loading.show({
+    //     QSpinnerFacebook,
+    //     spinnerColor: 'white',
+    //     spinnerSize: 120,
+    //     backgroundColor: 'indigo-10',
+    //     message: 'Transaction is being sent, please wait',
+    //     messageColor: 'white'
+    //   })
+    // } else {
+    //   Loading.hide()
+    // }
   },
-  SET_TXREADY: (state, payload) => {
-    console.log('SET_TXREADY', payload)
-    state.txReady = payload
+  SET_TXERROR: (state, payload) => {
+    if (payload instanceof Error) {
+      state.txError = true
+      state.txErrorData = payload
+    } else {
+      state.txError = false
+      state.txErrorData = ''
+    }
   }
 }
 
@@ -50,7 +68,6 @@ const actions = {
   SENDER: (context, payload) => {
     context.commit('SET_SENDING', true)
     let txParams = {
-      privateKey: context.state.privateKey,
       chainId: 1,
       data: payload.data,
       gasCoin: payload.gasCoin || 'BIP',
@@ -80,15 +97,13 @@ const actions = {
         break
     }
     return new Promise((resolve, reject) => {
-      context.state.minterGate.postTx(txParams).then(txHash => {
+      context.state.minterGate.postTx(txParams, { privateKey: context.state.privateKey }).then(txHash => {
         console.log(payload.type + ' created: ' + txHash)
         resolve(txHash)
         context.commit('SET_SENDING', false)
-        context.commit('SET_TXREADY', true)
       }).catch(error => {
         console.log(error)
         context.commit('SET_SENDING', false)
-        context.commit('SET_TXREADY', true)
         reject(error)
       })
     })

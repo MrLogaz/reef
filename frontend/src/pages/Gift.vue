@@ -1,10 +1,10 @@
 <template>
   <q-page padding>
-    <div class="text-center q-pt-md" v-if="balance">
+    <!-- <div class="text-center q-pt-md" v-if="balance">
       <div class="text-h5 text-bold text-indigo-10">You have {{ parseFloat(balance.total_balance_sum) }} bip</div>
       <div class="text-h6 text-grey">~ {{ bipRub(balance.total_balance_sum) }} rub | ~ {{ parseFloat(balance.total_balance_sum_usd) }} usd</div>
       <q-separator class="q-mt-md q-mb-md" color="indigo-6" />
-    </div>
+    </div> -->
     <services-list />
   </q-page>
 </template>

@@ -1,6 +1,6 @@
 {
-  "name": "REEF push",
-  "version": "0.2",
+  "name": "push.reef",
+  "version": "0.3.5",
   "description": "REEF push",
   "productName": "REEF push",
   "cordovaId": "org.cordova.quasar.app",
@@ -12,23 +12,23 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
-    "axios": "^0.18.1",
+    "@quasar/extras": "^1.5.2",
+    "axios": "^0.19.2",
     "big.js": "^5.2.2",
     "bip39": "^3.0.2",
-    "minter-js-sdk": "^0.26.1",
+    "minter-js-sdk": "^0.30.0",
     "minterjs-util": "^0.15.1",
     "minterjs-wallet": "^4.0.4",
     "qrcode": "^1.4.4",
-    "quasar": "^1.0.0",
+    "quasar": "^1.9.8",
     "vue-carousel": "^0.18.0",
-    "vue-i18n": "^8.0.0",
-    "vuex-persistedstate": "^2.7.0"
+    "vue-i18n": "^8.15.4",
+    "vuex-persistedstate": "^2.7.1"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0",
+    "@quasar/app": "^1.6.0",
     "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.1.0",
     "eslint": "^5.10.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-vue": "^5.0.0"

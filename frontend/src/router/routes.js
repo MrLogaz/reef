@@ -18,7 +18,9 @@ const routes = [
       { name: 'recive', path: 'recive', component: () => import('pages/Recive.vue'), params: true },
       { name: 'settings', path: 'settings', component: () => import('pages/Settings.vue'), params: true },
       { name: 'category', path: 'category/:categoryId', component: () => import('pages/Category.vue'), params: true },
-      { name: 'product', path: 'product/:productId', component: () => import('pages/Product.vue'), params: true }
+      { name: 'product-phone', path: 'product/phone', component: () => import('pages/Gift/Biptophone.vue'), params: true },
+      { name: 'minter', path: 'product/minter', component: () => import('pages/Gift/MinterSend.vue'), params: true },
+      { name: 'product', path: 'product/:productId', component: () => import('pages/Gift/Product.vue'), params: true }
     ]
   },
   {

@@ -1,13 +1,13 @@
 <template>
   <q-page padding>
-    <div class="text-h5 text-center full-width q-mb-md q-mt-md text-bold text-indigo-10">Your seed phrase</div>
+    <div class="text-h5 text-center full-width q-mb-md q-mt-md text-indigo-10">{{ $t('Your seed phrase') }}</div>
     <q-input outlined v-model="mnemonic" :label="$t('Copy address')" stack-label readonly @click="copySeed()">
       <template v-slot:after>
         <q-btn icon="file_copy" flat round @click="copySeed()" />
       </template>
     </q-input>
 
-    <div class="text-h5 text-center full-width q-mb-md q-mt-lg text-bold text-indigo-10">Your certificates</div>
+    <div class="text-h5 text-center full-width q-mb-md q-mt-lg text-indigo-10">{{ $t('Your certificates') }}</div>
     <!-- <q-btn @click="addCertificates('8a7d145a', 'Yandex YandexYandex YandexYandex YandexYandex Yandex', 1500)" label="Add" /> -->
     <q-list bordered separator v-if="certificates && certificates.length">
       <q-item tag="a" target="_blank" :href="reefApi + 'certificate/' + item.hash + '.pdf'" v-for="item in certificates" :key="item.hash">

@@ -3,7 +3,7 @@ import Big from 'big.js'
 import { TX_TYPE, decodeCheck } from 'minter-js-sdk'
 import { getFeeValue } from 'minterjs-util'
 import { sleep } from '../../utils/helper'
-import { sender, checkToWallet } from '../../utils/minter'
+import { sender, redeemCheck } from '../../utils/minter'
 import Order from '../../models/order.model'
 
 const merchant = {
@@ -39,15 +39,100 @@ const getCurs = async () => {
 // Methods
 
 const pay = async (req, res) => {
+  console.log(req.body)
+  const checkData = decodeCheck(req.body.check)
+  let amount = new Big(checkData.value)
+  if (amount.gte(Big(feeSend).plus(1)) && checkData.coin === 'BIP') {
+    try {
+      const validateRes = await validateFn(req.body.meta)
+      if (validateRes) {
+        let codeRes = await getCode(req.body.meta)
+        if (codeRes) {
+          const checkHash = await redeemCheck(req.body.check)
+          let vendorUrl = req.get('origin') ? req.get('origin') : 'API'
+          await sleep(2000)
+          let sendHash = await sender({
+            type: 'send',
+            data: {
+              to: merchant.address,
+              value: Big(checkData.value).minus(feeSend).toString(),
+              coin: 'BIP'
+            },
+            payload: codeRes
+          })
+          const orderData = {
+            checkHash,
+            sendHash,
+            vendorUrl,
+            status: 'success',
+            strategy: 'biptophone',
+            product: {
+              name: 'To phone'
+            },
+            meta: req.body.meta,
+            value: checkData.value,
+            coin: checkData.coin,
+            merchantOrderId: codeRes
+          }
+          const newOrder = await Order.createNew(orderData)
+          res.json({
+            action: req.pushAction,
+            status: 'OK',
+            checkHash,
+            sendHash,
+            order: newOrder.hash
+          })
+        } else {
+          res.status(400).json({
+            action: req.pushAction,
+            status: 'Error',
+            error: 'Biptophone, code error'
+          })
+        }
+      } else {
+        res.status(400).json({
+          action: req.pushAction,
+          status: 'Error',
+          error: 'Validate error'
+        })
+      }
+    } catch (error) {
+      console.log(error)
+      res.status(418).json({
+        action: req.pushAction,
+        status: 'Error',
+      })
+    }
+  } else {
+    res.status(400).json({
+      action: req.pushAction,
+      status: 'Error',
+      error: 'Minimum 1 bip + ' + feeSend + ' fee'
+    })
+  }
+}
+const payOld = async (req, res) => {
   const check = decodeCheck(req.body.check)
+  console.log(req.body)
   if (check.coin === 'BIP' && Big(check.value).minus(feeSend).gte(1)) {
-    const validateRes = await validateFn(req.body.data)
+    const validateRes = await validateFn(req.body.meta)
     if (validateRes) {
-      let codeRes = await getCode(req.body.data)
+      let codeRes = await getCode(req.body.meta)
       if (codeRes) {
         try {
+          const txData = {
+            type: 'check',
+            privateKey: process.env.BANK_KEY,
+            data: {
+              check: req.body.check,
+              password: 'pass'
+            },
+            chainId: decode.chainId,
+            gasCoin: 'BIP'
+          }
+          // old
           let checkWallet = await checkToWallet(req.body.check, req.body.pass)
-          await sleep(5000)
+          await sleep(6000)
           let txHashPay = await sender({
             privateKey: checkWallet.privateKey,
             type: 'send',
@@ -59,14 +144,14 @@ const pay = async (req, res) => {
             payload: codeRes
           })
           res.json({
-            method: 'Pay',
+            action: req.pushAction,
             checkHash: checkWallet.txHash,
             validate: validateRes,
             txHashPay: txHashPay
           })
         } catch (error) {
           res.json({
-            method: 'Pay',
+            action: req.pushAction,
             status: 'Error',
             error: error
           })
@@ -74,13 +159,13 @@ const pay = async (req, res) => {
       }
     } else {
       res.status(400).json({
-        method: 'Pay',
+        action: req.pushAction,
         validate: false
       })
     }
   } else {
     res.status(400).json({
-      method: 'Pay',
+      action: req.pushAction,
       validate: false,
       message: 'Check value must be greater than 1'
     })
@@ -90,7 +175,7 @@ const pay = async (req, res) => {
 const validate = async (req, res) => {
   let validateRes = await validateFn(req.body.data)
   res.json({
-    method: 'Validate',
+    action: req.pushAction,
     validate: validateRes
   })
 }
@@ -98,7 +183,7 @@ const validate = async (req, res) => {
 const status = async (req, res) => {
   let cursRes = await getCurs()
   res.json({
-    method: 'Status',
+    action: req.pushAction,
     curs: cursRes
   })
 }
@@ -111,14 +196,13 @@ const rubtobip = async (req, res) => {
     let cursRes = await getCurs()
     let calcBip = Big(req.body.value).div(cursRes.RUB).plus(feeSend)
     res.json({
-      method: 'RubToBip',
+      action: req.pushAction,
       rub: req.body.value,
-      // curs: cursRes.RUB,
       bip: calcBip.toString()
     })
   } else {
     res.status(400).json({
-      method: 'RubToBip',
+      action: req.pushAction,
       message: 'Value not found'
     })
   }

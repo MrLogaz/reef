@@ -1,12 +1,17 @@
 import axios from 'axios'
+import Big from 'big.js'
 
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 const getDefaultState = () => {
   return {
     explorerApi: 'https://explorer-api.minter.network/api/v1/',
     reefApi: 'https://push.reef.mn/api/',
     currency: null,
     balance: null,
-    balanceJSON: {},
+    balanceJSON: { BIP: 0 },
+    balanceBIP: 0,
+    balanceUSD: 0,
+    balanceRUB: 0,
     categories: null,
     products: null
   }
@@ -34,12 +39,21 @@ const mutations = {
     if (!state.currency) state.currency = {}
     state.currency['biptorub'] = payload.biptorub
   },
-  SET_BALANCE: (state, payload) => {
-    let tmpJson = {}
+  SET_BALANCE: async (state, payload) => {
+    let tmpJson = { BIP: 0 }
     payload.balances.forEach((item) => {
       tmpJson[item.coin] = item.amount
     })
+    let currencyUSD = Big(payload.available_balance_sum_usd).div(payload.available_balance_sum)
     state.balanceJSON = tmpJson
+    state.balanceBIP = Big(tmpJson.BIP)
+    state.balanceUSD = Big(tmpJson.BIP).times(currencyUSD).round(2)
+    if (state.currency && state.currency.biptorub) {
+      state.balanceRUB = Big(tmpJson.BIP).times(state.currency.biptorub).round(2)
+    } else {
+      await sleep(3000)
+      state.balanceRUB = Big(tmpJson.BIP).times(state.currency.biptorub).round(2)
+    }
     state.balance = payload
   },
   SET_PRODUCTS: (state, payload) => {
@@ -49,16 +63,12 @@ const mutations = {
 }
 
 const actions = {
-  SAVE_WALLET_PUSH: async (context, payload) => {
-    let { data } = await axios.post(context.state.reefApi + 'wallet', payload)
+  REEF_API: async (context, payload) => {
+    let { data } = await axios.post(context.rootState.api.reefApi + 'strategy/' + payload[0] + '/' + payload[1], payload[2])
     return data
   },
-  SEND_EMAIL: async (context, payload) => {
-    let { data } = await axios.post(context.state.reefApi + 'email/solo', payload)
-    return data.data
-  },
   SEND_CHECK: async (context, payload) => {
-    let { data } = await axios.post(context.state.reefApi + 'strategy/giftery/pay', payload)
+    let { data } = await axios.post(context.state.reefApi + 'strategy/' + payload.strategy + '/pay', payload)
     return data
   },
   FETCH_BALANCE: async (context, payload) => {
@@ -70,7 +80,7 @@ const actions = {
     context.commit('SET_CURRENCY', data)
   },
   FETCH_PRODUCTS: async (context, payload) => {
-    let { data } = await axios.get(context.state.reefApi + 'strategy/giftery/products')
+    let { data } = await axios.post(context.state.reefApi + 'strategy/giftery/products')
     context.commit('SET_PRODUCTS', data)
   }
 }

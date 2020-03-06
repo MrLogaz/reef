@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 const getDefaultState = () => {
   return {
@@ -17,14 +17,14 @@ const mutations = {
 }
 
 const actions = {
-  BIPTOPHONE_CODE: async (context, payload) => {
-    let { data } = await axios.post(context.rootState.api.reefApi + 'services/biptophone/code', payload)
-    return data
-  },
-  BIPTOPHONE_VALIDATE: async (context, payload) => {
-    let { data } = await axios.post(context.rootState.api.reefApi + 'services/biptophone/validate', payload)
-    return data
-  }
+  // BIPTOPHONE_CODE: async (context, payload) => {
+  //   let { data } = await axios.post(context.rootState.api.reefApi + 'strategy/biptophone/code', payload)
+  //   return data
+  // },
+  // BIPTOPHONE_VALIDATE: async (context, payload) => {
+  //   let { data } = await axios.post(context.rootState.api.reefApi + 'strategy/biptophone/validate', payload)
+  //   return data
+  // }
 }
 
 export default {

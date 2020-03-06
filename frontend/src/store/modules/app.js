@@ -1,9 +1,12 @@
 import { i18n } from 'boot/i18n'
 import axios from 'axios'
+import { Cookies } from 'quasar'
+
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const getDefaultState = () => {
   return {
+    productRoute: {},
     language: 'en-us',
     username: null,
     from: null,
@@ -24,9 +27,10 @@ const mutations = {
   SET_LANG: (state, payload) => {
     i18n.locale = payload
     state.language = payload
+    Cookies.set('language', payload)
   },
-  SAVE_USER: (state, payload) => {
-    state.username = payload.username
+  SAVE_MESSAGE: (state, payload) => {
+    console.log(payload)
     state.from = payload.from
     state.message = payload.message
   },
@@ -55,10 +59,8 @@ const actions = {
   },
   LOAD_SERTIFICATE: async (context, payload) => {
     await sleep(5000)
-    console.log('payload')
-    console.log(payload)
     try {
-      let { data } = await axios.get(context.rootState.api.reefApi + 'strategy/giftery/certificate?hash=' + payload)
+      let { data } = await axios.post(context.rootState.api.reefApi + 'strategy/giftery/certificate', { hash: payload })
       return data
     } catch (error) {
       console.log('error', error)

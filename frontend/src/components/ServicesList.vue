@@ -1,32 +1,29 @@
 <template>
   <div>
-    <!-- <div class="row justify-center">
+    <div class="row justify-center q-mt-md">
       <div class="col-sm-4 col-xs-6">
-        <div class="card-app">
-          <q-btn :to="'/' + seedkey + '/biptophone/'" no-caps>
-            <q-avatar color="orange" size="3.7em" text-color="white">
-              <q-icon name="system_update" size="1.2em" />
-            </q-avatar>
-            <div class="full-width">{{ $t('Top up phone balance') }}</div>
+        <div class="card-app category-giftery">
+          <q-btn outline color="indigo-10" class="shadow-2" :to="'/' + seedkey + '/product/phone'" no-caps>
+            <q-icon name="system_update" size="2em" />
+            <div class="full-width text-subtitle1 text-uppercase">{{ $t('Phone') }}</div>
           </q-btn>
         </div>
       </div>
       <div class="col-sm-4 col-xs-6">
-        <div class="card-app">
-          <q-btn to="/gift/biptophone" no-caps>
-            <q-avatar color="orange" size="3.7em" text-color="white">
-              <q-icon name="system_update" size="1.2em" />
-            </q-avatar>
-            <div class="full-width">{{ $t('Top up phone balance') }}</div>
+        <div class="card-app category-giftery">
+          <q-btn outline color="indigo-10" class="shadow-2" :to="'/' + seedkey + '/product/minter'" no-caps>
+            <q-icon name="account_balance_wallet" size="2em" />
+            <div class="full-width text-subtitle1 text-uppercase">Minter</div>
           </q-btn>
         </div>
       </div>
-    </div> -->
+    </div>
+    <q-separator class="q-mt-md q-mb-md" color="indigo-10" />
     <div class="row justify-center" v-if="categories && categories.length">
       <div class="col-sm-4 col-xs-6" v-for="category in categories" :key="category.id">
         <div class="card-app category-giftery">
           <q-btn :to="'/' + seedkey + '/category/' + category.id" no-caps>
-            <div class="full-width text-indigo-10 text-bold text-subtitle1">{{ language === 'ru' ? category.title : category.title_en.length ? category.title_en : category.code }}</div>
+            <div class="full-width text-indigo-10 text-subtitle1">{{ language === 'ru' ? category.title : category.title_en.length ? category.title_en : category.code }}</div>
           </q-btn>
         </div>
       </div>

@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.6f5e720aa97cf6e3a758613262186157.js"
+  "/precache-manifest.228345e798fe391da82def703054b0f8.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "REEF push"});
+workbox.core.setCacheNameDetails({prefix: "push.reef"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {

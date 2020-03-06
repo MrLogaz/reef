@@ -1,9 +1,27 @@
 <template>
   <q-page>
     <div class="q-pa-md">
-      <q-btn flat label="Back" color="primary" icon="keyboard_backspace" v-go-back="'/gift'" />
-      <div class="text-center text-h6 q-pb-lg">{{ $t('Top up phone balance') }}</div>
-      <q-form @submit="onSend" class="q-pb-lg text-white">
+      <div class="text-h5 text-center full-width q-mb-md q-mt-md text-indigo-10">{{ $t('Top up phone balance') }}</div>
+      <q-form class="q-pb-lg">
+        <q-input
+          v-model="amount"
+          type="number"
+          step="any"
+          class="q-mb-md"
+          outlined
+          clearable
+          clear-icon="close"
+          debounce="250"
+          :error="amountIsError"
+          :error-message="amountErrorMsg"
+          :label="$t('Amount')"
+          :hint="'Min 10 bip, max 500 bip'"
+        >
+          <template v-slot:after>
+            <q-btn round push no-caps label="Max" @click="maxAmountSend()" />
+          </template>
+        </q-input>
+        <not-enough v-if="amountIsError && amount && amount <= 500 && amount >= 10" :amount="amountNotEnough" />
         <q-input
           outlined
           bottom-slots
@@ -13,19 +31,27 @@
           v-model="phone"
           :label="$t('Enter phone number')"
           mask="+# (###) ### - ####"
+          hint="Example: +7 (900) 000 - 0000"
         >
-          <template v-slot:hint>
-            <div class="">Example: +7 (900) 000 - 0000</div>
-          </template>
           <template v-slot:after>
-            <q-btn type="submit" @click="onSend" :disabled="!checkPhone()" color="teal" round icon="send" />
+            <q-btn @click="pay" color="indigo" round icon="shopping_cart" />
           </template>
         </q-input>
       </q-form>
       <q-separator class="q-mb-lg" />
       <div class="text-grey-6">{{ $t('Money will be sent to the entered phone in 10 seconds') }}.</div>
-      <!-- {{ $t('Maximum') }} {{ currency['BIPRUB'] * 500 }} rub</div> -->
     </div>
+
+    <q-dialog v-model="txReady" size="md" position="bottom">
+      <q-card class="dialog-min300 text-center">
+        <q-card-section>
+          <div>
+            <q-icon color="secondary" name="done" size="5em" />
+          </div>
+          <div class="text-h6">{{ $t('Payment was successful!') }}</div>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -33,58 +59,115 @@
 import { mapState } from 'vuex'
 import Big from 'big.js'
 import { getFeeValue } from 'minterjs-util'
-import { TX_TYPE_SEND } from 'minterjs-tx'
+import { TX_TYPE } from 'minterjs-tx'
+import { issueCheck } from 'minter-js-sdk'
+import notEnough from '../../components/NotEnough.vue'
 export default {
   name: 'ServiceBiptophone',
+  components: {
+    'not-enough': notEnough
+  },
   data () {
     return {
       phone: null,
-      maximum: 500
+      amount: null,
+      amountNotEnough: null,
+      amountErrorMsg: null,
+      amountIsError: false,
+      sendFee: getFeeValue(TX_TYPE.SEND, { payload: '03esf0' }),
+      checkFee: getFeeValue(TX_TYPE.REDEEM_CHECK),
+      txReady: false
     }
   },
+  created () {},
   methods: {
+    checkBalance () {
+      this.amountErrorMsg = null
+      this.amountIsError = false
+      this.amountNotEnough = null
+      if (!this.amount || this.amount === '') {
+        this.amountIsError = true
+        this.amountErrorMsg = 'Min 10 bip'
+        return false
+      }
+      if (Big(this.amount).gte(500)) {
+        this.amountIsError = true
+        this.amountErrorMsg = 'Max 500 bip'
+        return false
+      }
+      if (Big(this.amount).lt(10)) {
+        this.amountIsError = true
+        this.amountErrorMsg = 'Min 10 bip'
+        return false
+      }
+      let available = Big(this.balanceBIP).minus(this.sendFee).minus(this.checkFee)
+      if (this.amount === '') return false
+      if (available.gte(this.amount)) return true
+      else {
+        this.amountIsError = true
+        this.amountNotEnough = Big(this.amount).minus(available).toString()
+        this.amountErrorMsg = this.$t('Not enough ') + this.amountNotEnough + ' bip'
+        return false
+      }
+    },
+    maxAmountSend () {
+      let available = Big(this.balanceBIP).minus(this.sendFee).minus(this.checkFee)
+      this.amount = available.toString()
+    },
     checkPhone () {
-      if (this.phone === null) return false
+      if (!this.phone) return false
       let phoneFilter = this.phone.replace(/\D+/g, '')
       if (phoneFilter && phoneFilter.length === 11) return true
+      else return false
     },
-    onSend () {
-      if (!this.checkPhone()) return false
-      let phoneFilter = this.phone.replace(/\D+/g, '')
-      this.$store.dispatch('BIPTOPHONE_VALIDATE', { phone: phoneFilter }).then(validateData => {
-        if (validateData && validateData.isvalid === '1') {
-          this.$store.dispatch('BIPTOPHONE_CODE', { phone: validateData.phone }).then(data => {
-            console.log(data)
-            if (data && data.keyword) {
-              let fee = getFeeValue(TX_TYPE_SEND, { payload: data.keyword })
-              let amount = Big(this.balanceJSON['BIP']).minus(fee)
-              if (amount.gte(500)) amount = Big(499.6)
-              let txData = {
-                txAction: 'SendTxParams',
-                coinSymbol: 'BIP',
-                feeCoinSymbol: 'BIP',
-                amount: amount.toString(),
-                address: 'Mx403b763ab039134459448ca7875c548cd5e80f77',
-                message: data.keyword
-              }
-              this.$store.dispatch('SENDER', txData).then(txHash => {
-                console.log(txHash)
-                this.$parent.biptophone = false
-              })
-            }
-          })
+    validate () {
+      if (this.checkPhone() && this.checkBalance()) return true
+      else return false
+    },
+    pay () {
+      if (this.validate()) {
+        let phoneFilter = this.phone.replace(/\D+/g, '')
+        let amount = Big(this.amount).minus(this.checkFee)
+        let nonce = new Date().getTime() - 1582480000000
+        const check = issueCheck({
+          privateKey: this.privateKey,
+          password: 'pass',
+          nonce: nonce,
+          chainId: 1,
+          coin: 'BIP',
+          value: amount.toString(),
+          dueBlock: 999999999
+        })
+        const buyData = {
+          check,
+          meta: {
+            phone: phoneFilter
+          }
         }
-      })
+        this.$store.commit('SET_SENDING', true)
+        this.$store.dispatch('REEF_API', ['biptophone', 'pay', buyData]).then(response => {
+          this.$store.commit('SET_SENDING', false)
+          this.$store.dispatch('FETCH_BALANCE')
+          this.txReady = true
+          console.log(response)
+        }).catch(error => {
+          this.$store.dispatch('FETCH_BALANCE')
+          this.$store.commit('SET_SENDING', false)
+          this.$store.commit('SET_TXERROR', error)
+        })
+      }
     }
-  },
-  created () {
   },
   computed: {
     ...mapState({
+      privateKey: state => state.wallet.privateKey,
       currency: state => state.api.currency,
       balance: state => state.api.balance,
-      balanceJSON: state => state.api.balanceJSON
+      balanceBIP: state => state.api.balanceBIP
     })
+  },
+  watch: {
+    amount () { this.checkBalance() }
   }
 }
 </script>

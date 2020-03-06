@@ -1,18 +1,16 @@
 <template>
   <q-page padding>
-    <div v-if="product" class="">
-      <div class="text-h5 text-center full-width q-mb-md q-mt-md text-bold text-indigo-10">{{ product.title }}</div>
+    <div v-if="products">
+      <div class="text-h5 text-center full-width q-mb-md q-mt-md text-indigo-10">{{ product.title }}</div>
       <q-img contain v-if="product.image_url" :src="'http://' + product.image_url" spinner-color="primary" spinner-size="82px" style="width: 100%; max-height: 250px" />
       <div class="q-mt-md text-subtitle2">{{ product.brief }}</div>
 
       <q-separator class="q-mt-md" color="indigo" />
 
       <div class="q-mt-md q-mb-lg">
-        <div class="text-h6 text-center full-width q-mb-md text-bold text-indigo-10">Buy certificate</div>
+        <div class="text-h5 text-center full-width q-mb-md text-indigo-10">{{ $t('Buy certificate') }}</div>
         <div class="row justify-center">
           <div class="col-sm-8 col-xs-12">
-            <div v-if="balance" class="text-subtitle1 text-center text-bold text-indigo-10">You have {{ parseFloat(balance.total_balance_sum) }} bip</div>
-            <div v-if="balance" class="text-subtitle2 text-center text-grey">~ {{ bipRub(balance.total_balance_sum) }} rub | ~ {{ parseFloat(balance.total_balance_sum_usd) }} usd</div>
             <!-- <q-input class="product__select q-mt-md"
               v-model="email"
               type="email"
@@ -21,17 +19,20 @@
               outlined
               hint="A certificate will come to this mail"
             /> -->
-            <q-select class="product__select q-mt-md"
+            <q-select class="product__select"
               outlined
               v-model="selectFaces"
               :options="product.faces"
-              label="Choose certificate"
+              :label="$t('Choose certificate')"
+              :error="amountIsError && amountNotEnough > 0"
+              :error-message="amountErrorMsg"
               :display-value="selectFaces ? selectFaces + ' rub' : ''"
             >
               <template v-slot:option="scope">
                 <q-item
                   v-bind="scope.itemProps"
                   v-on="scope.itemEvents"
+                  v-if="scope.opt > 0"
                 >
                   <q-item-section>
                     <q-item-label><b>{{ scope.opt }} rub</b>&nbsp;&nbsp;=&nbsp;&nbsp;<span>{{ bipPrice(scope.opt) }} bip</span></q-item-label>
@@ -39,22 +40,23 @@
                 </q-item>
               </template>
               <template v-slot:after>
-                <q-btn @click="buy()" :disabled="!checkBuy()" size="md" color="indigo" stack icon="shopping_cart" :label="'Buy for ' + bipPrice(selectFaces) + ' bip'" />
+                <q-btn @click="buy()" size="md" :disabled="amountIsError" color="indigo" stack icon="shopping_cart" :label="$t('Buy for ') + bipPrice(selectFaces) + ' bip'" />
               </template>
             </q-select>
           </div>
         </div>
+        <not-enough v-if="amountIsError && amountNotEnough > 0" :amount="amountNotEnough" />
       </div>
 
-      <q-separator class="q-mt-lg q-mb-md" color="indigo" />
-      <div class="text-right">
-        <q-btn flat @click="dialogDisclaimer = true" label="Disclaimer" color="indigo-4" />
+      <q-separator class="q-mt-lg q-mb-lg" color="indigo-10" />
+      <div class="text-center">
+        <q-btn push @click="dialogDisclaimer = true" :label="$t('Disclaimer')" />
       </div>
 
       <q-dialog v-model="dialogDisclaimer">
         <q-card class="dialog-min300">
           <q-card-section>
-            <div class="text-h6">Disclaimer</div>
+            <div class="text-h6">{{ $t('Disclaimer') }}</div>
           </q-card-section>
           <q-card-section>
             <div v-html="product.disclaimer"></div>
@@ -62,6 +64,18 @@
           <q-card-actions align="right">
             <q-btn flat label="OK" color="primary" v-close-popup />
           </q-card-actions>
+        </q-card>
+      </q-dialog>
+
+      <q-dialog v-model="txReady" size="md" position="bottom">
+        <q-card class="dialog-min300 text-center">
+          <q-card-section>
+            <div>
+              <q-icon color="secondary" name="done" size="5em" />
+            </div>
+            <div class="text-h6">{{ $t('Payment was successful!') }}</div>
+            <div class="text-subtitle1">{{ $t('After a few seconds, the certificate will be ready') }}</div>
+          </q-card-section>
         </q-card>
       </q-dialog>
 
@@ -85,9 +99,15 @@
 <script>
 import { mapState, mapGetters } from 'vuex'
 import { issueCheck } from 'minter-js-sdk'
+import { TX_TYPE } from 'minterjs-tx'
+import { getFeeValue } from 'minterjs-util'
 import Big from 'big.js'
+import notEnough from '../../components/NotEnough.vue'
 export default {
   name: 'Settings',
+  components: {
+    'not-enough': notEnough
+  },
   data () {
     return {
       certificateDialog: false,
@@ -96,7 +116,12 @@ export default {
       selectFaces: null,
       dialogDisclaimer: false,
       productId: null,
-      product: null
+      product: null,
+      amountIsError: true,
+      amountNotEnough: 0,
+      amountErrorMsg: null,
+      checkFee: getFeeValue(TX_TYPE.REDEEM_CHECK),
+      txReady: false
     }
   },
   created () {
@@ -109,11 +134,19 @@ export default {
   },
   methods: {
     checkBuy () {
+      this.amountIsError = false
+      this.amountNotEnough = 0
       if (this.selectFaces && this.selectFaces > 0) {
-        let balanceRub = new Big(this.balance.total_balance_sum).times(this.currency.biptorub)
-        if (balanceRub.gt(this.selectFaces)) {
+        if (Big(this.balanceRUB).gte(this.selectFaces)) {
           return true
-        } else return false
+        } else {
+          this.amountIsError = true
+          let notEnough = Big(this.selectFaces).div(this.currency.biptorub).minus(this.balanceBIP).plus(this.checkFee)
+          this.amountNotEnough = notEnough.round(1, 3).toString()
+          this.amountErrorMsg = this.$t('Not enough ') + this.amountNotEnough + ' bip'
+          // this.amountNotEnough = Big(this.selectFaces).minus(this.balanceRUB)
+          return false
+        }
       } else return false
     },
     bipRub (sum) {
@@ -134,7 +167,7 @@ export default {
         let nonce = new Date().getTime() - 1582480000000
         const check = issueCheck({
           privateKey: this.privateKey,
-          passPhrase: 'pass',
+          password: 'pass',
           nonce: nonce,
           chainId: 1,
           coin: 'BIP',
@@ -142,16 +175,19 @@ export default {
           dueBlock: 999999999
         })
         const buyData = {
-          check: check,
-          product: this.productId,
-          face: this.selectFaces,
-          address: this.address
+          check,
+          strategy: 'giftery',
+          product: {
+            merchantId: this.productId,
+            name: this.product.title,
+            face: this.selectFaces
+          }
         }
         this.selectFaces = null
         this.$store.commit('SET_SENDING', true)
-        this.$store.dispatch('SEND_CHECK', buyData).then(response => {
+        this.$store.dispatch('REEF_API', ['giftery', 'pay', buyData]).then(response => {
           this.$store.commit('SET_SENDING', false)
-          this.$store.commit('SET_TXREADY', true)
+          this.txReady = true
           this.$store.commit('ADD_SERTIFICATES', {
             hash: response.orderHash,
             name: this.product.title,
@@ -160,14 +196,16 @@ export default {
           this.$store.dispatch('FETCH_BALANCE')
           this.$store.dispatch('LOAD_SERTIFICATE', response.orderHash).then(certificate => {
             this.certificateHash = response.orderHash
-            this.$store.commit('SET_TXREADY', false)
+            this.txReady = false
             this.certificateDialog = true
           }).catch(error => {
+            this.$store.commit('SET_TXERROR', error)
             console.log(error)
           })
         }).catch(error => {
+          this.$store.dispatch('FETCH_BALANCE')
           this.$store.commit('SET_SENDING', false)
-          console.log(error)
+          this.$store.commit('SET_TXERROR', error)
         })
       }
     }
@@ -176,6 +214,8 @@ export default {
     ...mapState({
       currency: state => state.api.currency,
       balance: state => state.api.balance,
+      balanceBIP: state => state.api.balanceBIP,
+      balanceRUB: state => state.api.balanceRUB,
       reefApi: state => state.api.reefApi,
       products: state => state.api.products,
       privateKey: state => state.wallet.privateKey,
@@ -190,6 +230,9 @@ export default {
       if (val && val.length && this.productId) {
         this.product = this.getProduct(this.productId)
       }
+    },
+    selectFaces (val) {
+      this.checkBuy()
     }
   }
 }
