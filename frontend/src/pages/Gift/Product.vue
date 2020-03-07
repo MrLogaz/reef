@@ -3,7 +3,7 @@
     <div v-if="products">
       <div class="text-h5 text-center full-width q-mb-md q-mt-md text-indigo-10">{{ product.title }}</div>
       <q-img contain v-if="product.image_url" :src="'http://' + product.image_url" spinner-color="primary" spinner-size="82px" style="width: 100%; max-height: 250px" />
-      <div class="q-mt-md text-subtitle2">{{ product.brief }}</div>
+      <div class="q-mt-md text-subtitle2" v-html="product.brief"></div>
 
       <q-separator class="q-mt-md" color="indigo" />
 

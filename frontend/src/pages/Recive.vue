@@ -14,6 +14,7 @@
           v-model.number="deeplinkAmount"
           type="number"
           :label="$t('Amount') + ' BIP'"
+          debounce="500"
           clear-icon="close"
           clearable
           outlined
@@ -47,7 +48,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { prepareLink, TX_TYPE } from 'minter-js-sdk'
+// import { prepareLink, TX_TYPE } from 'minter-js-sdk'
 import QRCode from 'qrcode'
 import { copyToClipboard } from 'quasar'
 export default {
@@ -76,27 +77,33 @@ export default {
         width: 200,
         margin: 0
       }
-      const txParams = {
-        type: TX_TYPE.SEND,
-        data: {
-          to: this.address,
-          value: this.deeplinkAmount,
-          coin: 'BIP'
-        }
-      }
-      // let deepLinkTmp = prepareLink(txParams, 'minter://')
-      this.deepLink = prepareLink(txParams)
-      // this.deepLink = deepLinkTmp.replace('https://minter://', 'minter://')
-
-      QRCode.toDataURL(this.deepLink, opts).then(url => {
-        this.qrImage = url
-      }).catch(err => {
-        this.$q.notify({
-          message: err,
-          color: 'purple'
+      // const txParams = {
+      //   type: TX_TYPE.SEND,
+      //   data: {
+      //     to: this.address,
+      //     value: this.deeplinkAmount,
+      //     coin: 'BIP'
+      //   }
+      // }
+      this.$store.dispatch('FETCH_DEEPLINK', {
+        address: this.address,
+        amount: this.deeplinkAmount
+      }).then(data => {
+        console.log(data)
+        // this.deepLink = prepareLink(txParams)
+        this.deepLink = data.web
+        QRCode.toDataURL(this.deepLink, opts).then(url => {
+          this.qrImage = url
+        }).catch(err => {
+          this.$q.notify({
+            message: err,
+            color: 'purple'
+          })
+          // console.error(err)
         })
-        // console.error(err)
       })
+      // let deepLinkTmp = prepareLink(txParams, 'minter://')
+      // this.deepLink = deepLinkTmp.replace('https://minter://', 'minter://')
     },
     copyAddress () {
       copyToClipboard(this.address)

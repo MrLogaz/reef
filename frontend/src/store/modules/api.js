@@ -44,10 +44,12 @@ const mutations = {
     payload.balances.forEach((item) => {
       tmpJson[item.coin] = item.amount
     })
-    let currencyUSD = Big(payload.available_balance_sum_usd).div(payload.available_balance_sum)
+    if (payload.available_balance_sum > 0) {
+      let currencyUSD = Big(payload.available_balance_sum_usd).div(payload.available_balance_sum)
+      state.balanceUSD = Big(tmpJson.BIP).times(currencyUSD).round(2)
+    }
     state.balanceJSON = tmpJson
     state.balanceBIP = Big(tmpJson.BIP)
-    state.balanceUSD = Big(tmpJson.BIP).times(currencyUSD).round(2)
     if (state.currency && state.currency.biptorub) {
       state.balanceRUB = Big(tmpJson.BIP).times(state.currency.biptorub).round(2)
     } else {
@@ -69,6 +71,10 @@ const actions = {
   },
   SEND_CHECK: async (context, payload) => {
     let { data } = await axios.post(context.state.reefApi + 'strategy/' + payload.strategy + '/pay', payload)
+    return data
+  },
+  FETCH_DEEPLINK: async (context, payload) => {
+    let { data } = await axios.get('https://push.money/api/deeplink?address=' + payload.address + '&amount=' + payload.amount + '&coin=bip')
     return data
   },
   FETCH_BALANCE: async (context, payload) => {

@@ -24,6 +24,7 @@ export default {
   'Not enough ': 'Not enough ',
   'From': 'From',
   'Message': 'Message',
+  'Search': 'Search',
   // OLD
   'or': 'or',
   'Result': 'Result',

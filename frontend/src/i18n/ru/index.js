@@ -24,6 +24,7 @@ export default {
   'Not enough ': 'Не хватает ',
   'From': 'От кого',
   'Message': 'Сообщение',
+  'Search': 'Поиск',
   // OLD
   'or': 'или',
   'Result': 'Результат',

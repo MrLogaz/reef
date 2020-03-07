@@ -36,13 +36,13 @@
           <!-- <q-icon color="indigo-3" name="account_balance_wallet" size="36px" class="self-center q-mr-md" /> -->
           <!-- <i class="las la-coins self-center q-mr-md" style="font-size: 3em"></i> -->
           <div>
-            <div v-if="language === 'en-us'" style="font-size: 1.8em; line-height: 1.2em">{{ balanceUSD }}&nbsp;&nbsp;USD</div>
-            <div v-else style="font-size: 1.7em; line-height: 1.2em">{{ balanceRUB }}&nbsp;&nbsp;RUB</div>
-            <div style="font-size: 1.3em;">{{ balanceBIP }}&nbsp;&nbsp;BIP</div>
+            <div v-if="language === 'en-us'" style="font-size: 1.6em; line-height: 1.2em">{{ balanceUSD }}&nbsp;&nbsp;USD</div>
+            <div v-else style="font-size: 1.6em; line-height: 1.2em">{{ balanceRUB }}&nbsp;&nbsp;RUB</div>
+            <div style="font-size: 1.2em;">{{ balanceBIP }}&nbsp;&nbsp;BIP</div>
           </div>
         </div>
         <div class="self-center">
-          <q-btn class="text-weight-thin" outline @click="dialogShare = true" :label="$t('Share')" icon="share" />
+          <q-btn dense class="text-weight-thin q-pl-xs q-pr-xs" outline @click="dialogShare = true" :label="$t('Share')" icon="share" />
         </div>
       </div>
 
