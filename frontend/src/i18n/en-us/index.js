@@ -25,6 +25,8 @@ export default {
   'From': 'From',
   'Message': 'Message',
   'Search': 'Search',
+  'Your phone': 'Your phone',
+  'Phone number saved': 'Phone number saved',
   // OLD
   'or': 'or',
   'Result': 'Result',

@@ -86,7 +86,7 @@
           <div class="text-h5 full-width q-mb-md q-mt-md text-indigo-10">{{ $t('Share link') }}</div>
           <q-input outlined v-model="shareUrl" :label="$t('Copy address')" stack-label readonly @click="copyUrl()">
             <template v-slot:after>
-              <q-btn v-if="shareTest()" @click="share(resultLink)" color="positive" icon="share" label="Share" />
+              <q-btn v-if="shareTest()" round @click="share(shareUrl)" color="positive" icon="share" />
               <q-btn v-else icon="file_copy" flat round @click="copyUrl()" />
             </template>
           </q-input>
@@ -178,7 +178,7 @@ export default {
     share () {
       navigator.share({
         title: 'Подарочный кошелек',
-        url: this.resultLink
+        url: this.shareUrl
       })
         .then(() => console.log('Successful share'))
         .catch(error => console.log('Error sharing', error))

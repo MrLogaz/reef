@@ -79,7 +79,11 @@ export default {
       txReady: false
     }
   },
-  created () {},
+  created () {
+    if (localStorage.getItem('phone') !== null) {
+      this.phone = localStorage.getItem('phone')
+    }
+  },
   methods: {
     checkBalance () {
       this.amountErrorMsg = null

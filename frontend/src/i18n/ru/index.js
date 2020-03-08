@@ -25,6 +25,8 @@ export default {
   'From': 'От кого',
   'Message': 'Сообщение',
   'Search': 'Поиск',
+  'Your phone': 'Ваш телефон',
+  'Phone number saved': 'Номер телефона сохранен',
   // OLD
   'or': 'или',
   'Result': 'Результат',

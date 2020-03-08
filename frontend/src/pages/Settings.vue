@@ -7,6 +7,23 @@
       </template>
     </q-input>
 
+    <div class="text-h5 text-center full-width q-mb-md q-mt-lg text-indigo-10">{{ $t('Your phone') }}</div>
+    <q-input
+      outlined
+      bottom-slots
+      color="tale"
+      clearable
+      clear-icon="close"
+      v-model="phone"
+      :label="$t('Enter phone number')"
+      mask="+# (###) ### - ####"
+      hint="Example: +7 (900) 000 - 0000"
+    >
+      <template v-slot:after>
+        <q-btn icon="save" flat round @click="savePhone()" />
+      </template>
+    </q-input>
+
     <div class="text-h5 text-center full-width q-mb-md q-mt-lg text-indigo-10">{{ $t('Your certificates') }}</div>
     <!-- <q-btn @click="addCertificates('8a7d145a', 'Yandex YandexYandex YandexYandex YandexYandex Yandex', 1500)" label="Add" /> -->
     <q-list bordered separator v-if="certificates && certificates.length">
@@ -31,7 +48,14 @@ import { copyToClipboard, openURL } from 'quasar'
 export default {
   name: 'Settings',
   data () {
-    return {}
+    return {
+      phone: null
+    }
+  },
+  created () {
+    if (localStorage.getItem('phone') !== null) {
+      this.phone = localStorage.getItem('phone')
+    }
   },
   methods: {
     clickLink (link) {
@@ -51,6 +75,15 @@ export default {
         position: 'bottom',
         timeout: 400
       })
+    },
+    savePhone () {
+      this.$q.notify({
+        message: this.$t('Phone number saved'),
+        color: 'purple',
+        position: 'bottom',
+        timeout: 400
+      })
+      localStorage.setItem('phone', this.phone)
     }
   },
   computed: {

@@ -50,7 +50,7 @@
 import { mapState } from 'vuex'
 // import { prepareLink, TX_TYPE } from 'minter-js-sdk'
 import QRCode from 'qrcode'
-import { copyToClipboard } from 'quasar'
+import { Platform, copyToClipboard } from 'quasar'
 export default {
   name: 'Recive',
   data () {
@@ -91,7 +91,11 @@ export default {
       }).then(data => {
         console.log(data)
         // this.deepLink = prepareLink(txParams)
-        this.deepLink = data.web
+        if (Platform.is.desktop) {
+          this.deepLink = data.web
+        } else {
+          this.deepLink = data.mobile
+        }
         QRCode.toDataURL(this.deepLink, opts).then(url => {
           this.qrImage = url
         }).catch(err => {
