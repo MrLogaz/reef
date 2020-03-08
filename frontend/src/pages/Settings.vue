@@ -3,7 +3,7 @@
     <div class="text-h5 text-center full-width q-mb-md q-mt-md text-indigo-10">{{ $t('Your seed phrase') }}</div>
     <q-input outlined v-model="mnemonic" :label="$t('Copy address')" stack-label readonly @click="copySeed()">
       <template v-slot:after>
-        <q-btn icon="file_copy" flat round @click="copySeed()" />
+        <q-btn round icon="file_copy" @click="copySeed()" />
       </template>
     </q-input>
 
@@ -17,10 +17,10 @@
       v-model="phone"
       :label="$t('Enter phone number')"
       mask="+# (###) ### - ####"
-      hint="Example: +7 (900) 000 - 0000"
+      :hint="$t('Example') + ': +7 (900) 000 - 0000'"
     >
       <template v-slot:after>
-        <q-btn icon="save" flat round @click="savePhone()" />
+        <q-btn round icon="save" @click="savePhone()" />
       </template>
     </q-input>
 

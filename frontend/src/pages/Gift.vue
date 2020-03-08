@@ -18,7 +18,7 @@
         <q-icon name="search" />
       </template>
     </q-input>
-    <q-list bordered separator v-if="giftFilter && giftFilter.length > 1">
+    <q-list bordered separator v-if="giftFilter && giftFilter.length !== 0">
       <q-item v-for="gift in giftFilter" :key="gift.id" clickable v-ripple :to="{ name: 'product', params: { productId: gift.id } }">
         <q-item-section side>
           <img style="height: 32px; width: 56px;" :src="'http://' + gift.image_url" />
@@ -48,9 +48,10 @@ export default {
   },
   methods: {
     filterGift (searchVal) {
-      if (searchVal.length > 1) {
-        this.giftFilter = this.products.filter(v => v.title.toLowerCase().indexOf(searchVal.toLowerCase()) > -1)
-      } else this.giftFilter = null
+      if (searchVal && searchVal.length > 1) {
+        let search = searchVal.toLowerCase()
+        this.giftFilter = this.products.filter(v => v.title.toLowerCase().indexOf(search) !== -1)
+      } else this.giftFilter = []
     },
     bipRub (sum) {
       if (sum) {

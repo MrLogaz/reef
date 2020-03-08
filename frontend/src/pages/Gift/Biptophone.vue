@@ -28,15 +28,20 @@
           color="tale"
           clearable
           clear-icon="close"
+          :error="phoneIsError"
           v-model="phone"
           :label="$t('Enter phone number')"
           mask="+# (###) ### - ####"
-          hint="Example: +7 (900) 000 - 0000"
+          :hint="$t('Example') + ': +7 (900) 000 - 0000'"
         >
-          <template v-slot:after>
+          <!-- <template v-slot:after>
             <q-btn @click="pay" color="indigo" round icon="shopping_cart" />
-          </template>
+          </template> -->
         </q-input>
+        <q-btn @click="pay" color="indigo-6" size="1.3em" class="q-mt-md">
+          <q-icon name="system_update" size="1.25em" class="q-mr-sm" />
+          <div style="font-size: 0.7em">{{ $t('Send') }} {{ amount ? amount : 0 }} Bip</div>
+        </q-btn>
       </q-form>
       <q-separator class="q-mb-lg" />
       <div class="text-grey-6">{{ $t('Money will be sent to the entered phone in 10 seconds') }}.</div>
@@ -74,6 +79,7 @@ export default {
       amountNotEnough: null,
       amountErrorMsg: null,
       amountIsError: false,
+      phoneIsError: false,
       sendFee: getFeeValue(TX_TYPE.SEND, { payload: '03esf0' }),
       checkFee: getFeeValue(TX_TYPE.REDEEM_CHECK),
       txReady: false
@@ -83,13 +89,16 @@ export default {
     if (localStorage.getItem('phone') !== null) {
       this.phone = localStorage.getItem('phone')
     }
+    if (this.balanceBIP) {
+      this.maxAmountSend()
+    }
   },
   methods: {
     checkBalance () {
       this.amountErrorMsg = null
       this.amountIsError = false
       this.amountNotEnough = null
-      if (!this.amount || this.amount === '') {
+      if (this.amount === null || this.amount === '') {
         this.amountIsError = true
         this.amountErrorMsg = 'Min 10 bip'
         return false
@@ -119,13 +128,21 @@ export default {
       this.amount = available.toString()
     },
     checkPhone () {
-      if (!this.phone) return false
-      let phoneFilter = this.phone.replace(/\D+/g, '')
-      if (phoneFilter && phoneFilter.length === 11) return true
-      else return false
+      this.phoneIsError = false
+      if (this.phone) {
+        let phoneFilter = this.phone.replace(/\D+/g, '')
+        if (phoneFilter && phoneFilter.length === 11) return true
+        else {
+          this.phoneIsError = true
+          return false
+        }
+      } else {
+        this.phoneIsError = true
+        return false
+      }
     },
     validate () {
-      if (this.checkPhone() && this.checkBalance()) return true
+      if (this.checkBalance() && this.checkPhone()) return true
       else return false
     },
     pay () {

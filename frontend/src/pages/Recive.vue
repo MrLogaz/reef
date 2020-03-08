@@ -1,13 +1,13 @@
 <template>
   <q-page padding>
-    <div class="text-h5 full-width text-indigo-10 q-pb-sm q-pt-md">{{ $t('Send coins to address') }}</div>
+    <div class="text-h5 full-width text-center text-indigo-10 q-pb-sm q-pt-md">{{ $t('Send coins to address') }}</div>
     <!-- <div class="text-h6 q-pb-sm q-pt-md">{{ $t('Send coins to address') }}</div> -->
     <q-input outlined v-model="address" :label="$t('Copy address')" stack-label readonly @click="copyAddress()">
       <template v-slot:after>
-        <q-btn icon="file_copy" flat round @click="copyAddress()" />
+        <q-btn icon="file_copy" round @click="copyAddress()" />
       </template>
     </q-input>
-    <div class="text-h5 full-width text-indigo-10 q-mt-lg q-mb-sm">{{ $t('Or use deeplink') }}</div>
+    <div class="text-h5 full-width text-center text-indigo-10 q-mt-lg q-mb-sm">{{ $t('Or use deeplink') }}</div>
     <div class="row">
       <div class="col-sm-6 col-xs-12">
         <q-input
@@ -20,12 +20,15 @@
           outlined
         >
           <template v-slot:after>
-            <q-btn flat round @click="dialogQrDeeplink = true">
+            <q-btn round @click="dialogQrDeeplink = true">
               <i class="las la-qrcode" style="font-size: 2.3em"></i>
             </q-btn>
           </template>
         </q-input>
-        <q-btn type="a" color="indigo-6" size="md" class="q-mt-md" target="_blank" icon="account_balance_wallet" :href="deepLink" :label="'Send ' + deeplinkAmount + ' Bip'" />
+        <q-btn type="a" color="indigo-6" size="1.3em" class="q-mt-md" target="_blank" :href="deepLink">
+          <q-icon name="account_balance_wallet" size="1.25em" class="q-mr-sm" />
+          <div style="font-size: 0.7em">{{ $t('Send') }} {{ deeplinkAmount }} Bip</div>
+        </q-btn>
       </div>
       <div class="desktop-only col-sm-6">
         <div class="q-ml-md">
@@ -36,7 +39,7 @@
     <q-dialog v-model="dialogQrDeeplink">
       <q-card class="text-center">
         <q-card-section>
-          <div class="text-h5">Send {{ deeplinkAmount }} Bip</div>
+          <div class="text-h5">{{ $t('Send') }} {{ deeplinkAmount }} Bip</div>
         </q-card-section>
         <q-card-section>
           <img style="max-width: 100%" :src="qrImage">

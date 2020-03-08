@@ -190,8 +190,8 @@ export default {
           this.txReady = true
           this.$store.commit('ADD_SERTIFICATES', {
             hash: response.orderHash,
-            name: this.product.title,
-            face: buyData.face
+            name: buyData.product.title,
+            face: buyData.product.face
           })
           this.$store.dispatch('FETCH_BALANCE')
           this.$store.dispatch('LOAD_SERTIFICATE', response.orderHash).then(certificate => {

@@ -27,10 +27,9 @@ const mutations = {
   SET_LANG: (state, payload) => {
     i18n.locale = payload
     state.language = payload
-    Cookies.set('language', payload)
+    Cookies.set('language', payload, { path: '/' })
   },
   SAVE_MESSAGE: (state, payload) => {
-    console.log(payload)
     state.from = payload.from
     state.message = payload.message
   },

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d20f7688816ad0bbece5",
+    "revision": "5ea83ac35219bc20022e",
     "url": "/css/app.61505600.css"
   },
   {
@@ -36,40 +36,44 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fonts/la-solid-900.87292218.woff"
   },
   {
-    "revision": "cedb84534c5ecbe4c41fbac302980960",
+    "revision": "1f595ab55f89010d9b5c84154c81fd74",
+    "url": "/img/reef_logo.1f595ab5.svg"
+  },
+  {
+    "revision": "7880aacd61074f1bdbda34583fd37e11",
     "url": "/index.html"
   },
   {
-    "revision": "6cd92e4f15369bc852d5",
-    "url": "/js/1.6cd92e4f.js"
+    "revision": "52eb9f82c2d7898638f4",
+    "url": "/js/1.52eb9f82.js"
   },
   {
-    "revision": "e9e2a99343e1cc6d7e92",
-    "url": "/js/10.e9e2a993.js"
+    "revision": "37aba8ad05c011b16ae9",
+    "url": "/js/10.37aba8ad.js"
   },
   {
-    "revision": "3e9569750e022a6213dc",
-    "url": "/js/11.3e956975.js"
+    "revision": "a7a4333b58373831cd07",
+    "url": "/js/11.a7a4333b.js"
   },
   {
-    "revision": "dae13812ce6fc567dad6",
-    "url": "/js/12.dae13812.js"
+    "revision": "27e96f630b095ed18e8c",
+    "url": "/js/12.27e96f63.js"
   },
   {
-    "revision": "078cedb5238b0f82b31a",
-    "url": "/js/13.078cedb5.js"
+    "revision": "4c09557ccec8700741a4",
+    "url": "/js/13.4c09557c.js"
   },
   {
     "revision": "6d5bd7e6f583ae6aa124",
     "url": "/js/14.6d5bd7e6.js"
   },
   {
-    "revision": "972f9f5742fcc411dd9b",
-    "url": "/js/3.972f9f57.js"
+    "revision": "67f9f93069c21690e7fa",
+    "url": "/js/3.67f9f930.js"
   },
   {
-    "revision": "a2d92a6b3a8e46c1cfa2",
-    "url": "/js/4.a2d92a6b.js"
+    "revision": "8fa0ad278218453b174c",
+    "url": "/js/4.8fa0ad27.js"
   },
   {
     "revision": "5159db5e02660fcaf062",
@@ -92,8 +96,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/9.5571609c.js"
   },
   {
-    "revision": "d20f7688816ad0bbece5",
-    "url": "/js/app.f37aa746.js"
+    "revision": "5ea83ac35219bc20022e",
+    "url": "/js/app.f84261f5.js"
   },
   {
     "revision": "f0aa1f0f855bb8a12607",

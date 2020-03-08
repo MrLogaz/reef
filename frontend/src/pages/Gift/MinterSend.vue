@@ -72,7 +72,11 @@ export default {
       txReady: false
     }
   },
-  created () {},
+  created () {
+    if (this.address) {
+      this.sendAddress = this.address
+    }
+  },
   methods: {
     shareTest () {
       if (navigator.share) return true
@@ -137,6 +141,7 @@ export default {
   },
   computed: {
     ...mapState({
+      address: state => state.wallet.address,
       balanceBIP: state => state.api.balanceBIP
     })
   }

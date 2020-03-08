@@ -2,7 +2,7 @@
   <div>
     <q-header bordered elevated class="bg-white text-primary">
       <q-toolbar>
-        <img color="white" class="q-ml-sm q-mr-md" text-color="white" width="32px" src="statics/icons/Icon-88.png">
+        <img color="white" class="q-ml-sm q-mr-md" text-color="white" width="34px" height="35px" src="~assets/reef_logo.svg">
         <div>
           <div class="text-h6 text-indigo-10 desktop-only">REEF Push</div>
           <div class="text-indigo-10 mobile-only">REEF Push</div>

@@ -26,7 +26,9 @@ export default {
   'Message': 'Сообщение',
   'Search': 'Поиск',
   'Your phone': 'Ваш телефон',
+  'Example': 'Например',
   'Phone number saved': 'Номер телефона сохранен',
+  'Send': 'Отправить',
   // OLD
   'or': 'или',
   'Result': 'Результат',
