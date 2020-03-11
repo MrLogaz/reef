@@ -3,6 +3,13 @@ import startegy from '../strategy'
 
 const router = express.Router()
 
+router.post('/test/:method?', (req, res) => {
+  res.json({
+    status: 'Test',
+    method: req.params.method
+  })
+})
+
 router.post('/:strategyName/:method?', (req, res) => {
   const strategyName = req.params.strategyName.toLowerCase()
   const method = req.params.method ? req.params.method.toLowerCase() : 'status'

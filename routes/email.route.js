@@ -3,7 +3,7 @@ import cors from "cors"
 import emailSENDGRID from "../controllers/emailSENDGRID.controller"
 const router = express.Router()
 
-var whitelist = ['http://localhost:8080', 'http://localhost:3000', 'https://push.reef.mn']
+var whitelist = ['http://localhost:8080', 'http://localhost:3000', 'https://reef.mn']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {

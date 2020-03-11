@@ -5,7 +5,7 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 const getDefaultState = () => {
   return {
     explorerApi: 'https://explorer-api.minter.network/api/v1/',
-    reefApi: 'https://push.reef.mn/api/',
+    reefApi: 'https://reef.mn/api/',
     currency: null,
     balance: null,
     balanceJSON: { BIP: 0 },
@@ -66,7 +66,7 @@ const mutations = {
 
 const actions = {
   REEF_API: async (context, payload) => {
-    let { data } = await axios.post(context.rootState.api.reefApi + 'strategy/' + payload[0] + '/' + payload[1], payload[2])
+    let { data } = await axios.post(context.state.reefApi + 'strategy/' + payload[0] + '/' + payload[1], payload[2])
     return data
   },
   SEND_CHECK: async (context, payload) => {

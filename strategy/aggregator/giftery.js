@@ -244,7 +244,7 @@ export default {
   pay,
   validate,
   status,
-  testorder,
+  // testorder,
   order: statusOrder,
   // code: getCode,
   certificate: getCertificate,

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.062dbcfdfe6970ed37772af99a2bbc9b.js"
+  "/precache-manifest.69a6562420ea04b36f55608f2b4e5d40.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "push.reef"});
