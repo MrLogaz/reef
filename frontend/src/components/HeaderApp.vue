@@ -8,21 +8,6 @@
           <div class="text-indigo-10 mobile-only">REEF Push</div>
           <q-item-label caption>{{ $t('Easy way to send a value') }}</q-item-label>
         </div>
-        <!-- <q-item class="q-pl-xs">
-          <q-item-section avatar>
-            <q-avatar color="white" class="desktop-only" text-color="white" size="42px">
-              <img src="statics/icons/Icon-120.png">
-            </q-avatar>
-            <q-avatar color="white" class="mobile-only" text-color="white" size="36px">
-            </q-avatar>
-          </q-item-section>
-
-          <q-item-section>
-            <div class="text-h6 text-indigo-10 desktop-only">REEF Push</div>
-            <div class="text-indigo-10 mobile-only">REEF Push</div>
-            <q-item-label caption>{{ $t('Easy way to send a value') }}</q-item-label>
-          </q-item-section>
-        </q-item> -->
         <q-space />
         <q-btn color="indigo-10" round outline dense class="q-mr-sm" :label="language.substr(0,2)" @click="alertLang = true" />
         <q-btn color="indigo-10" dense flat :to="'/' + seedkey + '/settings'" name="settings" label="" icon="settings" />
@@ -32,9 +17,6 @@
       <div class="bg-indigo-9 text-white text-weight-thin q-pa-sm q-pr-md q-pl-md full-width row justify-between">
         <div class="row">
           <img src="~assets/icons/coins_100px.png" width="34px" class="self-center q-mr-md" />
-          <!-- <q-icon color="indigo-3" name="img:~assets/icons/coins_100px.png" size="36px" class="self-center q-mr-md" /> -->
-          <!-- <q-icon color="indigo-3" name="account_balance_wallet" size="36px" class="self-center q-mr-md" /> -->
-          <!-- <i class="las la-coins self-center q-mr-md" style="font-size: 3em"></i> -->
           <div>
             <div v-if="language === 'en-us'" style="font-size: 1.6em; line-height: 1.2em">{{ balanceUSD }}&nbsp;&nbsp;USD</div>
             <div v-else style="font-size: 1.6em; line-height: 1.2em">{{ balanceRUB }}&nbsp;&nbsp;RUB</div>
@@ -60,7 +42,6 @@
       <q-tabs v-model="headerTab" align="justify" inline-label class="bg-white text-indigo-10">
         <q-route-tab :to="'/' + seedkey + '/gift'" name="gift" :label="$t('Gift')" icon="card_giftcard" style="min-width: 140px" />
         <q-route-tab :to="'/' + seedkey + '/recive'" name="recive" :label="$t('Receive')" icon="system_update_alt" />
-        <!-- <q-route-tab :to="'/' + seedkey + '/settings'" name="settings" label="" icon="settings" /> -->
       </q-tabs>
     </q-header>
 
@@ -75,19 +56,39 @@
             clear-icon="close"
             clearable
             outlined
-          />
+          >
+            <template v-slot:prepend>
+              <q-icon name="account_circle" />
+            </template>
+          </q-input>
           <q-input
             v-model="shareMsg"
             :label="$t('Message')"
             clear-icon="close"
+            class="q-mb-md"
             clearable
             outlined
-          />
+          >
+            <template v-slot:prepend>
+              <q-icon name="message" />
+            </template>
+          </q-input>
+          <q-input
+            v-model="sharePassword"
+            :label="$t('Insert password')"
+            clear-icon="close"
+            clearable
+            outlined
+          >
+            <template v-slot:prepend>
+              <q-icon name="lock" />
+            </template>
+          </q-input>
           <div class="text-h5 full-width q-mb-md q-mt-md text-indigo-10">{{ $t('Share link') }}</div>
           <q-input outlined v-model="shareUrl" :label="$t('Copy address')" stack-label readonly @click="copyUrl()">
             <template v-slot:after>
               <q-btn v-if="shareTest()" round @click="share(shareUrl)" color="positive" icon="share" />
-              <q-btn v-else icon="file_copy" flat round @click="copyUrl()" />
+              <q-btn v-else icon="file_copy" round @click="copyUrl()" />
             </template>
           </q-input>
           <div class="text-center q-mt-md">
@@ -121,6 +122,7 @@
 import { mapState } from 'vuex'
 import { openURL, copyToClipboard } from 'quasar'
 import QRCode from 'qrcode'
+import CryptoJS from 'crypto-js'
 export default {
   name: 'Index',
   data () {
@@ -131,6 +133,7 @@ export default {
       dialogShare: false,
       hideMsg: false,
       shareFrom: null,
+      sharePassword: null,
       shareMsg: null,
       shareUrl: null,
       languageList: [
@@ -149,7 +152,13 @@ export default {
   },
   methods: {
     generateQRcode () {
-      this.shareUrl = 'https://push.reef.mn/' + this.seedkey + '/'
+      const baseAddress = (process.env.DEV || location.hostname === 'localhost') ? 'http://localhost:8080/' : 'https://push.reef.mn/'
+      if (this.sharePassword) {
+        const code = CryptoJS.AES.encrypt(this.seedkey, this.sharePassword)
+        this.shareUrl = baseAddress + code.toString() + '/'
+      } else {
+        this.shareUrl = baseAddress + this.seedkey + '/'
+      }
       if (this.shareFrom || this.shareMsg) this.shareUrl += '?'
       if (this.shareFrom) {
         this.shareUrl += 'f=' + encodeURIComponent(this.shareFrom)
@@ -227,6 +236,9 @@ export default {
       this.generateQRcode()
     },
     shareFrom () {
+      this.generateQRcode()
+    },
+    sharePassword () {
       this.generateQRcode()
     }
   }

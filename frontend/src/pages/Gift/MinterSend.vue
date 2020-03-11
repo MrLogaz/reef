@@ -73,8 +73,11 @@ export default {
     }
   },
   created () {
-    if (this.address) {
-      this.sendAddress = this.address
+    if (localStorage.getItem('address') !== null) {
+      this.sendAddress = localStorage.getItem('address')
+    }
+    if (this.balanceBIP.gte(0.2)) {
+      this.maxAmountSend()
     }
   },
   methods: {

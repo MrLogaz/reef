@@ -53,7 +53,7 @@ const mutations = {
     if (state.currency && state.currency.biptorub) {
       state.balanceRUB = Big(tmpJson.BIP).times(state.currency.biptorub).round(2)
     } else {
-      await sleep(3000)
+      await sleep(2000)
       state.balanceRUB = Big(tmpJson.BIP).times(state.currency.biptorub).round(2)
     }
     state.balance = payload
@@ -78,8 +78,10 @@ const actions = {
     return data
   },
   FETCH_BALANCE: async (context, payload) => {
-    let { data } = await axios.get(context.state.explorerApi + 'addresses/' + context.rootState.wallet.address + '?withSum=true')
-    context.commit('SET_BALANCE', data.data)
+    if (context.rootState.wallet.address && context.rootState.wallet.address.length > 20) {
+      let { data } = await axios.get(context.state.explorerApi + 'addresses/' + context.rootState.wallet.address + '?withSum=true')
+      context.commit('SET_BALANCE', data.data)
+    }
   },
   FETCH_CURRENCY: async (context, payload) => {
     let { data } = await axios.get(context.state.reefApi + 'currency')

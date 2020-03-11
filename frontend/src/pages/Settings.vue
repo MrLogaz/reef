@@ -24,6 +24,21 @@
       </template>
     </q-input>
 
+    <div class="text-h5 text-center full-width q-mb-md q-mt-lg text-indigo-10">{{ $t('Your address') }}</div>
+    <q-input
+      outlined
+      bottom-slots
+      color="tale"
+      clearable
+      clear-icon="close"
+      v-model="address"
+      :label="$t('Enter Mx address')"
+    >
+      <template v-slot:after>
+        <q-btn round icon="save" @click="saveAddress()" />
+      </template>
+    </q-input>
+
     <div class="text-h5 text-center full-width q-mb-md q-mt-lg text-indigo-10">{{ $t('Your certificates') }}</div>
     <!-- <q-btn @click="addCertificates('8a7d145a', 'Yandex YandexYandex YandexYandex YandexYandex Yandex', 1500)" label="Add" /> -->
     <q-list bordered separator v-if="certificates && certificates.length">
@@ -49,12 +64,16 @@ export default {
   name: 'Settings',
   data () {
     return {
+      address: null,
       phone: null
     }
   },
   created () {
     if (localStorage.getItem('phone') !== null) {
       this.phone = localStorage.getItem('phone')
+    }
+    if (localStorage.getItem('address') !== null) {
+      this.address = localStorage.getItem('address')
     }
   },
   methods: {
@@ -84,6 +103,15 @@ export default {
         timeout: 400
       })
       localStorage.setItem('phone', this.phone)
+    },
+    saveAddress () {
+      this.$q.notify({
+        message: this.$t('Address saved'),
+        color: 'purple',
+        position: 'bottom',
+        timeout: 400
+      })
+      localStorage.setItem('address', this.address)
     }
   },
   computed: {

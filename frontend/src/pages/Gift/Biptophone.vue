@@ -89,7 +89,8 @@ export default {
     if (localStorage.getItem('phone') !== null) {
       this.phone = localStorage.getItem('phone')
     }
-    if (this.balanceBIP) {
+    console.log(this.balanceBIP.gte(10))
+    if (this.balanceBIP.gte(10)) {
       this.maxAmountSend()
     }
   },
