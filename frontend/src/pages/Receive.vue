@@ -55,7 +55,7 @@ import { mapState } from 'vuex'
 import QRCode from 'qrcode'
 import { Platform, copyToClipboard } from 'quasar'
 export default {
-  name: 'Recive',
+  name: 'Receive',
   data () {
     return {
       qrImage: null,

@@ -119,7 +119,7 @@ export default {
       const seedkey = this.mnemonicTo36(mnemonic)
       // const seedkey = mnemonic.split(' ').map(word => wordlists.english.indexOf(word)).join('.')
       this.makeWallet(mnemonic, seedkey)
-      const path = '/' + seedkey + '/recive'
+      const path = '/' + seedkey + '/receive'
       if (this.$route.path !== path) this.$router.push(path)
     }
     this.$store.dispatch('FETCH_BALANCE')

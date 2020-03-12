@@ -15,7 +15,7 @@ const routes = [
     children: [
       { name: 'empty', path: '', redirect: 'gift' },
       { name: 'gift', path: 'gift', component: () => import('pages/Gift.vue'), params: true },
-      { name: 'recive', path: 'recive', component: () => import('pages/Recive.vue'), params: true },
+      { name: 'receive', path: 'receive', component: () => import('pages/Receive.vue'), params: true },
       { name: 'settings', path: 'settings', component: () => import('pages/Settings.vue'), params: true },
       { name: 'category', path: 'category/:categoryId', component: () => import('pages/Category.vue'), params: true },
       { name: 'product-phone', path: 'product/phone', component: () => import('pages/Gift/Biptophone.vue'), params: true },

@@ -1,6 +1,6 @@
 <template>
   <div class="text-red-10 q-mt-md q-mb-md">
-    <q-btn :to="{ name: 'recive', params: { amount: amount } }" color="orange-14" class="full-width" :label="$t('Top up balance by ') + amount + ' bip'" />
+    <q-btn :to="{ name: 'receive', params: { amount: amount } }" color="orange-14" class="full-width" :label="$t('Top up balance by ') + amount + ' bip'" />
   </div>
 </template>
 

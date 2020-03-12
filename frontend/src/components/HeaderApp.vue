@@ -41,7 +41,7 @@
 
       <q-tabs v-model="headerTab" align="justify" inline-label class="bg-white text-indigo-10">
         <q-route-tab :to="'/' + seedkey + '/gift'" name="gift" :label="$t('Gift')" icon="card_giftcard" style="min-width: 140px" />
-        <q-route-tab :to="'/' + seedkey + '/recive'" name="recive" :label="$t('Receive')" icon="system_update_alt" />
+        <q-route-tab :to="'/' + seedkey + '/receive'" name="receive" :label="$t('Receive')" icon="system_update_alt" />
       </q-tabs>
     </q-header>
 
