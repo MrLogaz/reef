@@ -94,12 +94,14 @@ export default {
     this.$store.dispatch('FETCH_PRODUCTS')
     this.$store.dispatch('GET_SERTIFICATES')
     if (this.$route.params.seed && this.$route.params.seed !== '') {
+      // this.numTo36(this.$route.params.seed)
       const mnemonicArr = this.$route.params.seed.split('.')
       if (mnemonicArr.length < 12) {
         this.secret = this.$route.params.seed
         this.dialogPassword = true
       } else {
-        const mnemonic = mnemonicArr.map(n => wordlists.english[n]).join(' ')
+        const mnemonic = this.num36ToMnemonic(this.$route.params.seed)
+        // const mnemonic = mnemonicArr.map(n => wordlists.english[n]).join(' ')
         this.makeWallet(mnemonic, this.$route.params.seed)
         const path = '/' + this.$route.params.seed + '/gift'
         if (this.$route.path !== path) this.$router.push(path)
@@ -114,7 +116,8 @@ export default {
       this.dialogPassword = true
     } else {
       const mnemonic = generateMnemonic()
-      const seedkey = mnemonic.split(' ').map(word => wordlists.english.indexOf(word)).join('.')
+      const seedkey = this.mnemonicTo36(mnemonic)
+      // const seedkey = mnemonic.split(' ').map(word => wordlists.english.indexOf(word)).join('.')
       this.makeWallet(mnemonic, seedkey)
       const path = '/' + seedkey + '/recive'
       if (this.$route.path !== path) this.$router.push(path)
@@ -127,6 +130,21 @@ export default {
     }, 6000)
   },
   methods: {
+    mnemonicTo36 (mnemonic) {
+      const seedNumkey = mnemonic.split(' ').map(word => wordlists.english.indexOf(word))
+      const seed36key = seedNumkey.map(numWord => Number(numWord).toString(36))
+      return seed36key.join('.')
+    },
+    num36ToMnemonic (mnemonic) {
+      let seedWord
+      if (/[a-zA-Z]/.test(mnemonic)) {
+        const seedNumkey = mnemonic.split('.').map(numWord => parseInt(numWord, 36))
+        seedWord = seedNumkey.map(n => wordlists.english[n])
+      } else {
+        seedWord = mnemonic.split('.').map(n => wordlists.english[n])
+      }
+      return seedWord.join(' ')
+    },
     makeWallet (mnemonic, seedkey) {
       if (isValidMnemonic(mnemonic)) {
         this.mnemonic = mnemonic
@@ -144,7 +162,8 @@ export default {
         console.log(this.secret)
         const decodePass = CryptoJS.AES.decrypt(this.secret, this.password).toString(CryptoJS.enc.Utf8)
         if (decodePass.length > 0) {
-          const mnemonic = decodePass.split('.').map(n => wordlists.english[n]).join(' ')
+          const mnemonic = this.num36ToMnemonic(decodePass)
+          // const mnemonic = decodePass.split('.').map(n => wordlists.english[n]).join(' ')
           if (isValidMnemonic(mnemonic)) {
             this.makeWallet(mnemonic, decodePass)
             this.dialogPassword = false
