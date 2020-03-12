@@ -92,7 +92,6 @@ export default {
         address: this.address,
         amount: this.deeplinkAmount
       }).then(data => {
-        console.log(data)
         // this.deepLink = prepareLink(txParams)
         if (Platform.is.desktop) {
           this.deepLink = data.web

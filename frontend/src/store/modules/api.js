@@ -29,7 +29,6 @@ const getters = {
 
 const mutations = {
   SET_DEV: (state) => {
-    console.log('SET_DEV')
     state.reefApi = 'http://localhost:3000/api/'
   },
   RESET_API: state => {

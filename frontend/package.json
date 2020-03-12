@@ -15,6 +15,7 @@
     "@quasar/extras": "^1.5.2",
     "axios": "^0.19.2",
     "big.js": "^5.2.2",
+    "bignumber.js": "^9.0.0",
     "bip39": "^3.0.2",
     "crypto-js": "^4.0.0",
     "minter-js-sdk": "^0.30.0",
