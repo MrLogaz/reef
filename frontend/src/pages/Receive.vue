@@ -51,7 +51,7 @@
 
 <script>
 import { mapState } from 'vuex'
-// import { prepareLink, TX_TYPE } from 'minter-js-sdk'
+import { prepareLink, TX_TYPE } from 'minter-js-sdk'
 import QRCode from 'qrcode'
 import { Platform, copyToClipboard } from 'quasar'
 export default {
@@ -73,6 +73,16 @@ export default {
     }
   },
   methods: {
+    base64ToHex (str) {
+      let cropStr = str.replace('https:///tx/', '')
+      const raw = atob(cropStr)
+      let result = ''
+      for (let i = 0; i < raw.length; i++) {
+        const hex = raw.charCodeAt(i).toString(16)
+        result += (hex.length === 2 ? hex : '0' + hex)
+      }
+      return result.toLowerCase()
+    },
     generateDeepQRcode () {
       const opts = {
         errorCorrectionLevel: 'M',
@@ -80,36 +90,29 @@ export default {
         width: 200,
         margin: 0
       }
-      // const txParams = {
-      //   type: TX_TYPE.SEND,
-      //   data: {
-      //     to: this.address,
-      //     value: this.deeplinkAmount,
-      //     coin: 'BIP'
-      //   }
-      // }
-      this.$store.dispatch('FETCH_DEEPLINK', {
-        address: this.address,
-        amount: this.deeplinkAmount
-      }).then(data => {
-        // this.deepLink = prepareLink(txParams)
-        if (Platform.is.desktop) {
-          this.deepLink = data.web
-        } else {
-          this.deepLink = data.mobile
+      const txParams = {
+        type: TX_TYPE.SEND,
+        data: {
+          to: this.address,
+          value: this.deeplinkAmount,
+          coin: 'BIP'
         }
-        QRCode.toDataURL(this.deepLink, opts).then(url => {
-          this.qrImage = url
-        }).catch(err => {
-          this.$q.notify({
-            message: err,
-            color: 'purple'
-          })
-          // console.error(err)
+      }
+      const deepLinkMobile = 'minter:///tx?d=' + this.base64ToHex(prepareLink(txParams, ''))
+      // const deepLinkMobile = prepareLink(txParams, 'minter://')
+      if (Platform.is.desktop) {
+        this.deepLink = prepareLink(txParams)
+      } else {
+        this.deepLink = deepLinkMobile
+      }
+      QRCode.toDataURL(deepLinkMobile, opts).then(url => {
+        this.qrImage = url
+      }).catch(err => {
+        this.$q.notify({
+          message: err,
+          color: 'purple'
         })
       })
-      // let deepLinkTmp = prepareLink(txParams, 'minter://')
-      // this.deepLink = deepLinkTmp.replace('https://minter://', 'minter://')
     },
     copyAddress () {
       copyToClipboard(this.address)

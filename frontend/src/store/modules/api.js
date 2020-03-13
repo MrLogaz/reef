@@ -72,10 +72,6 @@ const actions = {
     let { data } = await axios.post(context.state.reefApi + 'strategy/' + payload.strategy + '/pay', payload)
     return data
   },
-  FETCH_DEEPLINK: async (context, payload) => {
-    let { data } = await axios.get('https://push.money/api/deeplink?address=' + payload.address + '&amount=' + payload.amount + '&coin=bip')
-    return data
-  },
   FETCH_BALANCE: async (context, payload) => {
     if (context.rootState.wallet.address && context.rootState.wallet.address.length > 20) {
       let { data } = await axios.get(context.state.explorerApi + 'addresses/' + context.rootState.wallet.address + '?withSum=true')
