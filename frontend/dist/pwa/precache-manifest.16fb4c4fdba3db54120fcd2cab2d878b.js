@@ -40,7 +40,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/reef_logo.1f595ab5.svg"
   },
   {
-    "revision": "fcbe498bb2deff1c2f5e435e45614420",
+    "revision": "99a92522efb6feb621b285c2ecf435cb",
     "url": "/index.html"
   },
   {
