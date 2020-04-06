@@ -3,11 +3,16 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/babel-node ./bin/www",
-    "build": "./node_modules/.bin/babel app.js -d ./dist",
-    "dev": "nodemon --exec babel-node ./bin/www"
+    "start": "npm run prod",
+    "build": "npm-run-all clean transpile",
+    "clean": "rimraf dist-server",
+    "transpile": "babel ./server --out-dir dist-server",
+    "server": "node ./dist-server/bin/www",
+    "prod": "npm-run-all build server",
+    "dev": "NODE_ENV=development nodemon --exec babel-node ./bin/www"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.8.7",
     "@sendgrid/mail": "^6.5.5",
     "axios": "^0.19.2",
     "big.js": "^5.2.2",
@@ -25,6 +30,8 @@
     "mongoose": "^5.9.7",
     "morgan": "^1.10.0",
     "nodemailer": "^6.4.6",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "telegraf": "^3.37.0",
     "tweetnacl": "^1.0.3",
     "tweetnacl-util": "^0.15.1",
