@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "start": "npm run prod",
+    "start": "node ./dist-server/bin/www",
     "build": "npm-run-all clean transpile",
     "clean": "rimraf dist-server",
     "transpile": "babel ./server --out-dir dist-server",
