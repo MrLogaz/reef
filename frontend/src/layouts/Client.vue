@@ -121,9 +121,9 @@ export default {
     this.$store.dispatch('FETCH_BALANCE')
   },
   mounted () {
-    setInterval(() => {
-      this.$store.dispatch('FETCH_BALANCE')
-    }, 6000)
+    // setInterval(() => {
+    //   this.$store.dispatch('FETCH_BALANCE')
+    // }, 6000)
   },
   methods: {
     mnemonicTo62 (mnemonic) {
@@ -152,19 +152,23 @@ export default {
     },
     onSubmitPassword () {
       if (this.password && this.password.length > 0) {
-        const decodePass = CryptoJS.AES.decrypt(this.secret, this.password).toString(CryptoJS.enc.Utf8)
-        if (decodePass.length > 0) {
-          const mnemonic = this.num62ToMnemonic(decodePass)
-          // const mnemonic = decodePass.split('.').map(n => wordlists.english[n]).join(' ')
-          if (isValidMnemonic(mnemonic)) {
-            this.makeWallet(mnemonic, decodePass)
-            this.dialogPassword = false
-            const path = '/' + decodePass + '/gift'
-            if (this.$route.path !== path) this.$router.push(path)
+        const decodePass = CryptoJS.AES.decrypt(this.secret, this.password)
+        try {
+          const decodePassStr = decodePass.toString(CryptoJS.enc.Utf8)
+          if (decodePassStr.length > 0) {
+            const mnemonic = this.num62ToMnemonic(decodePassStr)
+            if (isValidMnemonic(mnemonic)) {
+              this.makeWallet(mnemonic, decodePassStr)
+              this.dialogPassword = false
+              const path = '/' + decodePassStr + '/gift'
+              if (this.$route.path !== path) this.$router.push(path)
+            } else {
+              this.passwordIsError = true
+            }
           } else {
             this.passwordIsError = true
           }
-        } else {
+        } catch (e) {
           this.passwordIsError = true
         }
       }

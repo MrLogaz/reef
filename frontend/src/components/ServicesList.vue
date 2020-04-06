@@ -11,6 +11,14 @@
       </div>
       <div class="col-sm-4 col-xs-6">
         <div class="card-app category-giftery">
+          <q-btn outline color="indigo-10" class="shadow-2" :to="'/' + seedkey + '/product/flatfm'" no-caps>
+            <q-icon name="radio" size="2em" />
+            <div class="full-width text-subtitle1 text-uppercase">Flat.FM</div>
+          </q-btn>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-6">
+        <div class="card-app category-giftery">
           <q-btn outline color="indigo-10" class="shadow-2" :to="'/' + seedkey + '/product/minter'" no-caps>
             <q-icon name="account_balance_wallet" size="2em" />
             <div class="full-width text-subtitle1 text-uppercase">Minter</div>

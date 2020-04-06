@@ -34,6 +34,7 @@ export default {
   'Send': 'Send',
   'Need password': 'Need password',
   'Insert password': 'Insert password',
+  'Send to Flat.FM': 'Send to Flat.FM',
   // OLD
   'or': 'or',
   'Result': 'Result',

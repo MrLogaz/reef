@@ -13,7 +13,7 @@ const corsOptions = {
   methods: 'POST, GET, OPTIONS, HEAD',
   allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
   credentials: true,
-  preflightContinue: true,
+  // preflightContinue: true,
   optionsSuccessStatus: 204
 }
 router.options('*', cors(corsOptions))
@@ -22,9 +22,11 @@ router.options('*', cors(corsOptions))
 router.get('/biptophone/', cors(corsOptions), (req, res) => {
   biptophoneController.getCurrence(req, res);
 });
+
 router.post('/biptophone/code', cors(corsOptions), (req, res) => {
   biptophoneController.getCode(req, res);
 });
+
 router.post('/biptophone/validate', cors(corsOptions), (req, res) => {
   biptophoneController.validate(req, res);
 });

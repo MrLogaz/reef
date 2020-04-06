@@ -44,7 +44,6 @@
         <q-route-tab :to="'/' + seedkey + '/receive'" name="receive" :label="$t('Receive')" icon="system_update_alt" />
       </q-tabs>
     </q-header>
-
     <q-dialog v-model="dialogShare">
       <q-card class="dialog-min300">
         <q-card-section>
@@ -149,8 +148,15 @@ export default {
   },
   created () {
     this.generateQRcode()
+    window.onpopstate = (e) => {
+      e.preventDefault()
+      this.dialogShare = false
+    }
   },
   methods: {
+    openShareDialog () {
+      this.$router.push('#share')
+    },
     generateQRcode () {
       const baseAddress = (process.env.DEV || location.hostname === 'localhost') ? 'http://localhost:8080/' : 'https://push.reef.mn/'
       if (this.sharePassword) {
@@ -240,7 +246,15 @@ export default {
     },
     sharePassword () {
       this.generateQRcode()
+    },
+    dialogShare (val) {
+      if (val) history.pushState({ status: '#share' }, '#share')
+      else if (history.state && history.state.status && history.state.status === '#share') {
+        this.$router.go(-1)
+        this.dialogShare = false
+      }
     }
   }
 }
+
 </script>

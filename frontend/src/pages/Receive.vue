@@ -73,9 +73,29 @@ export default {
     }
   },
   methods: {
+    atobUTF16 (sBase64) {
+      var sBinaryString = atob(sBase64), aBinaryView = new Uint8Array(sBinaryString.length)
+      Array.prototype.forEach.call(aBinaryView, function (el, idx, arr) {
+        arr[idx] = sBinaryString.charCodeAt(idx)
+      })
+      return String.fromCharCode.apply(null, new Uint16Array(aBinaryView.buffer))
+    },
+    btoaUTF16 (sString) {
+      var aUTF16CodeUnits = new Uint16Array(sString.length)
+      Array.prototype.forEach.call(aUTF16CodeUnits, function (el, idx, arr) { arr[idx] = sString.charCodeAt(idx) })
+      return btoa(String.fromCharCode.apply(null, new Uint8Array(aUTF16CodeUnits.buffer)))
+    },
+    b64_to_utf8 (str) {
+      return decodeURIComponent(escape(atob(str)))
+    },
     base64ToHex (str) {
       let cropStr = str.replace('https:///tx/', '')
+      // console.log(cropStr)
+      // const raw = this.b64_to_utf8(cropStr)
+      // const raw = this.btoaUTF16(cropStr)
+      // const raw = this.atobUTF16(cropStr)
       const raw = atob(cropStr)
+      // const raw = cropStr
       let result = ''
       for (let i = 0; i < raw.length; i++) {
         const hex = raw.charCodeAt(i).toString(16)
@@ -98,8 +118,9 @@ export default {
           coin: 'BIP'
         }
       }
-      const deepLinkMobile = 'minter:///tx?d=' + this.base64ToHex(prepareLink(txParams, ''))
-      // const deepLinkMobile = prepareLink(txParams, 'minter://')
+      // const deepLinkMobile = 'minter:///tx?d=' + this.base64ToHex(prepareLink(txParams, ''))
+      const deepLinkMobile = prepareLink(txParams, 'minter://').replace('https://', '')
+      // const deepLinkMobile = prepareLink(txParams)
       if (Platform.is.desktop) {
         this.deepLink = prepareLink(txParams)
       } else {

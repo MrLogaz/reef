@@ -71,11 +71,11 @@ module.exports = function (ctx) {
       // preloadChunks: false,
 
       // extractCSS: false,
-      // uglifyOptions: {
-      //   optimization: {
-      //     minimize: true
-      //   }
-      // }
+      uglifyOptions: {
+        optimization: {
+          minimize: true
+        }
+      },
 
       // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
       extendWebpack (cfg) {
@@ -224,7 +224,7 @@ module.exports = function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'push.reef.mn'
+        appId: 'reef.mn'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
