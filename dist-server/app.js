@@ -6,6 +6,8 @@ var _express = _interopRequireDefault(require("express"));
 
 var _path = _interopRequireDefault(require("path"));
 
+var _serveFavicon = _interopRequireDefault(require("serve-favicon"));
+
 var _cors = _interopRequireDefault(require("cors"));
 
 var _cookieParser = _interopRequireDefault(require("cookie-parser"));
@@ -39,6 +41,7 @@ _appLogger["default"].stream = {
   }
 };
 (0, _connect["default"])();
+app.use((0, _serveFavicon["default"])(_path["default"].join(__dirname, '../public', 'favicon.ico')));
 app.use((0, _cors["default"])());
 app.use((0, _cookieParser["default"])());
 app.use(_bodyParser["default"].json());
@@ -46,8 +49,8 @@ app.use(_express["default"].json());
 app.use(_express["default"].urlencoded({
   extended: false
 }));
-app.use(_express["default"]["static"](_path["default"].join(__dirname, '/frontend/dist/pwa')));
-app.use(_express["default"]["static"](_path["default"].join(__dirname, '/certificate')));
+app.use(_express["default"]["static"](_path["default"].join(__dirname, '../frontend/dist/pwa')));
+app.use(_express["default"]["static"](_path["default"].join(__dirname, '../certificate')));
 app.use((0, _morgan["default"])("dev", {
   "stream": _appLogger["default"].stream
 })); // import wallet from './routes/wallet.route'
@@ -63,11 +66,11 @@ app.use('/api/strategy', _strategy["default"]);
 app.use('/api/services', _services["default"]);
 app.use('/api/currency', _currency["default"]);
 app.use('/api/order', _order["default"]);
-app.use('/api/certificate', _express["default"]["static"](_path["default"].join(__dirname, '/certificate')));
+app.use('/api/certificate', _express["default"]["static"](_path["default"].join(__dirname, '../certificate')));
 app.get('/test', function (req, res) {
   res.send('Test endpoint!');
 });
-app.use('*', _express["default"]["static"](_path["default"].join(__dirname, '/frontend/dist/pwa'))); // catch 404 and forward to error handler
+app.use('*', _express["default"]["static"](_path["default"].join(__dirname, '../frontend/dist/pwa'))); // catch 404 and forward to error handler
 
 app.use(function (req, res, next) {
   next((0, _httpErrors["default"])(404));

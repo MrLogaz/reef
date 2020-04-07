@@ -123,7 +123,7 @@ export default {
     },
     onSendToAddress () {
       if (this.checkSend()) {
-        let txData = {
+        const txData = {
           type: 'send',
           data: {
             to: this.sendAddress,
